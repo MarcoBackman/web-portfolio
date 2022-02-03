@@ -1,0 +1,61 @@
+#inner_lists a p#high_light_tab {
+    border-color: #563f46;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    color: #563f46;
+}
+
+#inner_lists a p#high_light_tab:hover {
+    border-color: #bbab9b;
+    color: #bbab9b;
+    border-radius: 25px;
+    transition-duration: 0.3s;
+}
+
+h2#menu_title {
+    position: sticky;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    color: #b9936c;
+    margin: 0;
+    padding-left: 1.5em;
+    background-color: #c0ded7;
+}
+
+h2#menu_title::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    width: 55%;
+    border-bottom: 2px solid #b9936c;
+    margin-bottom: 1.5em;
+}
+
+body {
+    width: 100%;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+section#main_section{
+    min-height: 750px;
+    background-color: #ffffff;
+}
+
+div#menu_title_div {
+    margin: 0;
+}
+
+article#introduction {
+    background-color: #ffffff;
+    margin-top: 2%;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+article#introduction p {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    margin: 0;
+}

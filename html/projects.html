@@ -1,142 +1,174 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
     <title>Sung-Jun(Tony) Baek</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/main.css">
-    <script type="text/javascript" src="./src/script/main.js"> </script>
-    <!--
-      use this on css
-      font-family: 'Anton', sans-serif;
-      font-family: 'Bebas Neue', cursive;
-      font-family: 'Fjalla One', sans-serif;
-      font-family: 'Roboto', sans-serif;
-      font-family: 'Poppins', sans-serif;
-    -->
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-    </style>
+    <link rel="stylesheet" href="./../css/projects.css">
+    <link rel="stylesheet" href="./../css/navbar.css">
+    <link rel="stylesheet" href="./../css/footer.css">
   </head>
-  <!-- Navigation bar -->
-  <header>
-    <nav id="nav_bar">
-        <div class="right_nav_items">
-          <a id="nav_bar_icon" href="/">
-              <img src="" alt="" class="image">
-          </a>
-          <ul>
-            <li class="nav_li_item">
-              <a href="./about-me.html">
-                  <p>About me</p>
-              </a>
+  <body>
+    <header>
+      <nav id="nav_bar">
+        <div class="header_div">
+          <ul id="outer_lists">
+            <li class="outer_list">
+              <div class="header_div">
+                <h1 id="main_title">Sung-Jun (Tony) Baek's Portfolio</h1>
+              </div>
             </li>
-            <li class="nav_li_item">
-              <a href="./contact-me.html">
-                  <p>Contact me</p>
-              </a>
-            </li>
-            <li class="nav_li_item">
-              <a href="./projects.html">
-                <p>Projects</p>
-              </a>
-            </li>
-            <li class="nav_li_item">
-              <a href="./resume.html">
-                <p>Resume</p>
-              </a>
-            </li>
-            <li class="nav_li_item">
-              <a href="./skills.html">
-                <p>Skills</p>
-              </a>
+            <li class="outer_list">
+              <ul id="inner_lists">
+                <li class="nav_li_item">
+                  <a href="./about-me.html">
+                      <p>About me</p>
+                  </a>
+                </li>
+                <li class="nav_li_item">
+                  <a href="./skills.html">
+                    <p>Marketable skills and abilities</p>
+                  </a>
+                </li>
+                <li class="nav_li_item">
+                  <a href="./projects.html">
+                    <p id="high_light_tab">Projects</p>
+                  </a>
+                </li>
+                <li class="nav_li_item">
+                  <a href="./resume.html">
+                    <p>Resume</p>
+                  </a>
+                </li>
+                <li class="nav_li_item">
+                  <a href="./contact-me.html">
+                      <p>Contact me</p>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
       </nav>
-
-    <div>
+    </header>
+    <section id="main_section">
+      <div id="menu_title_div">
+        <h2 id="menu_title">Projects</br></h2>
+      </div>
+      <div id="project_div">
         <h3>Projects</h3>
         <ul id="project_lists">
-            <li class="nav_li_item">
-                <a href="https://github.com/TCC2021SeniorProject">
-                    <p>Model based IoT</p>
-                </a>
-                <img src="../src/img/Screenshot from 2021-09-25 12-08-44.png" alt="IoT_image" width="500px">
-                </img>
-                <p>
-                    Model based IoT is a project that converts UPPAAL model into a python code so that user can directly inject the output code to embedded system.</br>
-                    Used tools: Java Spring, Python, Gradle, Raspberry Pi, XML, UPPAAL.
-                </p>
-            </li>
-            <li class="nav_li_item">
-                <a href="https://github.com/CSE4081-d-star-team">
-                    <p>D* Lite algoritm analysis</p>
-                </a>
-                <img src="../src/img/dstar.gif" alt="analysis_img_1" width="300px">
-                </img>
-                <img src="../src/img/editor.gif" alt="analysis_img_2" width="300px">
-                </img>
-                <p>
-                    Coded with Python using pyGame framework and Java using Swing and AWT frameworks.</br>
-                    Made GUI for point generators.</br>
-                    Takes user input in GUI app.</br>
-                    Generates text-based map based on user click.</br>
-                    Included dynamic editor for users to interact with the app.</br>
-                    Collaborated with others to implement effective path finding algorithm.</br>
-                </p>
-            </li>
-            <li class="nav_li_item">
-                <a href="https://github.com/MarcoBackman/RangeSearchAnalysis">
-                    <p>KNN Range Search analysis</p>
-                </a>
-                <img src="../src/img/sagemaker-knn-1.gif" alt="web-rangeSearch_img" width="500px">
-                </img>
-                <p>
-                    Coded with Java and Batch.</br>
-                    An analitial program that compares the effectiveness of KNN algorithm over Brute-force(Euclidean distance).</br>
-                    Application of KD-tree for KNN algorithm.</br>
-                </p>
-            </li>
-            <li class="nav_li_item">
-                <a href="https://github.com/MarcoBackman/RangeSearchAnalysis">
-                    <p>Embeded web application contest</p>
-                </a>
-                <img src="../src/img/1-down.PNG" alt="web-app_img" height="500px">
-                </img>
-                <p>
-                    Coded with HTML, EJS, CSS, JavaScript.</br>
-                    Made server-interactive webapplication.</br>
-                    Worked on AWS EC2 databsae on Ubuntu machine with PostgreSQL.</br>
-                    Learned about interactive web and secured network communication.</br>
-                    Collaborated with three other teammembers.</br>
-                </br>
-                </p>
-            </li>
+          <li class="nav_li_item">
+              <a href="https://github.com/TCC2021SeniorProject">
+                  <p>Model based IoT</p>
+              </a>
+              <img src="../src/img/Screenshot from 2021-09-25 12-08-44.png" alt="IoT_image" width="500px">
+              </img>
+              <p>
+                  Model based IoT is a project that converts UPPAAL model into a python code so that user can directly inject the output code to embedded system.</br>
+                  Used tools: Java Spring, Python, Gradle, Raspberry Pi, XML, UPPAAL.
+              </p>
+          </li>
+          <li class="nav_li_item">
+              <a href="https://github.com/CSE4081-d-star-team">
+                  <p>D* Lite algoritm analysis</p>
+              </a>
+              <img src="../src/img/dstar.gif" alt="analysis_img_1" width="300px">
+              </img>
+              <img src="../src/img/editor.gif" alt="analysis_img_2" width="300px">
+              </img>
+              <p>
+                  Coded with Python using pyGame framework and Java using Swing and AWT frameworks.</br>
+                  Made GUI for point generators.</br>
+                  Takes user input in GUI app.</br>
+                  Generates text-based map based on user click.</br>
+                  Included dynamic editor for users to interact with the app.</br>
+                  Collaborated with others to implement effective path finding algorithm.</br>
+              </p>
+          </li>
+          <li class="nav_li_item">
+              <a href="https://github.com/MarcoBackman/RangeSearchAnalysis">
+                  <p>KNN Range Search analysis</p>
+              </a>
+              <img src="../src/img/sagemaker-knn-1.gif" alt="web-rangeSearch_img" width="500px">
+              </img>
+              <p>
+                  Coded with Java and Batch.</br>
+                  An analitial program that compares the effectiveness of KNN algorithm over Brute-force(Euclidean distance).</br>
+                  Application of KD-tree for KNN algorithm.</br>
+              </p>
+          </li>
+          <li class="nav_li_item">
+              <a href="https://github.com/MarcoBackman/RangeSearchAnalysis">
+                  <p>Embeded web application contest</p>
+              </a>
+              <img src="../src/img/1-down.PNG" alt="web-app_img" height="500px">
+              </img>
+              <p>
+                  Coded with HTML, EJS, CSS, JavaScript.</br>
+                  Made server-interactive webapplication.</br>
+                  Worked on AWS EC2 databsae on Ubuntu machine with PostgreSQL.</br>
+                  Learned about interactive web and secured network communication.</br>
+                  Collaborated with three other teammembers.</br></br>
+              </p>
+          </li>
         </ul>
-    </div>
-
-  </body>
-  <footer>
-    <div align="center">
-      <div class="footer">
-        <p>2022 Spring 4234</p>
-        <p>Class with Fitzroy Nembhard Florida Tech</p>
-        <p>Project Assignment 1</p>
-        <p>
-          Designed by Tony Baek
-          <a>
-
-          </a>
-        </p>
       </div>
+    </section>
+    <footer class="main_footer">
+      <ul class="footer_list">
+        <li class="footer_li_item">
+          <a href="./about-me.html">
+              <p>About me</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="./skills.html">
+            <p>Marketable skills and abilities</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="./projects.html">
+            <p>Projects</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="./resume.html">
+            <p>Resume</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="./contact-me.html">
+              <p>Contact me</p>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <footer class="social_media">
+      <ul class="footer_list">
+        <li class="footer_li_item">
+          <a href="./about-me.html">
+              <p>LinkedIn</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="./skills.html">
+            <p>Google Scholar</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="./projects.html">
+            <p>Projects</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="./resume.html">
+            <p>ResearchGate</p>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <div class="copyright">
+      <p>&copy;&nbsp;&nbsp;2022&nbsp;-&nbsp;Tony Baek</p>
     </div>
-  </footer>
+  </body>
 </html>

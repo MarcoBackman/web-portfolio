@@ -1,0 +1,108 @@
+header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    color: #563f46;
+    background-color: #c0ded7;
+    padding: 0;
+    margin: 0;
+}
+
+nav#nav_bar {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+div.header_div {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+h1#main_title {
+    display: flex;
+    position: relative;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    align-items: flex-start;
+}
+
+ul#outer_lists {
+    list-style-type: none;
+    float: left;
+    width: 100%;
+}
+
+li.outer_list {
+    width: 100%;
+}
+
+ul#inner_lists {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_li_item a {
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    margin-right: 0.5em;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+}
+
+#inner_lists a p {
+    padding: 2px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-color: #a2836e;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    color: #a2836e;
+    transition-duration: 0.5s;
+}
+
+#inner_lists a p:hover {
+    border-color: #6b6b6b;
+    border-style: dotted;
+    color: #585757;
+    border-radius: 25px;
+    transition-duration: 0.5s;
+}
+
+@media only screen and (max-width: 768px) {
+    ul#outer_lists {
+        list-style-type: none;
+        float: none;
+        width: 100%;
+    }
+
+    li.outer_list {
+        width: 100%;
+    }
+
+    ul#inner_lists {
+        display: inline;
+        position: relative;
+        list-style-type: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    li.nav_li_item a p {
+        display: flex;
+        position: relative;
+        width: 100%;
+        text-decoration: none;
+        margin: 0.5em 0 0 0;
+        margin-right: 0.5em;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    }
+}

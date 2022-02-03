@@ -1,0 +1,123 @@
+footer.main_footer {
+    padding-top: 2em;
+}
+
+footer.main_footer, footer.social_media {
+    display: flex;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    background-color: #c0ded7;
+    color: #b9936c;
+    margin: 0;
+}
+
+ul.footer_list {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.footer_li_item {
+    display: block;
+    position: relative;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    display:inline-block;
+}
+
+li.footer_li_item a {
+    display: block;
+    color: #b9936c;
+    text-align: center;
+    text-decoration: underline;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    transition-duration: 0.5s;
+}
+
+li.footer_li_item a:hover {
+    color: #563f46;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+div.copyright {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    background-color: #c0ded7;
+    color: #b9936c;
+    padding-top: 1.2em;
+    padding-bottom: 2.5em;
+    margin: 0;
+}
+
+div.copyright p {
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    text-decoration: none;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+}
+
+@media only screen and (max-width: 768px) {
+
+    footer.main_footer, footer.social_media {
+        display: flex;
+        position: relative;
+        width: 100%;
+        background-color: #c0ded7;
+        color: #b9936c;
+        margin: 0;
+    }
+
+    ul.footer_list {
+        display: inline;
+        position: relative;
+        width: 100%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main_footer ul.footer_list::after {
+        content: "";
+        display: flex;
+        position: relative;
+        margin-top: 0;
+        padding-top: 0;
+        width: 80%;
+        border-bottom: 2px solid #b9936c;
+        margin-bottom: 1.5em;
+        margin-top: 1.5em;
+        margin-left: 10%;
+    }
+
+    li.footer_li_item {
+        display: inline;
+        position: relative;
+        width: 100%;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        display:inline-block;
+    }
+
+    li.footer_li_item a {
+        color: #b9936c;
+        text-decoration: underline;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+        transition-duration: 0.5s;
+    }
+
+    li.footer_li_item a p {
+        margin-left: 2em;
+        text-align: left;
+    }
+
+}
