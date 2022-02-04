@@ -4,11 +4,68 @@ header {
     width: 100%;
     max-width: 100%;
     align-items: center;
-    color: #563f46;
     background-color: #c0ded7;
     padding: 0;
     margin: 0;
 }
+
+div.header_div h1 {
+    /* Fallback: Set a background color. */
+    background-color: #b9936c;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Create the gradient. */
+    background-image: linear-gradient(
+        45deg,
+        #7e4a35 16.666%,
+        #7e4a35 70.5%,
+        #b9936c 70.5%,
+        #b9936c 80%
+    );
+
+    background-size: 100%;
+    background-repeat: repeat;
+    animation: animation_normal 0.5s ease forwards;
+}
+
+div.header_div h1:hover {
+    animation: animation_hover 0.75s ease-in forwards;
+}
+
+@keyframes animation_normal {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+
+@keyframes animation_hover {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
+
+@keyframes opacity_effect {
+    10% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+  }
 
 nav#nav_bar {
     display: flex;
@@ -23,11 +80,16 @@ div.header_div {
     width: 100%;
 }
 
+div.header_div a {
+    text-decoration:none;
+}
+
 h1#main_title {
     display: flex;
     position: relative;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     align-items: flex-start;
+    animation: 2s ease-out 0s 2 opacity_effect;
 }
 
 ul#outer_lists {
@@ -54,6 +116,7 @@ ul#inner_lists {
     text-decoration: none;
     margin-right: 0.5em;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    animation: 1s ease-out 0s 1 opacity_effect;
 }
 
 #inner_lists a p {
@@ -81,6 +144,7 @@ ul#inner_lists {
         list-style-type: none;
         float: none;
         width: 100%;
+        margin-bottom: 2em;
     }
 
     li.outer_list {
@@ -104,5 +168,6 @@ ul#inner_lists {
         margin: 0.5em 0 0 0;
         margin-right: 0.5em;
         font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+        animation: 1s ease-out 0s 1 opacity_effect;
     }
 }

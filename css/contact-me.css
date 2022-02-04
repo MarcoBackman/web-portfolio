@@ -23,7 +23,7 @@ header {
 }
 
 h2#menu_title {
-    position: sticky;
+    position: flex;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     color: #b9936c;
     margin: 0;

@@ -4,6 +4,11 @@ body {
     margin: 0;
 }
 
+img {
+    max-width: 100%;
+    max-height: 35vh;
+}
+
 section#main_section{
     min-height: 750px;
     background-color: #ffffff;
@@ -46,6 +51,10 @@ h2#menu_title::after {
 
 section#main_section{
     min-height: 750px;
+}
+
+div#project_div ul, div#project_div ul li p {
+    margin: 0;
 }
 
 #project_div {
