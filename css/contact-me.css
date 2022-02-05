@@ -28,6 +28,7 @@ h2#menu_title {
     color: #b9936c;
     margin: 0;
     padding-left: 1.5em;
+    padding-top: 1em;
     background-color: #c0ded7;
 }
 
@@ -39,7 +40,7 @@ h2#menu_title::after {
     padding-top: 0;
     width: 55%;
     border-bottom: 2px solid #b9936c;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 }
 
 body {

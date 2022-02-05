@@ -9,6 +9,34 @@ header {
     margin: 0;
 }
 
+input#hamberger_icon {
+    display: none;
+    background-color: #c0ded7;
+    border-radius: 50%;
+    transition-duration: 0.3s;
+    width: 50px;
+    height: 30px;
+    float: left;
+    margin: 5px;
+}
+
+ul#menu_nav {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    margin-left: 2em;
+}
+
+ul#burger_menu {
+    display: none;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+}
+
+#stripe_box:hover {
+    background-color: #8ea7a0;
+    transition-duration: 0.3s;
+}
+
 div.header_div h1 {
     /* Fallback: Set a background color. */
     background: linear-gradient(90deg,
@@ -53,7 +81,7 @@ h1#main_title {
     position: relative;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     align-items: flex-start;
-    animation: 2s ease-out 0s 1 opacity_effect;
+    animation: 1s ease-out 0s 1 opacity_effect;
 }
 
 ul.outer_lists {
@@ -68,29 +96,36 @@ li.outer_list {
 
 ul#inner_lists {
     display: flex;
+    position: relative;
     list-style-type: none;
-    width: 100%;
+    width: 80%;
     margin: 0;
     padding: 0;
 }
 
-.nav_li_item a {
+li.nav_li_item {
+    position: relative;
+}
+
+li.nav_li_item a {
     display: flex;
     position: relative;
     text-decoration: none;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     margin-right: 0.5em;
+    width: 100%;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     animation: 1s ease-out 0s 1 opacity_effect;
 }
 
 #inner_lists a p {
-    padding: 2px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    margin: 0;
     border-color: #a2836e;
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
+    padding: 0.5em;
     color: #a2836e;
     transition-duration: 0.5s;
 }
@@ -103,20 +138,27 @@ ul#inner_lists {
     transition-duration: 0.5s;
 }
 
-ul#menu_nav {
-    display: block;
-}
-
-ul#burger_menu {
-    display: none;
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-}
 
 @media only screen and (max-width: 768px) {
+    input#hamberger_icon {
+        display: inline-block;
+    }
+
+    ul#menu_nav {
+        display: none;
+    }
+
+    input#hamberger_icon:checked ~ header ul#burger_menu {
+        display: block;
+    }
+
     ul.outer_lists {
+        display: none;
         list-style-type: none;
         float: none;
         width: 100%;
+        margin: 0;
+        margin-left: 10%;
         margin-bottom: 2em;
     }
 
@@ -133,6 +175,10 @@ ul#burger_menu {
         padding: 0;
     }
 
+    li.nav_li_item a {
+        width: 80%;
+    }
+
     li.nav_li_item a p {
         display: flex;
         position: relative;
@@ -142,13 +188,5 @@ ul#burger_menu {
         margin-right: 0.5em;
         font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
         animation: 1s ease-out 0s 1 opacity_effect;
-    }
-
-    ul#burger_menu {
-        display: block;
-    }
-
-    ul#menu_nav {
-        display: none;
     }
 }
