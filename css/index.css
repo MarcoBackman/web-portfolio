@@ -30,17 +30,6 @@ section#main_section{
     margin: 0;
 }
 
-div#burger_menu {
-    display: block;
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-}
-
-div#burger_menu h2 {
-    margin: 0;
-}
-
 @media only screen and (max-width: 768px) {
-    div#burger_menu {
-        display: none;
-    }
+
 }

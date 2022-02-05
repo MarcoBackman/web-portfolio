@@ -56,7 +56,7 @@ h1#main_title {
     animation: 2s ease-out 0s 1 opacity_effect;
 }
 
-ul#outer_lists {
+ul.outer_lists {
     list-style-type: none;
     float: left;
     width: 100%;
@@ -103,8 +103,17 @@ ul#inner_lists {
     transition-duration: 0.5s;
 }
 
+ul#menu_nav {
+    display: block;
+}
+
+ul#burger_menu {
+    display: none;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+}
+
 @media only screen and (max-width: 768px) {
-    ul#outer_lists {
+    ul.outer_lists {
         list-style-type: none;
         float: none;
         width: 100%;
@@ -133,5 +142,13 @@ ul#inner_lists {
         margin-right: 0.5em;
         font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
         animation: 1s ease-out 0s 1 opacity_effect;
+    }
+
+    ul#burger_menu {
+        display: block;
+    }
+
+    ul#menu_nav {
+        display: none;
     }
 }
