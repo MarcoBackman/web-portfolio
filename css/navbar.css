@@ -11,51 +11,15 @@ header {
 
 div.header_div h1 {
     /* Fallback: Set a background color. */
-    background-color: #b9936c;
-    background-clip: text;
+    background: linear-gradient(90deg,
+                                #7e4a35,
+                                #b9936c);
     -webkit-text-fill-color: transparent;
-
-    /* Create the gradient. */
-    background-image: linear-gradient(
-        45deg,
-        #7e4a35 16.666%,
-        #7e4a35 70.5%,
-        #b9936c 70.5%,
-        #b9936c 80%
-    );
-
+    background-clip : text;
+    -webkit-background-clip: text;
+    color: transparent;
     background-size: 100%;
-    background-repeat: repeat;
     animation: animation_normal 0.5s ease forwards;
-}
-
-div.header_div h1:hover {
-    animation: animation_hover 0.75s ease-in forwards;
-}
-
-@keyframes animation_normal {
-    0% {
-        background-size: 650%;
-    }
-    40% {
-        background-size: 650%;
-    }
-    100% {
-        background-size: 100%;
-    }
-}
-
-
-@keyframes animation_hover {
-    0% {
-        background-size: 100%;
-    }
-    80% {
-        background-size: 650%;
-    }
-    100% {
-        background-size: 650%;
-    }
 }
 
 @keyframes opacity_effect {
@@ -89,7 +53,7 @@ h1#main_title {
     position: relative;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     align-items: flex-start;
-    animation: 2s ease-out 0s 2 opacity_effect;
+    animation: 2s ease-out 0s 1 opacity_effect;
 }
 
 ul#outer_lists {

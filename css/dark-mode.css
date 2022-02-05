@@ -62,28 +62,27 @@ input#darkmode:checked{
     transition: .3s linear;
 }
 
-div.header_div h1 {
-    /* Fallback: Set a background color. */
-    background-color: #383838;
-
-    /* Create the gradient. */
-    background-image: linear-gradient(
-        45deg,
-        #7e4a35 16.666%,
-        #7e4a35 70.5%,
-        #b9936c 70.5%,
-        #b9936c 80%
-    );
-}
-
-input#darkmode:checked + #inner_lists a p {
+input#darkmode:checked + header #inner_lists a p {
     border-color: #a2836e;
     color: #a2836e;
 }
 
-input#darkmode:checked + #inner_lists a p:hover {
-    border-color: #6b6b6b;
-    color: #585757;
+input#darkmode:checked + header #inner_lists a p:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+input#darkmode:checked + header div.header_div h1 {
+    /* Fallback: Set a background color. */
+    background: linear-gradient(45deg,
+                                #ffdacc,
+                                #b9936c);
+    -webkit-text-fill-color: transparent;
+    background-clip : text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 100%;
+    animation: animation_normal 0.5s ease forwards;
 }
 
 /* Content */
