@@ -54,11 +54,9 @@ section#main_section{
     min-height: 750px;
 }
 
-div#project_div ul, div#project_div ul li p {
-    margin: 0;
-}
-
-#project_div {
+#box_repeater {
+    display: grid;
+    position: relative;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     padding-left: 2em;
     padding-right: 2em;

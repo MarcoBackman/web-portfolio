@@ -145,11 +145,11 @@ li.nav_li_item a {
     }
 
     ul#menu_nav {
-        display: none;
+        display: block;
     }
 
     input#hamberger_icon:checked ~ header ul#burger_menu {
-        display: block;
+        display: none;
     }
 
     ul.outer_lists {
