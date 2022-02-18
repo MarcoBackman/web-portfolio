@@ -9,7 +9,7 @@ header {
     margin: 0;
 }
 
-input#hamberger_icon {
+input#hamburger_icon {
     display: none;
     background-color: #c0ded7;
     border-radius: 50%;
@@ -142,7 +142,7 @@ li.nav_li_item a {
 
 
 @media only screen and (max-width: 768px) {
-    input#hamberger_icon {
+    input#hamburger_icon {
         display: inline-block;
     }
 
@@ -150,7 +150,7 @@ li.nav_li_item a {
         display: block;
     }
 
-    input#hamberger_icon:checked ~ header ul#menu_nav {
+    input#hamburger_icon:checked ~ header ul#menu_nav {
         display: none;
     }
 

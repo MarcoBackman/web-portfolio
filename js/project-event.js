@@ -23,6 +23,19 @@ const MONTHS = {'Jan' : 'January',
         'Nov' : 'November',
         'Dec' : 'December'};
 
+const MONTHS_NUM = {'Jan' : 1,
+        'Feb' : 2,
+        'Mar' : 3,
+        'Apr' : 4,
+        'May' : 5,
+        'Jun' : 6,
+        'Jul' : 7,
+        'Aug' : 8,
+        'Sep' : 9,
+        'Oct' : 10,
+        'Nov' : 11,
+        'Dec' : 12};
+
 function parse_image(img_source, link) {
     let a = document.createElement('a');
     a.setAttribute("href", link.textContent);
@@ -71,14 +84,26 @@ function create_time_p(text) {
 // Original: Wed, 02 Feb 2022 23:30:00 GMT
 // -> MMMM, dd, YYYY, TZD
 function toDateFormat(original_day_time) {
-    let final_text = ""
-    original_day_time = original_day_time.replace(',', '');
-    let splitted_keywords = original_day_time.split(' ');
-    final_text += DAYS[splitted_keywords[0]] + " ";
-    final_text += MONTHS[splitted_keywords[2]] + " ";
-    final_text += splitted_keywords[3] + " ";
-    final_text += "EST";
-    return final_text;
+    let splitted_keywords = (original_day_time.replace(',', '')).split(' ');
+    let year = splitted_keywords[3];
+    let month = MONTHS_NUM[splitted_keywords[2]];
+    let date = splitted_keywords[1];
+    let wholeTime = splitted_keywords[4];
+    let timeSet = wholeTime.split(':');
+    let hour = timeSet[0];
+    let minute = timeSet[1];
+    let seconds = timeSet[2];
+
+    let dateFormat = new Date(Date.UTC(year, month, date, hour, minute, seconds));
+
+    let options = { weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    timeZone: splitted_keywords[5],
+                    timeZoneName: 'short'};
+
+    return dateFormat.toLocaleString('en-US', options);
 }
 
 function create_location_p(text) {
@@ -97,8 +122,6 @@ function create_description_div(content) {
 }
 
 function description_display(button) {
-    let box_div = button.parentElement;
-    let box_wrapper = box_div.parentElement;
     let description_div = button.nextElementSibling;
     if (button.textContent == "learn more") {
         description_div.style.display = "block";
@@ -131,9 +154,31 @@ function set_button(box_div, description_btn, event_description) {
     }
 }
 
+function filterByTitle() {
+
+}
+
+function filterByDesc() {
+
+}
+
+function filterByDate() {
+
+}
+
+function filterEvent(events, filterValue, filterFunction) {
+
+}
+
+
 document.addEventListener("DOMContentLoaded", async() => {
 
     let article_div = document.querySelector('#box_repeater');
+    let filter_btn = document.querySelector("#filter_submit");
+    let clear_btn = document.querySelector("#filter_clear");
+
+    filter_btn.addEventListener('submit', () => {filterEvent(this, "to", "to")});
+    clear_btn.addEventListener('click', () => {alert("cleared")});
 
     let rss_load = async() => {
         return await fetch(RSS_LOCAL)
@@ -173,3 +218,4 @@ document.addEventListener("DOMContentLoaded", async() => {
 
     await rss_load();
 });
+

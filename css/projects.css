@@ -30,7 +30,7 @@ section#main_section{
 }
 
 h2#menu_title {
-    position: sticky;
+    display: block;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     color: #b9936c;
     margin: 0;
@@ -153,9 +153,11 @@ div#box_repeater {
  */
 
 div.box_menu_row {
+    display: -ms-grid;
     display: grid;
     position: relative;
     grid-template-columns: repeat(5, 1fr);
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 10px 10px;
     margin-bottom: 1em;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
@@ -236,6 +238,7 @@ p.event_location {
     font-size: 14px;
     overflow-wrap: break-word;
     word-wrap: break-word;
+    -webkit-hyphens: auto;
     hyphens: auto;
 }
 
@@ -251,6 +254,7 @@ div.event_description_div {
     font-size: 12px;
     color: #000000;
     word-wrap: break-word;
+    -webkit-hyphens: auto;
     hyphens: auto;
     margin-bottom: 2em;
 }
@@ -302,6 +306,7 @@ button.learn_btn:hover {
     }
 
     div.box_menu_row {
+        -ms-grid-columns: 1fr;
         grid-template-columns: repeat(1, 1fr);
         padding-left: 1em;
     }
@@ -327,5 +332,18 @@ button.learn_btn:hover {
     li.filter_li {
         width: 100%;
         margin-bottom: 1em;
+    }
+
+
+    button#filter_submit {
+        display: flex;
+        max-width: none;
+        width: 50%;
+    }
+
+    button#filter_clear {
+        display: flex;
+        max-width: none;
+        width: 50%;
     }
 }
