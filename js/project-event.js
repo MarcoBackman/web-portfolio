@@ -1,4 +1,5 @@
-const RSS_LOCAL = `./../src/data/events.rss`;
+'use strict';
+const RSS_LOCAL = `http://18.219.119.188:8080/rss`;
 const DEFAULT_IMG = './../src/img/jsMeme.jpg';
 
 const DAYS = {'Mon' : 'Monday',
@@ -38,10 +39,10 @@ function parse_image(img_source, link) {
 
     a.appendChild(img);
     return a;
-} 
+}
 
 function create_div() {
-    let div = document.createElement("div");
+    let div = document.createElement("article");
     div.setAttribute("class", "box_menu");
     return div;
 }
@@ -62,7 +63,7 @@ function create_title_h3(text) {
 function create_time_p(text) {
     let event_start = document.createElement('p');
     event_start.setAttribute("class", "event_start");
-    date_time_text = toDateFormat(text.textContent);
+    let date_time_text = toDateFormat(text.textContent);
     event_start.textContent = date_time_text;
     return event_start;
 }
@@ -70,13 +71,13 @@ function create_time_p(text) {
 // Original: Wed, 02 Feb 2022 23:30:00 GMT
 // -> MMMM, dd, YYYY, TZD
 function toDateFormat(original_day_time) {
-    final_text = ""
+    let final_text = ""
     original_day_time = original_day_time.replace(',', '');
-    splitted_keywords = original_day_time.split(' ');
+    let splitted_keywords = original_day_time.split(' ');
     final_text += DAYS[splitted_keywords[0]] + " ";
     final_text += MONTHS[splitted_keywords[2]] + " ";
     final_text += splitted_keywords[3] + " ";
-    final_text += splitted_keywords[5] + " ";
+    final_text += "EST";
     return final_text;
 }
 
@@ -87,6 +88,7 @@ function create_location_p(text) {
     return event_location;
 }
 
+//
 function create_description_div(content) {
     let event_description_div = document.createElement('div');
     event_description_div.setAttribute("class", "event_description_div");
@@ -94,45 +96,46 @@ function create_description_div(content) {
     return event_description_div;
 }
 
-function expand(compoment) {
-    let div_component = compoment.parentElement; 
-    let target_description = div_component.querySelector('.event_description_div');
-    console.log(div_component);
-    console.log(target_description);
-    target_description.style.display = "block";
-    let description_hieght = target_description.style.gridTemplateRows; 
-    console.log(target_description.style.height);
-    let div_height = div_component.style.gridTemplateRows;
-    console.log(description_hieght + div_height);
-    div_component.style.gridTemplateRows  = description_hieght + div_height + "px";
-}
-
-function create_learn_button() {
-    let learn_more_btn = document.createElement('button');
-    learn_more_btn.setAttribute("class", "learn_btn");
-    learn_more_btn.textContent = "learn more";
-    learn_more_btn.setAttribute("onclick", "expand(this)")
-    return learn_more_btn;
-}
-
-function check_box_resize(target_box, div, article_div, row_div) {
-    
-    let height = target_box.offsetHeight;
-    console.log(height);
-    if (height > 110) {
-        console.log("hiding");
-        target_box.style.display = "none";
-        btn = create_learn_button();
-        div.appendChild(btn);
+function description_display(button) {
+    let box_div = button.parentElement;
+    let box_wrapper = box_div.parentElement;
+    let description_div = button.nextElementSibling;
+    if (button.textContent == "learn more") {
+        description_div.style.display = "block";
+        button.textContent = "show less"
+    } else {
+        description_div.style.display = "none";
+        button.textContent = "learn more"
     }
-    //removed rendered data
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function getButton() {
+    let btn = document.createElement('button');
+    btn.setAttribute("class", "learn_btn");
+    btn.textContent = "learn more";
+    btn.addEventListener('click',
+    () => description_display(btn)
+    , false);
+    return btn;
+}
 
-    article_div = document.querySelector('#box_repeater');
+function isOverflown(element) {
+    return element.clientHeight > 400;
+}
 
-    const read_rss = async() => {
+function set_button(box_div, description_btn, event_description) {
+    if(isOverflown(box_div) === true) {
+        event_description.style.display = "none";
+    } else {
+        box_div.removeChild(description_btn);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", async() => {
+
+    let article_div = document.querySelector('#box_repeater');
+
+    let rss_load = async() => {
         return await fetch(RSS_LOCAL)
           .then(response => response.text())
           .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
@@ -140,10 +143,10 @@ document.addEventListener("DOMContentLoaded", () => {
             let index = 0;
             const items = data.querySelectorAll("item");
             let row_div = create_row_div();
-            items.forEach(event_items = item => {
+            items.forEach(item => {
                 if (index % 5 == 0) {
-                    article_div.appendChild(row_div);
                     row_div= create_row_div();
+                    article_div.appendChild(row_div);
                 }
                 index = index + 1;
 
@@ -153,24 +156,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 let img_frame = parse_image(image, link);
                 let event_title = create_title_h3(item.querySelector("title"));
                 let event_start = create_time_p(item.querySelector("start"));
-                let event_end = create_time_p(item.querySelector("end"));
                 let event_location = create_location_p(item.querySelector("location"));
+                let description_btn = getButton();
                 let event_description = create_description_div(item.querySelector("description"));
                 div.appendChild(img_frame);
                 div.appendChild(event_title);
                 div.appendChild(event_start);
                 div.appendChild(event_location);
+                div.appendChild(description_btn);
                 div.appendChild(event_description);
                 row_div.appendChild(div);
-
-                //check_box_resize(event_description, div, article_div, row_div);
+                set_button(div, description_btn, event_description);
             });
         });
     }
 
-    read_rss();
+    await rss_load();
 });
-
-
-
-//console.log(html_data());

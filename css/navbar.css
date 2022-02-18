@@ -148,7 +148,7 @@ li.nav_li_item a {
         display: block;
     }
 
-    input#hamberger_icon:checked ~ header ul#burger_menu {
+    input#hamberger_icon:checked ~ header ul#menu_nav {
         display: none;
     }
 
@@ -158,8 +158,9 @@ li.nav_li_item a {
         float: none;
         width: 100%;
         margin: 0;
-        margin-left: 10%;
-        margin-bottom: 2em;
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-bottom: 1em;
     }
 
     li.outer_list {
@@ -176,7 +177,7 @@ li.nav_li_item a {
     }
 
     li.nav_li_item a {
-        width: 80%;
+        width: 100%;
     }
 
     li.nav_li_item a p {
