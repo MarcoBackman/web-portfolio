@@ -104,7 +104,9 @@ ul#inner_lists {
 }
 
 li.nav_li_item {
+    display: flex;
     position: relative;
+    min-width: fit-content;
 }
 
 li.nav_li_item a {
