@@ -1,3 +1,5 @@
+/* Shared CSS for all pages with nav tag in it */
+
 header {
     display: flex;
     position: relative;
@@ -9,22 +11,22 @@ header {
     margin: 0;
 }
 
-input#hamburger_icon {
+label#checkbox_label {
     display: none;
-    background-color: #c0ded7;
-    border-radius: 50%;
-    transition-duration: 0.3s;
-    width: 50px;
+}
+
+input#hamburger_icon {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    width: 30px;
     height: 30px;
-    float: left;
-    margin: 5px;
 }
 
 ul#menu_nav {
     display: inline-block;
     width: 100%;
+    list-style-type: none;
     padding: 0;
-    margin-left: 2em;
 }
 
 ul#burger_menu {
@@ -43,13 +45,14 @@ div.header_div h1 {
                                 #7e4a35,
                                 #b9936c);
     -webkit-text-fill-color: transparent;
+    background-clip: -webkit-background-clip;
     background-clip : text;
-    -webkit-background-clip: text;
     color: transparent;
     background-size: 100%;
     animation: animation_normal 0.5s ease forwards;
 }
 
+/* Blurs in and out */
 @keyframes opacity_effect {
     10% {
         opacity: 0%;
@@ -70,6 +73,7 @@ div.header_div {
     display: flex;
     position: relative;
     width: 100%;
+    margin-left: 1em;
 }
 
 div.header_div a {
@@ -84,29 +88,22 @@ h1#main_title {
     animation: 1s ease-out 0s 1 opacity_effect;
 }
 
-ul.outer_lists {
-    list-style-type: none;
-    float: left;
-    width: 100%;
-}
-
 li.outer_list {
     width: 100%;
 }
 
-ul#inner_lists {
+ul.inner_lists {
     display: flex;
     position: relative;
-    list-style-type: none;
     width: 80%;
-    margin: 0;
+    margin-left: 1em;
     padding: 0;
 }
 
 li.nav_li_item {
     display: flex;
     position: relative;
-    min-width: fit-content;
+    margin-right: 0.5em;
 }
 
 li.nav_li_item a {
@@ -115,13 +112,11 @@ li.nav_li_item a {
     text-decoration: none;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    margin-right: 0.5em;
-    width: 100%;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     animation: 1s ease-out 0s 1 opacity_effect;
 }
 
-#inner_lists a p {
+ul.inner_lists a p {
     margin: 0;
     border-color: #a2836e;
     border-style: solid;
@@ -132,7 +127,7 @@ li.nav_li_item a {
     transition-duration: 0.5s;
 }
 
-#inner_lists a p:hover {
+ul.inner_lists a p:hover {
     border-color: #6b6b6b;
     border-style: dotted;
     color: #585757;
@@ -140,14 +135,19 @@ li.nav_li_item a {
     transition-duration: 0.5s;
 }
 
+/* Highlights the menu tab background */
+p#highlight {
+    color: #ffffff;
+    background-color:#a2836e
+}
 
 @media only screen and (max-width: 768px) {
-    input#hamburger_icon {
-        display: inline-block;
+    label#checkbox_label {
+        display: block;
     }
 
-    ul#menu_nav {
-        display: block;
+    input#hamburger_icon {
+        display: inline-block;
     }
 
     input#hamburger_icon:checked ~ header ul#menu_nav {
@@ -155,9 +155,7 @@ li.nav_li_item a {
     }
 
     ul.outer_lists {
-        display: none;
-        list-style-type: none;
-        float: none;
+        display: flex;
         width: 100%;
         margin: 0;
         margin-left: 2em;
@@ -169,27 +167,19 @@ li.nav_li_item a {
         width: 100%;
     }
 
-    ul#inner_lists {
+    ul.inner_lists {
         display: inline;
         position: relative;
-        list-style-type: none;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    li.nav_li_item a {
         width: 100%;
     }
 
-    li.nav_li_item a p {
-        display: flex;
+    li.nav_li_item, li.nav_li_item > a{
+        display: block;
         position: relative;
         width: 100%;
         text-decoration: none;
-        margin: 0.5em 0 0 0;
-        margin-right: 0.5em;
         font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
         animation: 1s ease-out 0s 1 opacity_effect;
     }
 }
+

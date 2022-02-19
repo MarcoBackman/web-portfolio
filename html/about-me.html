@@ -2,6 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sung-Jun(Tony) Baek</title>
     <link rel="stylesheet" href="./../css/navbar.css">
     <link rel="stylesheet" href="./../css/footer.css">
@@ -9,11 +10,13 @@
     <link rel="stylesheet" href="./../css/dark-mode.css">
   </head>
   <body>
+    <label id="checkbox_label">
+      <input type="image" id="hamburger_icon" name="hamburger_list" src="../src/img/hamburgerIcon.png" checked>
+    </label>
     <label id="darkmode_label">
       <p>View in Dark Mode</p>
+      <input type="checkbox" id="darkmode" name="darkmode" checked>
     </label>
-    <input type="checkbox" id="darkmode" name="darkmode" checked>
-    <input type="checkbox" id="hamberger_icon" name="hamberger_list" unchecked>
     <header>
       <nav id="nav_bar">
         <div class="header_div">
@@ -26,10 +29,10 @@
               </div>
             </li>
             <li class="outer_list">
-              <ul id="inner_lists">
+              <ul class="inner_lists">
                 <li class="nav_li_item">
                   <a href="about-me.html">
-                      <p>About me</p>
+                      <p id="highlight">About me</p>
                   </a>
                 </li>
                 <li class="nav_li_item">
@@ -50,44 +53,6 @@
                 <li class="nav_li_item">
                   <a href="contact-me.html">
                       <p>Contact me</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul id="burger_menu" class="outer_lists">
-            <li class="outer_list">
-              <div class="header_div">
-                <a href="../index.html">
-                  <h1 id="main_title">Hamburger Menu</h1>
-                </a>
-              </div>
-            </li>
-            <li class="outer_list">
-              <ul id="inner_lists">
-                <li class="nav_li_item">
-                  <a href="about-me.html">
-                    <p>Single Bacon Beast Burger</p>
-                  </a>
-                </li>
-                <li class="nav_li_item">
-                  <a href="skills.html">
-                    <p>Single Bacon Beast Burger</p>
-                  </a>
-                </li>
-                <li class="nav_li_item">
-                  <a href="projects.html">
-                    <p>Double Bacon Beast Burger</p>
-                  </a>
-                </li>
-                <li class="nav_li_item">
-                  <a href="resume.html">
-                    <p>Triple Bacon Beast Burger</p>
-                  </a>
-                </li>
-                <li class="nav_li_item">
-                  <a href="contact-me.html">
-                      <p>Famous Star with Cheese</p>
                   </a>
                 </li>
               </ul>

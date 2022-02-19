@@ -2,20 +2,22 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sung-Jun(Tony) Baek</title>
     <link rel="stylesheet" href="./../css/projects.css">
     <link rel="stylesheet" href="./../css/navbar.css">
     <link rel="stylesheet" href="./../css/footer.css">
     <link rel="stylesheet" href="./../css/dark-mode.css">
-    <script src="./../js/project-event.js"></script>
-    <script src="./../js/navbar-event.js"></script>
+    <script src="./../js/project-event.js" defer></script>
   </head>
   <body>
+    <label id="checkbox_label">
+      <input type="image" id="hamburger_icon" name="hamburger_list" src="../src/img/hamburgerIcon.png" checked>
+    </label>
     <label id="darkmode_label">
       <p>View in Dark Mode</p>
+      <input type="checkbox" id="darkmode" name="darkmode" unchecked>
     </label>
-    <input type="checkbox" id="darkmode" name="darkmode" unchecked>
-    <input type="checkbox" id="hamburger_icon" name="hamburger_list" checked>
     <header>
       <nav id="nav_bar">
         <div class="header_div">
@@ -28,7 +30,7 @@
               </div>
             </li>
             <li class="outer_list">
-              <ul id="inner_lists">
+              <ul class="inner_lists">
                 <li class="nav_li_item">
                   <a href="about-me.html">
                       <p>About me</p>
@@ -41,7 +43,7 @@
                 </li>
                 <li class="nav_li_item">
                   <a href="projects.html">
-                    <p>Projects</p>
+                    <p id="highlight">Projects</p>
                   </a>
                 </li>
                 <li class="nav_li_item">
@@ -65,38 +67,36 @@
         <h2 id="menu_title">My Event Manager<br></h2>
       </div>
       <div id="filter_div">
-        <form id="filter_form">
-          <ul id="filter_ul">
-            <li class="filter_li">
-              <div class="filter_input">
-                <label for="title_input">Title</label>
-                <input type="text" id="title_input" name="title_input" value="">
-              </div>
-            </li>
-            <li class="filter_li">
-              <div class="filter_input">
-                <label for="desc_input">Desc</label>
-                <input type="text" id="desc_input" name="desc_input" value="">
-              </div>
-            </li>
-            <li class="filter_li">
-              <div class="filter_input">
-                <label for="date_input">Date</label>
-                <input type="text" id="date_input" name="date_input" value="">
-              </div>
-            </li>
-            <li class="filter_li">
-              <div class="button_container">
-                <button id="filter_submit">
-                  Submit
-                </button>
-                <button id="filter_clear">
-                  Clear Filters
-                </button>
-              </div>
-            </li>
-          </ul>
-        </form>
+        <ul id="filter_ul">
+          <li class="filter_li">
+            <div class="filter_input">
+              <label for="title_input">Title</label>
+              <input type="text" id="title_input" name="title_input" value="">
+            </div>
+          </li>
+          <li class="filter_li">
+            <div class="filter_input">
+              <label for="desc_input">Desc</label>
+              <input type="text" id="desc_input" name="desc_input" value="">
+            </div>
+          </li>
+          <li class="filter_li">
+            <div class="filter_input">
+              <label for="date_input">Date</label>
+              <input type="text" id="date_input" name="date_input" value="DD/MM/YYYY">
+            </div>
+          </li>
+          <li class="filter_li">
+            <div class="button_container">
+              <button id="filter_submit">
+                Submit
+              </button>
+              <button id="filter_clear">
+                Clear Filters
+              </button>
+            </div>
+          </li>
+        </ul>
       </div>
       <div id="box_repeater">
       </div>
@@ -115,7 +115,7 @@
         </li>
         <li class="footer_li_item">
           <a href="./projects.html">
-            <p>Projects</p>
+            <p id="hightlight">Projects</p>
           </a>
         </li>
         <li class="footer_li_item">

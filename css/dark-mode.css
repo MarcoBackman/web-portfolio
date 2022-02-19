@@ -1,5 +1,6 @@
-/* Checkbox */
+/*This feature is temporarily disabled.*/
 
+/* Checkbox */
 input#darkmode {
     display: inline-flex;
     position: relative;
@@ -11,7 +12,6 @@ input#darkmode {
     cursor: pointer;
     outline: none;
     transition: .3s linear;
-    float: right;
 }
 
 input#darkmode::before {
@@ -26,7 +26,7 @@ input#darkmode::before {
 }
 
 label#darkmode_label {
-    display: inline-flex;
+    display: flex;
     float: right;
 }
 
@@ -85,8 +85,3 @@ input#darkmode:checked + #inner_lists a p:hover {
     border-color: #6b6b6b;
     color: #585757;
 }
-
-
-/* Content */
-
-/* Footer */

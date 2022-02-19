@@ -1,3 +1,5 @@
+/* CSS for skills.html page */
+
 body {
     width: 100%;
     background-color: #FFFFFF;
@@ -25,7 +27,6 @@ section#main_section{
 }
 
 h2#menu_title {
-    position: sticky;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     color: #b9936c;
     margin: 0;

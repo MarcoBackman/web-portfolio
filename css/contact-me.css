@@ -1,3 +1,5 @@
+/* CSS for contact-me.html page */
+
 header {
     display: flex;
     position: relative;
@@ -23,7 +25,6 @@ header {
 }
 
 h2#menu_title {
-    position: flex;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     color: #b9936c;
     margin: 0;
@@ -33,6 +34,7 @@ h2#menu_title {
 }
 
 h2#menu_title::after {
+    display: flex;
     content: "";
     display: inline-block;
     position: relative;

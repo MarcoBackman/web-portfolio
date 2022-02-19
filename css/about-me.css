@@ -1,3 +1,5 @@
+/* CSS for about-me.css page */
+
 #inner_lists a p#high_light_tab {
     border-color: #563f46;
     border-style: solid;
@@ -14,7 +16,6 @@
 }
 
 h2#menu_title {
-    position: sticky;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     color: #b9936c;
     margin: 0;

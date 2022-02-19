@@ -1,41 +1,21 @@
 'use strict';
+//hosted rss feed server
 const RSS_LOCAL = `http://18.219.119.188:8080/rss`;
 const DEFAULT_IMG = './../src/img/jsMeme.jpg';
-
-const DAYS = {'Mon' : 'Monday',
-        'Tue' : 'Tuesday',
-        'Wed' : 'Wednesday',
-        'Thu' : 'Thursday',
-        'Fri' : 'Friday',
-        'Sat' : 'Saturday',
-        'Sun' : 'Sunday'};
-
-const MONTHS = {'Jan' : 'January',
-        'Feb' : 'Feburary',
-        'Mar' : 'March',
-        'Apr' : 'April',
-        'May' : 'May',
-        'Jun' : 'Jun',
-        'Jul' : 'July',
-        'Aug' : 'August',
-        'Sep' : 'September',
-        'Oct' : 'October',
-        'Nov' : 'November',
-        'Dec' : 'December'};
-
 const MONTHS_NUM = {'Jan' : 1,
-        'Feb' : 2,
-        'Mar' : 3,
-        'Apr' : 4,
-        'May' : 5,
-        'Jun' : 6,
-        'Jul' : 7,
-        'Aug' : 8,
-        'Sep' : 9,
-        'Oct' : 10,
-        'Nov' : 11,
-        'Dec' : 12};
+                    'Feb' : 2,
+                    'Mar' : 3,
+                    'Apr' : 4,
+                    'May' : 5,
+                    'Jun' : 6,
+                    'Jul' : 7,
+                    'Aug' : 8,
+                    'Sep' : 9,
+                    'Oct' : 10,
+                    'Nov' : 11,
+                    'Dec' : 12};
 
+//creates img tag
 function parse_image(img_source, link) {
     let a = document.createElement('a');
     a.setAttribute("href", link.textContent);
@@ -54,18 +34,21 @@ function parse_image(img_source, link) {
     return a;
 }
 
+//creates article element
 function create_div() {
     let div = document.createElement("article");
     div.setAttribute("class", "box_menu");
     return div;
 }
 
+//creates row div element
 function create_row_div() {
     let row_div = document.createElement("div");
     row_div.setAttribute("class", "box_menu_row");
     return row_div;
 }
 
+//creates title element
 function create_title_h3(text) {
     let event_title = document.createElement('h3');
     event_title.setAttribute("class", "event_title");
@@ -73,6 +56,7 @@ function create_title_h3(text) {
     return event_title;
 }
 
+//creates timeline element
 function create_time_p(text) {
     let event_start = document.createElement('p');
     event_start.setAttribute("class", "event_start");
@@ -96,16 +80,34 @@ function toDateFormat(original_day_time) {
 
     let dateFormat = new Date(Date.UTC(year, month, date, hour, minute, seconds));
 
-    let options = { weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    timeZone: splitted_keywords[5],
-                    timeZoneName: 'short'};
-
-    return dateFormat.toLocaleString('en-US', options);
+    return dateFormat.toLocaleString('en-US', { weekday: 'long',
+                                                year: 'numeric',
+                                                month: 'long',
+                                                day: 'numeric',
+                                                timeZone: 'America/New_York',
+                                                timeZoneName: 'short'});
 }
 
+//Date format parser for rss feed
+function toInputDateFormat(original_day_time) {
+    let splitted_keywords = (original_day_time.replace(',', '')).split(' ');
+    let year = splitted_keywords[3];
+    let month = MONTHS_NUM[splitted_keywords[2]];
+    let date = splitted_keywords[1];
+    return parseInt(month) + "/" + parseInt(date) + "/" + parseInt(year);
+}
+
+//Date format parser for user input
+function toCompareDateFormat(input_date) {
+    input_date = input_date.trim();
+    let numbers = (input_date.split("/"));
+    let month = numbers[0];
+    let date = numbers[1];
+    let year = numbers[2];
+    return parseInt(month) + "/" + parseInt(date) + "/" + parseInt(year);
+}
+
+//creates location p element
 function create_location_p(text) {
     let event_location = document.createElement('p');
     event_location.setAttribute("class", "event_location");
@@ -113,7 +115,7 @@ function create_location_p(text) {
     return event_location;
 }
 
-//
+//creates description div element
 function create_description_div(content) {
     let event_description_div = document.createElement('div');
     event_description_div.setAttribute("class", "event_description_div");
@@ -121,6 +123,7 @@ function create_description_div(content) {
     return event_description_div;
 }
 
+//controlls display on button click
 function description_display(button) {
     let description_div = button.nextElementSibling;
     if (button.textContent == "learn more") {
@@ -132,6 +135,7 @@ function description_display(button) {
     }
 }
 
+//creates new button
 function getButton() {
     let btn = document.createElement('button');
     btn.setAttribute("class", "learn_btn");
@@ -142,10 +146,12 @@ function getButton() {
     return btn;
 }
 
+//identifies the content overflow
 function isOverflown(element) {
     return element.clientHeight > 400;
 }
 
+//append button on overflow
 function set_button(box_div, description_btn, event_description) {
     if(isOverflown(box_div) === true) {
         event_description.style.display = "none";
@@ -154,68 +160,192 @@ function set_button(box_div, description_btn, event_description) {
     }
 }
 
-function filterByTitle() {
+//returns target events from given events by title
+var filterByTitle = function(events, value) {
+    return new Promise(function(resolve, reject) {
+        let event_list = [];
+        events.forEach(item =>{
+            let title_item = item.querySelector("title");
+            //found matched
+            if (title_item.textContent.match(value) !== null) {
+                event_list.push(item);
+            }
+        });
 
+        if (value === "") {
+            resolve(events);
+        } else if (event_list.length !== 0) {
+            resolve(event_list);
+        } else {
+            alert("title not found");
+            resolve(events);
+        }
+    });
 }
 
-function filterByDesc() {
+//returns target events from given events by description
+var filterByDesc = function(events, value) {
+    return new Promise(function(resolve, reject) {
+        let event_list = [];
+        events.forEach(item =>{
+            let description_item = item.querySelector("description");
+            //found matched
+            if (description_item.textContent.match(value) !== null) {
+                event_list.push(item);
+            }
+        });
 
+        if (value === "") {
+            resolve(events);
+        } else if (event_list.length !== 0) {
+            resolve(event_list);
+        } else {
+            alert("Description not found");
+            resolve(events);
+        }
+    });
 }
 
-function filterByDate() {
+//returns target events from given events by date
+var filterByDate = function(events, value) {
+    return new Promise(function(resolve, reject) {
+        let event_list = [];
+        events.forEach(item =>{
+            let date_item = item.querySelector("start");
+            console.log(value)
+            let date_form = toInputDateFormat(date_item.textContent);
+            if (value) {
+                if (date_form.match(toCompareDateFormat(value)) !== null) {
+                    event_list.push(item);
+                }
+            }
+        });
 
+        if (!value) {
+            resolve(events);
+        } else if (event_list.length !== 0) {
+            resolve(event_list);
+        } else {
+            alert("date not found");
+            resolve(events);
+        }
+    });
 }
 
-function filterEvent(events, filterValue, filterFunction) {
+//Filters events by given values
+function filterEvents(events, filterValue, filterFunction) {
+    filterFunction(events, filterValue["title"])
+    .then(filtered_by_title => {
+      filterByDesc(filtered_by_title, filterValue["desc"])
+    .then(filtered_by_desc => {
+      filterByDate(filtered_by_desc, filterValue["date"])
+    .then(final_events => {
+        viewAllEvents(final_events);
+    })})});
+}
 
+//get rss data
+// - promise based, no need for additional async setup
+const fetch_event =
+    fetch(RSS_LOCAL)
+    .then(response => response.text())
+    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+    .then(data => {
+        return (data.querySelectorAll("item"));
+    });
+
+//get input fields on request
+// - async required to get input before execution
+async function getInputData() {
+    let title_input = document.querySelector("#title_input");
+    let desc_input = document.querySelector("#desc_input");
+    let date_input = document.querySelector("#date_input");
+    return { "title" : title_input.value.trim(),
+             "desc"  : desc_input.value.trim(),
+             "date"  : date_input.value.trim()};
 }
 
 
-document.addEventListener("DOMContentLoaded", async() => {
+//clears data on filter clear button click
+// - async required to clear content before execution
+async function clearFilter() {
+    let title_input = document.querySelector("#title_input");
+    let desc_input = document.querySelector("#desc_input");
+    let date_input = document.querySelector("#date_input");
+    title_input.value = "";
+    desc_input.value = "";
+    date_input.value = "";
+}
 
-    let article_div = document.querySelector('#box_repeater');
+//for initial page load up
+function getDefaultInputData() {
+    return { "title" : "",
+             "desc"  : "",
+             "date"  : ""};
+}
+
+//displays events
+// - async required for retriving input data before getting events
+const getEvent = async () => {
+    //need to wait for promise data to be fulfilled
+    const events = await fetch_event;
+
     let filter_btn = document.querySelector("#filter_submit");
     let clear_btn = document.querySelector("#filter_clear");
 
-    filter_btn.addEventListener('submit', () => {filterEvent(this, "to", "to")});
-    clear_btn.addEventListener('click', () => {alert("cleared")});
+    //adds buttons' event listeners
+    // - async required
+    filter_btn.addEventListener('click', async() => {
+        let input_data = await getInputData();
+        filterEvents(events, input_data, filterByTitle)
+    });
+    clear_btn.addEventListener('click', () => clearFilter());
 
-    let rss_load = async() => {
-        return await fetch(RSS_LOCAL)
-          .then(response => response.text())
-          .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-          .then(data => {
-            let index = 0;
-            const items = data.querySelectorAll("item");
-            let row_div = create_row_div();
-            items.forEach(item => {
-                if (index % 5 == 0) {
-                    row_div= create_row_div();
-                    article_div.appendChild(row_div);
-                }
-                index = index + 1;
+    //runs this on load by default
+    filterEvents(events, { "title":"", "desc":"", "date":""}, filterByTitle);
+};
 
-                let div = create_div();
-                let image = item.querySelector("enclosure");
-                let link = item.querySelector("link");
-                let img_frame = parse_image(image, link);
-                let event_title = create_title_h3(item.querySelector("title"));
-                let event_start = create_time_p(item.querySelector("start"));
-                let event_location = create_location_p(item.querySelector("location"));
-                let description_btn = getButton();
-                let event_description = create_description_div(item.querySelector("description"));
-                div.appendChild(img_frame);
-                div.appendChild(event_title);
-                div.appendChild(event_start);
-                div.appendChild(event_location);
-                div.appendChild(description_btn);
-                div.appendChild(event_description);
-                row_div.appendChild(div);
-                set_button(div, description_btn, event_description);
-            });
-        });
+//removes all children
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
     }
+}
 
-    await rss_load();
-});
+//displays components by given events
+function viewAllEvents(events) {
+      let index = 0;
+      let box_repeater = document.querySelector("#box_repeater");
+      let row_div = create_row_div();
+      //clears existing content first
+      removeAllChildNodes(box_repeater);
 
+      //adds all required card-like elements into main container
+      events.forEach(item => {
+          if (index % 5 == 0) {
+              row_div= create_row_div();
+              box_repeater.appendChild(row_div);
+          }
+          index = index + 1;
+          let div = create_div();
+          let image = item.querySelector("enclosure");
+          let link = item.querySelector("link");
+          let img_frame = parse_image(image, link);
+          let event_title = create_title_h3(item.querySelector("title"));
+          let event_start = create_time_p(item.querySelector("start"));
+          let event_location = create_location_p(item.querySelector("location"));
+          let description_btn = getButton();
+          let event_description = create_description_div(item.querySelector("description"));
+          div.appendChild(img_frame);
+          div.appendChild(event_title);
+          div.appendChild(event_start);
+          div.appendChild(event_location);
+          div.appendChild(description_btn);
+          div.appendChild(event_description);
+          row_div.appendChild(div);
+          set_button(div, description_btn, event_description);
+    });
+}
+
+//Main method
+getEvent();

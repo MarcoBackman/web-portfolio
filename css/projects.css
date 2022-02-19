@@ -1,3 +1,5 @@
+/* CSS for projects.html page */
+
 body {
     width: 100%;
     background-color: #ffffff;
@@ -10,7 +12,6 @@ img {
 }
 
 section#main_section{
-    min-height: 750px;
     background-color: #ffffff;
 }
 
@@ -54,12 +55,6 @@ section#main_section{
     min-height: 750px;
 }
 
-form#filter_form {
-    display: flex;
-    width: 100%;
-    position: relative;
-}
-
 div#filter_div {
     display: flex;
     position: relative;
@@ -76,7 +71,6 @@ ul#filter_ul {
 li.filter_li {
     display: flex;
     list-style: none;
-    margin-right: 1em;
     padding: 0;
     margin: 0;
     margin-right: 1em;
@@ -106,7 +100,7 @@ div.filter_input input {
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     background-color: #ffffff;
     border-style: none;
-    padding: 0;
+    color: #989e9d;
     margin: 0;
     padding: 0.5em;
     border-radius: 0px 10px 10px 0px;
@@ -121,7 +115,7 @@ div.button_container {
 div.button_container button {
     min-width: 5em;
     max-width: 8em;
-    width: max-content;
+    width: auto;
     height: 2.5em;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     background-color: #f5f5f5;
@@ -141,7 +135,6 @@ div.button_container button:hover {
 div#box_repeater {
     display: block;
     position: relative;
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     margin-top: 2em;
     padding-left: 1em;
     padding-right: 1em;
@@ -156,11 +149,10 @@ div.box_menu_row {
     display: -ms-grid;
     display: grid;
     position: relative;
-    grid-template-columns: repeat(5, 1fr);
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px 10px;
     margin-bottom: 1em;
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     min-height: 400px;
 }
 
@@ -172,7 +164,6 @@ article.box_menu {
     width: 100%;
     border: 2px solid;
     border-color: #bbab9b;
-    transition-duration: 0.2s;
     text-decoration: none;
     min-width: 20%;
     margin-bottom: 1em;
@@ -198,7 +189,7 @@ img.box_img {
     position: relative;
     padding-left: 2.5%;
     padding-right: 2.5%;
-    height: fit-content;
+    height: auto;
     width: 95%;
 }
 
@@ -237,7 +228,8 @@ p.event_location {
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     font-size: 14px;
     overflow-wrap: break-word;
-    word-wrap: break-word;
+    /* These are for compatibility with other Web browsers*/
+    -ms-hyphens:auto;
     -webkit-hyphens: auto;
     hyphens: auto;
 }
@@ -247,7 +239,6 @@ div.event_description_div {
     position: relative;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     width: 90%;
-    height: auto;
     height: fit-content;
     padding-left: 1em;
     padding-right: 1em;
@@ -255,6 +246,7 @@ div.event_description_div {
     color: #000000;
     word-wrap: break-word;
     -webkit-hyphens: auto;
+    -ms-hyphens:auto;
     hyphens: auto;
     margin-bottom: 2em;
 }
@@ -263,7 +255,6 @@ div.event_description_div div {
     display: block;
     position: relative;
     width: 100%;
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     padding: 0;
     margin: 0;
 }
@@ -306,23 +297,19 @@ button.learn_btn:hover {
     }
 
     div.box_menu_row {
+        /* Added more attributes due to web browser compatability issues*/
+        grid-column: 1fr;
         -ms-grid-columns: 1fr;
-        grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: 1fr;
         padding-left: 1em;
     }
 
-    div.filter_div {
-        display: flex;
-    }
-
     div.filter_input {
-        display: flex;
         width: 100%;
     }
 
     ul#filter_ul {
         display: inline;
-        list-style-type: none;
         width: 100%;
         margin: 0;
         padding-right: 2em;
