@@ -87,7 +87,6 @@ function toDateFormat(original_day_time) {
                                                 timeZone: 'America/New_York',
                                                 timeZoneName: 'short'});
 }
-
 //Date format parser for rss feed
 function toInputDateFormat(original_day_time) {
     let splitted_keywords = (original_day_time.replace(',', '')).split(' ');
@@ -167,7 +166,7 @@ var filterByTitle = function(events, value) {
         events.forEach(item =>{
             let title_item = item.querySelector("title");
             //found matched
-            if (title_item.textContent.match(value) !== null) {
+            if (title_item.textContent.toLowerCase().match(value.toLowerCase()) !== null) {
                 event_list.push(item);
             }
         });
@@ -190,7 +189,7 @@ var filterByDesc = function(events, value) {
         events.forEach(item =>{
             let description_item = item.querySelector("description");
             //found matched
-            if (description_item.textContent.match(value) !== null) {
+            if (description_item.textContent.toLowerCase().match(value.toLowerCase()) !== null) {
                 event_list.push(item);
             }
         });
@@ -215,7 +214,9 @@ var filterByDate = function(events, value) {
             console.log(value)
             let date_form = toInputDateFormat(date_item.textContent);
             if (value) {
-                if (date_form.match(toCompareDateFormat(value)) !== null) {
+                if (value === "MM/DD/YYYY") { //ignores default date format input
+                    event_list.push(item);
+                } else if (date_form.match(toCompareDateFormat(value)) !== null) {
                     event_list.push(item);
                 }
             }

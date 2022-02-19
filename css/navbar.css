@@ -44,6 +44,7 @@ div.header_div h1 {
     background: linear-gradient(90deg,
                                 #7e4a35,
                                 #b9936c);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: -webkit-background-clip;
     background-clip : text;
