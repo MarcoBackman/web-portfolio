@@ -9,6 +9,12 @@ header {
     background-color: #deeaee;
 }
 
+body {
+    width: 100%;
+    background-color: #ffffff;
+    margin: 0;
+}
+
 #inner_lists a p#high_light_tab {
     border-color: #563f46;
     border-style: solid;
@@ -23,6 +29,7 @@ header {
     transition-duration: 0.3s;
     border-radius: 25px;
 }
+
 
 h2#menu_title {
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
@@ -45,20 +52,13 @@ h2#menu_title::after {
     margin-bottom: 1em;
 }
 
-body {
-    width: 100%;
-    background-color: #ffffff;
-    margin: 0;
+#nav_head_title {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 section#main_section{
     min-height: 750px;
     background-color: #ffffff;
-}
-
-
-#nav_head_title {
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-    padding-left: 2em;
-    padding-right: 2em;
 }

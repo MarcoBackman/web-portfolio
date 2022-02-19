@@ -68,17 +68,17 @@ function create_time_p(text) {
 // Original: Wed, 02 Feb 2022 23:30:00 GMT
 // -> MMMM, dd, YYYY, TZD
 function toDateFormat(original_day_time) {
-    let splitted_keywords = (original_day_time.replace(',', '')).split(' ');
-    let year = splitted_keywords[3];
-    let month = MONTHS_NUM[splitted_keywords[2]];
-    let date = splitted_keywords[1];
-    let wholeTime = splitted_keywords[4];
+    let split_keywords = (original_day_time.replace(',', '')).split(' ');
+    let year = split_keywords[3];
+    let month = MONTHS_NUM[split_keywords[2]];
+    let date = split_keywords[1];
+    let wholeTime = split_keywords[4];
     let timeSet = wholeTime.split(':');
     let hour = timeSet[0];
     let minute = timeSet[1];
     let seconds = timeSet[2];
 
-    let dateFormat = new Date(Date.UTC(year, month, date, hour, minute, seconds));
+    let dateFormat = new Date(Date.UTC(year, month - 1, date, hour, minute, seconds));
 
     return dateFormat.toLocaleString('en-US', { weekday: 'long',
                                                 year: 'numeric',
@@ -89,10 +89,12 @@ function toDateFormat(original_day_time) {
 }
 //Date format parser for rss feed
 function toInputDateFormat(original_day_time) {
-    let splitted_keywords = (original_day_time.replace(',', '')).split(' ');
-    let year = splitted_keywords[3];
-    let month = MONTHS_NUM[splitted_keywords[2]];
-    let date = splitted_keywords[1];
+    let split_keywords = (original_day_time.replace(',', '')).split(' ');
+    let year = split_keywords[3];
+    let month = MONTHS_NUM[split_keywords[2]];
+    console.log(split_keywords[2]);
+    console.log(month);
+    let date = split_keywords[1];
     return parseInt(month) + "/" + parseInt(date) + "/" + parseInt(year);
 }
 
@@ -122,7 +124,7 @@ function create_description_div(content) {
     return event_description_div;
 }
 
-//controlls display on button click
+//control display on button click
 function description_display(button) {
     let description_div = button.nextElementSibling;
     if (button.textContent == "learn more") {
@@ -286,7 +288,7 @@ function getDefaultInputData() {
 }
 
 //displays events
-// - async required for retriving input data before getting events
+// - async required for retrieving input data before getting events
 const getEvent = async () => {
     //need to wait for promise data to be fulfilled
     const events = await fetch_event;

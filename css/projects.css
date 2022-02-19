@@ -11,10 +11,13 @@ img {
     max-height: 35vh;
 }
 
+/* Main content field */
+
 section#main_section{
     background-color: #ffffff;
 }
 
+/* Highlights the related button on present page */
 #inner_lists a p#high_light_tab {
     border-color: #563f46;
     border-style: solid;

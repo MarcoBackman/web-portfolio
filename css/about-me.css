@@ -1,4 +1,9 @@
 /* CSS for about-me.css page */
+body {
+    width: 100%;
+    background-color: #ffffff;
+    margin: 0;
+}
 
 #inner_lists a p#high_light_tab {
     border-color: #563f46;
@@ -33,12 +38,6 @@ h2#menu_title::after {
     width: 55%;
     border-bottom: 2px solid #b9936c;
     margin-bottom: 1em;
-}
-
-body {
-    width: 100%;
-    background-color: #ffffff;
-    margin: 0;
 }
 
 section#main_section{

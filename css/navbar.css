@@ -142,6 +142,7 @@ p#highlight {
     background-color:#a2836e
 }
 
+/* Apply screen size lower than 768 */
 @media only screen and (max-width: 768px) {
     label#checkbox_label {
         display: block;

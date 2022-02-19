@@ -71,6 +71,8 @@ div.copyright p {
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
 }
 
+/* Apply screen size lower than 768 */
+
 @media only screen and (max-width: 768px) {
 
     footer.main_footer, footer.social_media {
