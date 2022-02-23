@@ -1,6 +1,7 @@
 /* Shared CSS for all pages with footer tag in it */
 
 footer {
+    display: flex;
     background-color: #c0ded7;
     color: #b9936c;
     text-align: center;

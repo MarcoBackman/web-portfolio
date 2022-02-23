@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="./../css/navbar.css">
     <link rel="stylesheet" href="./../css/footer.css">
     <link rel="stylesheet" href="./../css/dark-mode.css">
+    <script src="./../js/currency-filter.js" defer></script>
   </head>
   <body>
     <label id="checkbox_label">
-      <input type="image" id="hamburger_icon" name="hamburger_list" src="../src/img/hamburgerIcon.png" checked>
+      <input type="image" id="hamburger_icon" name="hamburger_list" alt="img" src="../src/img/hamburgerIcon.png" checked>
     </label>
     <label id="darkmode_label">
       View in Dark Mode
@@ -111,6 +112,35 @@
                 <button type="button">Submit</button>
             </form>
           </div>
+      </div>
+      <div id="currency_div">
+        <h2>Exchange Rates for 2022 - 01 - 31</h2>
+        <label class="exchange_label">
+          From
+          <select name="currency" id="currency_from">
+            <option value="-">-</option>
+          </select>
+        </label>
+        <label class="exchange_label">
+          To
+          <select name="currency" id="currency_to">
+            <option value="-">-</option>
+          </select>
+        </label>
+        <label class="exchange_label">
+          Amount:
+          <input type="text" id="user_amount" name="user_amount">
+        </label>
+        <label class="exchange_label">
+          Result:
+          <input type="text" id="result" name="result" readonly="readonly">
+        </label>
+        <label class="exchange_label">
+          <input type="button" id="submit_button" name="submit_button" value="submit">
+        </label>
+        <div id="currency_symbol_div">
+
+        </div>
       </div>
     </section>
     <footer class="main_footer">

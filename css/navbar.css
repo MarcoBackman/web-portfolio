@@ -73,8 +73,8 @@ nav#nav_bar {
 div.header_div {
     display: flex;
     position: relative;
-    width: 100%;
-    margin-left: 1em;
+    width: 90%;
+    padding-left: 1em;
 }
 
 div.header_div a {

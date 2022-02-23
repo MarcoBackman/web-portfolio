@@ -92,8 +92,6 @@ function toInputDateFormat(original_day_time) {
     let split_keywords = (original_day_time.replace(',', '')).split(' ');
     let year = split_keywords[3];
     let month = MONTHS_NUM[split_keywords[2]];
-    console.log(split_keywords[2]);
-    console.log(month);
     let date = split_keywords[1];
     return parseInt(month) + "/" + parseInt(date) + "/" + parseInt(year);
 }
