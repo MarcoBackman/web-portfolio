@@ -114,7 +114,7 @@
           </div>
       </div>
       <div id="currency_div">
-        <h2>Exchange Rates for 2022 - 01 - 31</h2>
+        <h2 id="exchange_rate_headline"></h2>
         <label class="exchange_label">
           From
           <select name="currency" id="currency_from">
@@ -128,14 +128,14 @@
           </select>
         </label>
         <label class="exchange_label">
-          Amount:
+          Amount
           <input type="text" id="user_amount" name="user_amount">
         </label>
         <label class="exchange_label">
-          Result:
+          Result
           <input type="text" id="result" name="result" readonly="readonly">
         </label>
-        <label class="exchange_label">
+        <label class="exchange_label" id ="clear_label">
           <input type="button" id="submit_button" name="submit_button" value="submit">
         </label>
         <div id="currency_symbol_div">

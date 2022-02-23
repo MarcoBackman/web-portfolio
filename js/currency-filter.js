@@ -1,6 +1,6 @@
 'use strict';
 const CURRENCY_UNIX_SYMBOL_FILE = "../src/data/currency_code.txt"
-const LOCAL_CURRENCY_RATE = "../src/data/FX_RATES_DAILY-sd-2017-01-03.xml"
+const LOCAL_CURRENCY_RATE = "https://www.bankofcanada.ca/valet/observations/group/FX_RATES_DAILY/xml?start_date=2017-01-03"
 
 function ConvertHexToString(str) {
     return unescape(str.replace(/\\/g, "%"));
@@ -76,6 +76,13 @@ async function fetchCurrencyRate() {
         var nodes = data.querySelectorAll("o");
         //only uses the most recent data
         var last_observation = nodes[nodes.length- 1];
+
+        //update date
+        let header = document.querySelector("#exchange_rate_headline");
+        let current_date = last_observation.getAttribute("d");
+        header.textContent = "Exchange Rates for " + current_date;
+
+        //parse to observation
         let currency_rate = parse_observation(last_observation);
 
         //after parsing currency rate data, proceed to symbol data fetch
