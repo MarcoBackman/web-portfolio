@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000" />
     <title>Sung-Jun(Tony) Baek</title>
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -10,14 +11,16 @@
     <link rel="stylesheet" href="./css/dark-mode.css">
   </head>
   <body>
-    <label id="checkbox_label">
-      <input type="image" id="hamburger_icon" name="hamburger_list" src="./src/img/hamburgerIcon.png" checked>
-    </label>
-    <label id="darkmode_label">
-      View in Dark Mode
-      <input type="checkbox" id="darkmode" name="darkmode">
-    </label>
     <header>
+      <div id="top_bar">
+        <label id="checkbox_label" class="top_label">
+          <input alt="en" checked id="hamburger_icon" name="hamburger_list" src="./src/img/hamburgerIcon.png" type="image">
+        </label>
+        <label id="dark_mode_label" class="top_label">
+          View in Dark Mode
+          <input type="checkbox" id="darkmode" name="darkmode">
+        </label>
+      </div>
       <nav id="nav_bar">
         <div class="header_div">
           <ul id="menu_nav" class="outer_lists">
@@ -95,12 +98,12 @@
     <footer class="social_media">
       <ul class="footer_list">
         <li class="footer_li_item">
-          <a href="http://linkedin.com">
+          <a href="https://linkedin.com">
               <p>LinkedIn</p>
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="http://google.com">
+          <a href="https://google.com">
             <p>Google Scholar</p>
           </a>
         </li>

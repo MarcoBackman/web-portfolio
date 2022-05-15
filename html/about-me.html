@@ -3,20 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sung-Jun(Tony) Baek</title>
+    <meta name="theme-color" content="#000000" />
+
     <link rel="stylesheet" href="./../css/navbar.css">
     <link rel="stylesheet" href="./../css/footer.css">
     <link rel="stylesheet" href="./../css/about-me.css">
     <link rel="stylesheet" href="./../css/dark-mode.css">
+    <title>Sung-Jun(Tony) Baek</title>
   </head>
   <body>
-    <label id="checkbox_label">
-      <input type="image" id="hamburger_icon" name="hamburger_list" src="../src/img/hamburgerIcon.png" checked>
-    </label>
-    <label id="darkmode_label">
-      View in Dark Mode
-      <input type="checkbox" id="darkmode" name="darkmode" checked>
-    </label>
+    <div id="top_bar">
+      <label id="checkbox_label">
+        <input alt="en" checked id="hamburger_icon" name="hamburger_list" src="./src/img/hamburgerIcon.png" type="image">
+      </label>
+      <label id="darkmode_label">
+        View in Dark Mode
+        <input type="checkbox" id="darkmode" name="darkmode">
+      </label>
+    </div>
     <header>
       <nav id="nav_bar">
         <div class="header_div">
@@ -67,10 +71,7 @@
       </div>
       <article id="introduction">
         <!-- must be more than 150words -->
-        <p>
-          &nbsp;&nbsp;I'm Tony Baek, a computer sicence student.
-          <br>
-        </p>
+        <p>I'm Sung-Jun(Tony) Baek, a computer science recent graduate.</p>
         <p>Currently looking for a job for 2022 Summer.</p>
         <p>I mainly focus for clean code, Java, Python, Javascript.</p>
         <p>I'm currently interested in an application development for administrative automation and GUI development.</p>

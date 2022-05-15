@@ -125,7 +125,7 @@ function create_description_div(content) {
 //control display on button click
 function description_display(button) {
     let description_div = button.nextElementSibling;
-    if (button.textContent == "learn more") {
+    if (button.textContent === "learn more") {
         description_div.style.display = "block";
         button.textContent = "show less"
     } else {
@@ -160,7 +160,7 @@ function set_button(box_div, description_btn, event_description) {
 }
 
 //returns target events from given events by title
-var filterByTitle = function(events, value) {
+let filterByTitle = function(events, value) {
     return new Promise(function(resolve, reject) {
         let event_list = [];
         events.forEach(item =>{
@@ -183,7 +183,7 @@ var filterByTitle = function(events, value) {
 }
 
 //returns target events from given events by description
-var filterByDesc = function(events, value) {
+let filterByDesc = function(events, value) {
     return new Promise(function(resolve, reject) {
         let event_list = [];
         events.forEach(item =>{
@@ -323,7 +323,7 @@ function viewAllEvents(events) {
 
       //adds all required card-like elements into main container
       events.forEach(item => {
-          if (index % 5 == 0) {
+          if (index % 5 === 0) {
               row_div= create_row_div();
               box_repeater.appendChild(row_div);
           }

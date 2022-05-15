@@ -1,7 +1,8 @@
 /* Shared CSS for all pages with nav tag in it */
 
+
 header {
-    display: flex;
+    display: block;
     position: relative;
     width: 100%;
     max-width: 100%;
@@ -11,8 +12,23 @@ header {
     margin: 0;
 }
 
+div#top_bar {
+    display: flex;
+    width: 100%;
+    background-color: #c0ded7;
+}
+
+label#dark_mode_label {
+    float: right;
+    position: absolute;
+    top: 4px;
+    right: 2em;
+    z-index: 3;
+}
+
 label#checkbox_label {
     display: none;
+    z-index: 3;
 }
 
 input#hamburger_icon {
@@ -46,8 +62,6 @@ div.header_div h1 {
                                 #b9936c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: -webkit-background-clip;
-    background-clip : text;
     color: transparent;
     background-size: 100%;
     animation: animation_normal 0.5s ease forwards;

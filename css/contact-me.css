@@ -41,7 +41,6 @@ h2#menu_title {
 }
 
 h2#menu_title::after {
-    display: flex;
     content: "";
     display: inline-block;
     position: relative;
