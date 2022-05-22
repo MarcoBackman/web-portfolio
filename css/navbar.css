@@ -7,15 +7,15 @@ header {
     width: 100%;
     max-width: 100%;
     align-items: center;
-    background-color: #c0ded7;
+    background-color: #571616;
     padding: 0;
     margin: 0;
+    transition-duration: 0s;
 }
 
 div#top_bar {
-    display: flex;
+    display: block;
     width: 100%;
-    background-color: #c0ded7;
 }
 
 label#dark_mode_label {
@@ -51,20 +51,45 @@ ul#burger_menu {
 }
 
 #stripe_box:hover {
-    background-color: #8ea7a0;
+    background-color: #411515;
     transition-duration: 0.3s;
 }
 
 div.header_div h1 {
     /* Fallback: Set a background color. */
-    background: linear-gradient(90deg,
-                                #7e4a35,
-                                #b9936c);
+    background-color: #383838;
+
+    /* Create the gradient. */
+    background-image: linear-gradient(
+            45deg,
+            #e3e3e3 50%,
+            #fda4a4 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
     background-size: 100%;
-    animation: animation_normal 0.5s ease forwards;
+    z-index: 1;
+}
+
+h2#menu_title {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    color: #b9936c;
+    margin: 0;
+    padding-left: 1.5em;
+    padding-top: 1em;
+    background-color: #4d4d4d;
+}
+
+h2#menu_title::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    width: 55%;
+    border-bottom: 2px solid #b9936c;
+    margin-bottom: 1em;
 }
 
 /* Blurs in and out */
@@ -78,17 +103,16 @@ div.header_div h1 {
   }
 
 nav#nav_bar {
-    display: flex;
+    display: block;
     position: relative;
     width: 100%;
     max-width: 100%;
 }
 
 div.header_div {
-    display: flex;
+    display: block;
     position: relative;
-    width: 90%;
-    padding-left: 1em;
+    width: 100%;
 }
 
 div.header_div a {
@@ -96,29 +120,52 @@ div.header_div a {
 }
 
 h1#main_title {
-    display: flex;
+    display: block;
     position: relative;
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    font-size: 50px;
+    font-family: Georgia, serif;
     align-items: flex-start;
     animation: 1s ease-out 0s 1 opacity_effect;
+    text-align: center;
+    margin: 1em auto 0.3em auto;
+}
+
+h2#sub_title {
+    display: block;
+    position: relative;
+    font-size: 35px;
+    font-family: Georgia, serif;
+    align-items: flex-start;
+    animation: 1s ease-out 0s 1 opacity_effect;
+    text-align: center;
+    color: #605a14;
+    margin: 0 auto 1em auto;
 }
 
 li.outer_list {
     width: 100%;
 }
 
+li#title_list,
+li#title_list a {
+    display: block;
+    width: 100%;
+    transition-duration: 0s;
+}
+
 ul.inner_lists {
     display: flex;
     position: relative;
-    width: 80%;
-    margin-left: 1em;
+    width: 100%;
+    justify-content: center;
     padding: 0;
+    transition-duration: 0s;
 }
 
 li.nav_li_item {
     display: flex;
     position: relative;
-    margin-right: 0.5em;
+    padding: 0 0 0 1em;
 }
 
 li.nav_li_item a {
@@ -127,19 +174,17 @@ li.nav_li_item a {
     text-decoration: none;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    font-family: Georgia, serif;
     animation: 1s ease-out 0s 1 opacity_effect;
 }
 
 ul.inner_lists a p {
     margin: 0;
-    border-color: #a2836e;
-    border-style: solid;
-    border-width: 2px;
+    border: 3px solid #7e4a35;
     border-radius: 5px;
-    padding: 0.5em;
     color: #a2836e;
     transition-duration: 0.5s;
+    padding: 1em 2em 1em 2em;
 }
 
 ul.inner_lists a p:hover {
@@ -173,10 +218,8 @@ p#highlight {
     ul.outer_lists {
         display: flex;
         width: 100%;
-        margin: 0;
-        margin-left: 2em;
-        margin-right: 2em;
-        margin-bottom: 1em;
+        margin: 0 0 1em 0;
+        padding: 0;
     }
 
     li.outer_list {
@@ -189,13 +232,15 @@ p#highlight {
         width: 100%;
     }
 
-    li.nav_li_item, li.nav_li_item > a{
+    li.nav_li_item, li.nav_li_item > a {
         display: block;
         position: relative;
-        width: 100%;
+        width: 95%;
         text-decoration: none;
         font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
         animation: 1s ease-out 0s 1 opacity_effect;
+        padding: 0 1em 0 1em;
     }
+
 }
 
