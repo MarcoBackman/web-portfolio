@@ -1,6 +1,6 @@
 'use strict';
 const CURRENCY_UNIX_SYMBOL_FILE = "../src/data/currency_code.txt"
-const LOCAL_CURRENCY_RATE = "https://www.bankofcanada.ca/valet/observations/group/FX_RATES_DAILY/xml?start_date=2017-01-03"
+const CURRENCY_RATE_API = "https://www.bankofcanada.ca/valet/observations/group/FX_RATES_DAILY/xml?start_date=2017-01-03"
 
 function ConvertHexToString(str) {
     return unescape(str.replace(/\\/g, "%"));
@@ -69,7 +69,7 @@ async function fetchSymbolData(currency_rate) {
 //parse currency rate data - contains DOM format
 async function fetchCurrencyRate() {
     //Gets lists of currecy objects(rate and symbols)
-    let sets = await fetch(LOCAL_CURRENCY_RATE)
+    let sets = await fetch(CURRENCY_RATE_API)
     .then(response => response.text())
     .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
     .then(async(data) => {

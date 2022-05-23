@@ -2,6 +2,7 @@
 
 footer {
     display: flex;
+    position: relative;
     background-color: #571616;
     color: #b9936c;
     text-align: center;
@@ -17,7 +18,7 @@ footer.main_footer {
 }
 
 footer.main_footer, footer.social_media {
-    display: flex;
+    display: block;
     position: relative;
     align-items: center;
     margin: 0;
@@ -33,7 +34,6 @@ ul.footer_list {
 }
 
 li.footer_li_item {
-    display: block;
     position: relative;
     margin-left: 0.5em;
     margin-right: 0.5em;

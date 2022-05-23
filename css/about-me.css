@@ -21,20 +21,70 @@ body {
 }
 
 section#main_section{
+    display: block;
+    position: relative;
+    width: 100%;
     min-height: 750px;
-    background-color: #ffffff;
+    height: auto;
+    background-color: #cecece;
 }
 
 div#menu_title_div {
     margin: 0;
 }
 
+div.subtitle {
+    display: block;
+    position: relative;
+    margin: 3em 0 0 0;
+    text-align: center;
+    font-family: Consolas, serif;
+}
+
 article#introduction {
+    display: flex;
+    position: relative;
     margin-top: 2em;
     padding: 2em;
 }
 
-article#introduction p {
+aside#photograph {
+    display: inline;
+    position: relative;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url("../src/img/leaf1.jpg");
+    height: fit-content;
+}
+
+aside#photograph img {
+    height: auto;
+    width: 200px;
+    border: 2px solid #1f1f1f;
+    border-radius: 10px;
+    image-rendering: optimizeQuality;
+    opacity: 0.95;
+}
+
+aside#photograph img:hover {
+    opacity: 0.8;
+}
+
+article#introduction {
+    display: inline-flex;
+    position: absolute;
+    width: 90%;
+    height: 500px;
+    background: #FFFFFF;
+    left: 2%;
+    right: 2%;
+    padding: 2em;
+}
+
+div.description_content p {
+    display: block;
+    font-size: 12px;
+    overflow-wrap: break-word;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-    margin: 0;
+    margin: 0 0 0 1em;
 }
