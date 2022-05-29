@@ -66,5 +66,9 @@ iframe#resume_pdf {
 }
 
 @media only screen and (max-width: 768px) {
-
+    iframe#resume_pdf {
+        margin-left: 0;
+        width: 100%;
+        height: 110vw;
+    }
 }
