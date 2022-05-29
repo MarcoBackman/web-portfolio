@@ -42,7 +42,7 @@ li.footer_li_item {
 
 li.footer_li_item a {
     display: inherit;
-
+    color: #b9936c;
     text-decoration: none;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     transition-duration: 0.5s;
@@ -75,6 +75,11 @@ div.copyright p {
 /* Apply screen size lower than 768 */
 
 @media only screen and (max-width: 768px) {
+
+    section#main_section {
+        margin: 0;
+        padding: 0;
+    }
 
     footer.main_footer, footer.social_media {
         display: flex;
@@ -125,11 +130,13 @@ div.copyright p {
     li.footer_li_item a {
         text-decoration: underline;
         padding: 0;
+        margin: 0;
     }
 
     li.footer_li_item a p {
+        width: 90%;
         padding: 0;
-        margin-left: 0;
+        margin: 0.5em 0 0.5em 2em;
         text-align: left;
     }
 }

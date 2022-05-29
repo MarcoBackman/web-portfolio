@@ -53,3 +53,79 @@ h2#menu_title::after {
     padding-left: 2em;
     padding-right: 2em;
 }
+
+li.skill_item {
+    list-style: none;
+    margin: 1em 0 0 1em;
+    padding: 0 0 0 1em;
+    width: 93%;
+    border: 3px solid #6b6b6b;
+    border-radius: 10px;
+}
+
+h3.title {
+    font-family: "Book Antiqua", Roboto, Helvetica, Arial, serif;
+}
+
+div.card {
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    border: none;
+}
+
+div.card img {
+    width: 230px;
+    height: 230px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+div.skill_description {
+    width: 100%;
+}
+
+li.inner_list > img {
+    width: 70px;
+    height: 70px;
+}
+
+div.experience_bar {
+    width: 250px;
+    margin-bottom: 1em;
+}
+
+div.progress > div.full {
+    background-color: #4cc44c;
+}
+
+div.progress > div.middle {
+    background-color: #e87f42;
+}
+
+@media only screen and (max-width: 768px) {
+
+    li.skill_item {
+        padding: 1em 0.5em 1em 0.5em;
+    }
+
+    h3.title {
+        text-align: center;
+    }
+
+    div.card {
+        flex-flow: column;
+        margin: 0 0 1em 0;
+    }
+
+    div.experience_bar {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    div.card > img {
+        align-self: center;
+    }
+
+}

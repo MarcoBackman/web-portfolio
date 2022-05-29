@@ -73,3 +73,13 @@ span#main_description {
     animation: 4s ease 0s normal forwards 1 fadein;
 }
 
+@media only screen and (max-width: 768px) {
+    span#main_name:after {
+
+    }
+
+    span#main_description {
+        margin: 0;
+        padding: 0;
+    }
+}

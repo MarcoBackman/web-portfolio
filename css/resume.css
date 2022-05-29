@@ -54,3 +54,17 @@ h2#menu_title::after {
     padding-top: 2em;
     padding-bottom: 2em;
 }
+
+div#content_div p {
+    text-align: center;
+}
+
+iframe#resume_pdf {
+    margin-left: 10%;
+    width: 80%;
+    height: 60vw;
+}
+
+@media only screen and (max-width: 768px) {
+
+}

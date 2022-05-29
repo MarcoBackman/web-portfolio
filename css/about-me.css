@@ -41,13 +41,6 @@ div.subtitle {
     font-family: Consolas, serif;
 }
 
-article#introduction {
-    display: flex;
-    position: relative;
-    margin-top: 2em;
-    padding: 2em;
-}
-
 aside#photograph {
     display: inline;
     position: relative;
@@ -71,20 +64,70 @@ aside#photograph img:hover {
 }
 
 article#introduction {
-    display: inline-flex;
-    position: absolute;
+    display: flex;
+    position: relative;
     width: 90%;
-    height: 500px;
-    background: #FFFFFF;
+    background-image: linear-gradient(
+            90deg,
+            #571616 200px,
+            #571616 201px,
+            #4d4d4d 202px,
+            #4d4d4d 100%
+    );
+    color: #FFFFFF;
     left: 2%;
     right: 2%;
     padding: 2em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+}
+
+div#description_section {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    height: fit-content;
+}
+
+h2.header_content {
+    display: block;
+    position: relative;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    padding: 0 0 0 1em;
+}
+
+span#welcome {
+    font-size: 32px;
+    color: #bbb1b1;
+}
+
+div.description_content {
+    display: block;
+    position: relative;
 }
 
 div.description_content p {
-    display: block;
-    font-size: 12px;
+    font-size: 15px;
     overflow-wrap: break-word;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-    margin: 0 0 0 1em;
+    margin: 0 0 0 2em;
+}
+
+@media only screen and (max-width: 768px) {
+
+    article#introduction {
+        width: 84%;
+    }
+
+    aside#photograph {
+        padding: 10px;
+    }
+
+    aside#photograph img{
+        width: 120px;
+    }
+
+    div#description_section {
+        margin-left: 0.5em;
+    }
 }
