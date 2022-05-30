@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000" />
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="./../css/exchange-rate.css">
+    <link rel="stylesheet" href="./../css/navbar.css">
+    <link rel="stylesheet" href="./../css/footer.css">
+    <link rel="stylesheet" href="./../css/dark-mode.css">
+
+    <script src="./../js/currency-filter.js" defer></script>
+
+    <title>Exchange rate viewer</title>
+</head>
+<body>
+    <section id="main_section">
+        <div id="menu_title_div">
+            <h2 id="menu_title">Exchange Rate Viewer<br></h2>
+            <h3 class="sub_title">Description</h3>
+            <p class="project_description">
+                This project used public API data with 8-bit currency unicode sets.<br>
+                Currency boxes below is to simply show the convertable currencies.<br>
+                Created on March 2022. By Sung-Jun(Tony) Baek.
+            </p>
+            <h3 class="sub_title">How to use</h3>
+            <p class="">
+                Select origin currency to desired currency you wish to convert.<br>
+                Enter the origin money amount. After pressing submit, the result will be shown in the result box.
+            </p>
+            <h3 class="sub_title">Additional development info</h3>
+            <p>
+                Exchange rate provided by Bank of Canada: <a href="https://www.bankofcanada.ca">https://www.bankofcanada.ca</a>
+            </p>
+            <h3 class="sub_title">GitHub</h3>
+            <p>
+                View java script code:
+                <a href="https://github.com/MarcoBackman/web-portfolio/blob/main/js/currency-filter.js">
+                    https://github.com/MarcoBackman/web-portfolio/blob/main/js/currency-filter.js
+                </a>
+                <br>
+            </p>
+            <p>Download currency rate data API from 2017 to current date
+                <button>
+                    <a href="https://www.bankofcanada.ca/valet/observations/group/FX_RATES_DAILY/xml?start_date=2017-01-03">
+                        Download
+                    </a>
+                </button>
+            </p>
+            <div>
+                <p>
+                    Raw currency unicode
+                </p>
+                <iframe id="currency_code" src="../src/data/currency_code.txt">
+
+                </iframe>
+            </div>
+        </div>
+        <div id="currency_div">
+            <h2 id="exchange_rate_headline"></h2>
+            <label class="exchange_label">
+                From
+                <select name="currency" id="currency_from">
+                    <option value="-">-</option>
+                </select>
+            </label>
+            <label class="exchange_label">
+                To
+                <select name="currency" id="currency_to">
+                    <option value="-">-</option>
+                </select>
+            </label>
+            <label class="exchange_label">
+                Amount
+                <input type="text" id="user_amount" name="user_amount">
+            </label>
+            <label class="exchange_label">
+                Result
+                <input type="text" id="result" name="result" readonly="readonly">
+            </label>
+            <label class="exchange_label" id ="clear_label">
+                <input type="button" id="submit_button" name="submit_button" value="submit">
+            </label>
+            <div id="currency_symbol_div">
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
