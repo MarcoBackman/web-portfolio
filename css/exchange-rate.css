@@ -4,11 +4,12 @@ body {
 }
 
 h3.sub_title {
-    text-align: center;
+    text-align: left;
+    margin-left: 2em;
 }
 
 p.project_description {
-    text-align: center;
+    text-align: left;
     font-family: Consolas, Roboto, Helvetica, Arial, serif;
 }
 
@@ -66,9 +67,9 @@ div#currency_div > label input {
 }
 
 div#currency_div > label input#submit_button {
+    cursor: pointer;
     background-color: #4d4d4d;
     border-radius: 8px;
-    border-style: inset 1px 2px 5px #563f46;
     color: #ffffff;
     margin-top: 0.5em;
     width: 270px;
@@ -83,8 +84,12 @@ div#currency_div > label input#submit_button:hover {
     transition-duration: 0.3s;
 }
 
-input#user_amount, input#result {
+input#user_amount {
     width: 140px;
+}
+
+input#result {
+    cursor: default;
 }
 
 div#currency_symbol_div {
@@ -97,6 +102,7 @@ div#currency_symbol_div {
 }
 
 div.symbol_box {
+    cursor: default;
     float: left;
     width: 80px;
     height: 80px;
@@ -111,14 +117,13 @@ div.symbol_box {
 }
 
 div.symbol_box:hover {
+    cursor: default;
     transition-duration: 0.3s;
     background-color: #bbab9b;
 }
 
 p.country_code_p {
     text-align: center;
-    margin: 0;
-    margin-top: 0.5em;
 }
 
 p.symbol_p {
