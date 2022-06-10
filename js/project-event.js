@@ -1,6 +1,6 @@
 'use strict';
 //hosted rss feed server
-const RSS_LOCAL = `http://18.219.119.188:8080/rss`;
+const RSS_LOCAL = `http://18.191.207.59:8080/rss`;
 const DEFAULT_IMG = './../src/img/jsMeme.jpg';
 const MONTHS_NUM = {'Jan' : 1,
                     'Feb' : 2,

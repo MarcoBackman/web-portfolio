@@ -33,14 +33,6 @@
             <p>
                 Exchange rate provided by Bank of Canada: <a href="https://www.bankofcanada.ca">https://www.bankofcanada.ca</a>
             </p>
-            <h3 class="sub_title">GitHub</h3>
-            <p>
-                View java script code:
-                <a href="https://github.com/MarcoBackman/web-portfolio/blob/main/js/currency-filter.js">
-                    https://github.com/MarcoBackman/web-portfolio/blob/main/js/currency-filter.js
-                </a>
-                <br>
-            </p>
             <p>Download currency rate data API from 2017 to current date
                 <button>
                     <a href="https://www.bankofcanada.ca/valet/observations/group/FX_RATES_DAILY/xml?start_date=2017-01-03">
@@ -50,13 +42,21 @@
             </p>
             <div>
                 <p>
-                    Raw currency unicode
+                    Raw currency unicode. Curreny unicode is read from AWS S3 Bucket with enabled CORS
                 </p>
-                <iframe id="currency_code" src="../src/data/currency_code.txt">
+                <iframe id="currency_code" src="https://webdatabucket.s3.us-east-2.amazonaws.com/currency_code.txt">
 
                 </iframe>
             </div>
         </div>
+        <h3 class="sub_title">GitHub</h3>
+        <p>
+            View java script code:
+            <a href="https://github.com/MarcoBackman/web-portfolio/blob/main/js/currency-filter.js">
+                https://github.com/MarcoBackman/web-portfolio/blob/main/js/currency-filter.js
+            </a>
+            <br>
+        </p>
         <h3 class="sub_title">Program</h3>
         <div id="currency_div">
             <h2 id="exchange_rate_headline"></h2>
@@ -83,6 +83,7 @@
             <label class="exchange_label" id ="clear_label">
                 <input type="button" id="submit_button" name="submit_button" value="submit">
             </label>
+            <h2 style="text-align:center;">Available Currencies</h2>
             <div id="currency_symbol_div">
 
             </div>

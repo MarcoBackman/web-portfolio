@@ -1,5 +1,5 @@
 'use strict';
-const CURRENCY_UNIX_SYMBOL_FILE = "../src/data/currency_code.txt"
+const CURRENCY_UNIX_SYMBOL_FILE = "https://webdatabucket.s3.us-east-2.amazonaws.com/currency_code.txt"
 const CURRENCY_RATE_API = "https://www.bankofcanada.ca/valet/observations/group/FX_RATES_DAILY/xml?start_date=2017-01-03"
 
 function ConvertHexToString(str) {
@@ -40,9 +40,15 @@ function add_currency_option(country_code, currency_symbols) {
 
 //parse currency symbol unicode
 async function fetchSymbolData(currency_rate) {
-    let currency_symbols = await fetch(CURRENCY_UNIX_SYMBOL_FILE)
-    .then((response) => response.text())
-    .then(str => {
+    let currency_symbols = await fetch(CURRENCY_UNIX_SYMBOL_FILE, {
+        //mode:'cors',
+        method: 'GET',
+        headers: {
+            Accept: 'text/html'
+        }
+    }).then((response) => {
+        return response.text();
+    }).then(str => {
         let lines = str.split('\n');
 
         //Key - country code, Value - decoded unicode
@@ -62,7 +68,7 @@ async function fetchSymbolData(currency_rate) {
         //Add data to HTML components
         add_currency_option(country_code, currency_symbols);
         return currency_symbols;
-    });
+    }).catch((error) => console.log(error));
     return currency_symbols;
 }
 
