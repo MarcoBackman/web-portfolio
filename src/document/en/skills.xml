@@ -1,0 +1,48 @@
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<skills>
+    <skill id="java">
+        <title>Java Tech Skills</title>
+        <list>
+            <subject>Java version</subject>
+            <content>Used version 8 and 17</content>
+        </list>
+        <list>
+            <subject>Spring Boot MCV</subject>
+            <content>Implemented API endpoint services to handle user requests</content>
+        </list>
+    </skill>
+    <skill id="python">
+
+    </skill>
+    <skill id="front-end">
+
+    </skill>
+    <skill id="aws">
+
+    </skill>
+    <skill id="database">
+
+    </skill>
+    <skill id="script">
+
+    </skill>
+    <skill id="ci/cd">
+
+    </skill>
+    <skill id="cloud-service">
+
+    </skill>
+    <skill id="extra">
+        <list>
+            <subject>Maven</subject>
+            <content>Used maven to improve spring projects package management</content>
+        </list>
+        <list>
+            <subject>Gradle</subject>
+            <content>Used gradle to improve spring projects package management</content>
+        </list>
+    </skill>
+
+</skills>
