@@ -1,131 +1,208 @@
 /* CSS for skills.html page */
-
 body {
     width: 100%;
     background-color: #FFFFFF;
     margin: 0;
+    overflow-x: hidden;
 }
 
 section#main_section{
-    min-height: 750px;
-    background-color: #ffffff;
+    min-height: 100vh;
+    background-color: #6e5773;
 }
 
-#inner_lists a p#high_light_tab {
-    border-color: #563f46;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    color: #563f46;
-}
-
-#inner_lists a p#high_light_tab:hover {
-    border-color: #bbab9b;
-    color: #bbab9b;
-    border-radius: 25px;
-    transition-duration: 0.3s;
-}
-
-h2#menu_title {
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-    color: #b9936c;
-    margin: 0;
-    padding-top: 1em;
-    padding-left: 1.5em;
-    background-color: #c0ded7;
-}
-
-h2#menu_title::after {
-    content: "";
-    display: inline-block;
-    position: relative;
-    margin-top: 0;
-    padding-top: 0;
-    width: 55%;
-    border-bottom: 2px solid #b9936c;
-    margin-bottom: 1em;
-}
-
-#skill_box {
+section#grid-box-panel {
     display: block;
     position: relative;
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-    padding-left: 2em;
-    padding-right: 2em;
-}
-
-li.skill_item {
-    list-style: none;
-    margin: 1em 0 0 1em;
-    padding: 0 0 0 1em;
-    width: 93%;
-    border: 3px solid #6b6b6b;
-    border-radius: 10px;
-}
-
-h3.title {
-    font-family: "Book Antiqua", Roboto, Helvetica, Arial, serif;
-}
-
-div.card {
-    display: flex;
-    flex-flow: row;
-    position: relative;
-    border: none;
-}
-
-div.card img {
-    width: 230px;
-    height: 230px;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-}
-
-div.skill_description {
+    margin-top: 5em;
     width: 100%;
 }
 
-li.inner_list > img {
-    width: 70px;
-    height: 70px;
+div#grid-box-wrapper {
+    display: block;
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    width: 50%;
+    min-height: 100vh;
+    margin: 0 auto 0 auto;
+    padding-bottom: 2em;
 }
 
-div.experience_bar {
-    width: 250px;
-    margin-bottom: 1em;
+section.grid-box-row {
+    display: flex;
+    position: relative;
 }
 
-div.progress > div.full {
-    background-color: #4cc44c;
+section#first-box-row {
+    display: block;
+    position: relative;
+    min-height: 45em;
+    max-height: 45em;
+}
+section#second-box-row {
+    display: block;
+    position: relative;
+    min-height: 45em;
+    max-height: 45em;
 }
 
-div.progress > div.middle {
-    background-color: #e87f42;
+section#third-box-row {
+    display: block;
+    position: relative;
+    min-height: 45em;
+    max-height: 45em;
+    margin-bottom: 10em;
 }
 
-@media only screen and (max-width: 768px) {
 
-    li.skill_item {
-        padding: 1em 0.5em 1em 0.5em;
+gridbox.grid-box {
+    display: inline-flex;
+    position: absolute;
+    background-color: #FFFFFF;
+    border-radius: 17px;
+    border-color: #ea9085;
+    border-right-color: #6e5773;
+    border-top-color: #6e5773;
+    border-left-color: #4f323b;
+    border-bottom-color: #4f323b;
+    border-style: solid;
+    border-width: 5px;
+    width: 300px;
+    height: 280px;
+    overflow: hidden;
+    cursor: pointer;
+    transition-duration: 2s;
+}
+
+gridbox.grid-box > img {
+    display: inline-block;
+    width: 160px;
+    height: 150px;
+    margin: auto;
+}
+
+gridbox.grid-box > figcaption {
+    display: block;
+    position: absolute;
+    align-items: end;
+    font-family: sans-serif;
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 37% 0 30% 0;
+    text-align: center;
+    background: var(--c,#0009);
+    width: 100%;
+    height: 100%;
+    clip-path: inset(0 var(--_i,100%) 0 0);
+    mask:
+            linear-gradient(#000 0 0),
+            linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    -webkit-mask-clip: text, padding;
+    margin: -1px;
+}
+
+gridbox:hover figcaption{
+    --_i: 0%;
+}
+
+gridbox:hover img {
+    width: 260px;
+    height: 220px;
+    filter: brightness(0) saturate(100%) invert(91%) sepia(0%) saturate(118%) hue-rotate(138deg) brightness(93%) contrast(82%);
+    -webkit-filter: brightness(0) saturate(100%) invert(91%) sepia(0%) saturate(118%) hue-rotate(138deg) brightness(93%) contrast(82%);
+    transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+}
+
+gridbox:hover {
+    transition-duration: 2s;
+    -webkit-transition-duration: 2s;
+    min-width: 420px;
+    min-height: 400px;
+    z-index: 1;
+}
+
+gridbox>div.skill-detail-panel {
+    display: block;
+    opacity: 0;
+    position: fixed;
+    background-color: rgba(79, 50, 59, 0.76);
+    color: floralwhite;
+    border-color: #EA9085FF;
+    border-style: solid;
+    transition-duration: 0.5s;
+    border-radius: 11px;
+    pointer-events: none;
+}
+
+div.skill-detail-panel>p{
+    margin: 1em;
+}
+
+gridbox:hover div.skill-detail-panel {
+    display: flow-root;
+    position: fixed;
+    position: -ms-device-fixed;
+    opacity: 1;
+}
+
+gridbox > div.skill-detail-panel-left {
+    top: 25vh;
+    right: 5%;
+    width: 30vw;
+    height: 55vh;
+}
+
+gridbox > div.skill-detail-panel-right {
+    top: 25vh;
+    right: 5%;
+    width: 30vw;
+    height: 55vh;
+}
+
+figure:hover img {
+    transform: scale(1.2);
+    transition-duration: 2s;
+}
+
+gridbox.first-box-item {
+    top: 1em;
+    left: 1em;
+}
+
+gridbox.second-box-item {
+    top: 15em;
+    left: 15em;
+}
+
+gridbox.third-box-item {
+    top: 30em;
+    left: 30em;
+}
+
+@supports not (-webkit-mask-clip: text) {
+    figure figcaption {
+        -webkit-mask: none;
+        color: #fff;
+    }
+}
+
+
+@media only screen and (max-width: 1450px) {
+
+    gridbox > div.skill-detail-panel-left {
+        top: 25vh;
+        left: 5%;
+        width: 30vw;
+        height: 55vh;
     }
 
-    h3.title {
-        text-align: center;
+    div#grid-box-wrapper {
+        width: 70%;
+        min-height: 100vh;
+        margin: auto;
     }
-
-    div.card {
-        flex-flow: column;
-        margin: 0 0 1em 0;
-    }
-
-    div.experience_bar {
-        width: 90%;
-        margin-left: 5%;
-    }
-
-    div.card > img {
-        align-self: center;
-    }
-
 }

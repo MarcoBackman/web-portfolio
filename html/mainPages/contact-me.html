@@ -1,65 +1,57 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000" />
-    <meta charset="utf-8">
-
-    <link rel="stylesheet" href="./../css/contact-me.css">
-    <link rel="stylesheet" href="./../css/navbar.css">
-    <link rel="stylesheet" href="./../css/footer.css">
-    <link rel="stylesheet" href="./../css/dark-mode.css">
-
-    <script src="./../js/currency-filter.js" defer></script>
-
+    <link rel="stylesheet" href="../../css/contact-me.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/dark-mode.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+      $(function() {
+        $("#top-bar").load("../components/top-bar.html");
+      });
+    </script>
     <title>Sung-Jun(Tony) Baek</title>
   </head>
   <body>
-    <label id="checkbox_label">
-      <input type="image" id="hamburger_icon" name="hamburger_list"
-             alt="img" src="../src/img/hamburgerIcon.png" checked>
-    </label>
-    <label id="darkmode_label">
-      View in Dark Mode
-      <input type="checkbox" id="darkmode" name="darkmode">
-    </label>
     <header>
+      <div id="top-bar"></div>
       <nav id="nav_bar">
         <div class="header_div">
           <ul id="menu_nav" class="outer_lists">
-            <li class="outer_list">
-              <div class="header_div">
-                <a href="../index.html">
-                  <h1 id="main_title">Sung-Jun(Tony) Baek</h1>
-                  <h2 id="sub_title">my portfolio</h2>
-                </a>
-              </div>
-            </li>
-            <li class="outer_list">
+            <li id="category_list" class="outer_list">
               <ul class="inner_lists">
                 <li class="nav_li_item">
-                  <a href="about-me.html">
-                      <p>About me</p>
+                  <a href="../../index.html">
+                    <p>Home</p>
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="skills.html">
-                    <p >Marketable skills and abilities</p>
+                  <a href="./about-me.html">
+                    <p id="about-text">About me</p>
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="projects.html">
-                    <p>Projects</p>
+                  <a href="./skills.html">
+                    <p id="skills-text">Marketable skills and abilities</p>
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="resume.html">
-                    <p>Resume</p>
+                  <a href="./projects.html">
+                    <p id="project-text">Projects</p>
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="contact-me.html">
-                    <p id="highlight">Contact me</p>
+                  <a href="./resume.html">
+                    <p id="resume-text">Resume</p>
+                  </a>
+                </li>
+                <li class="nav_li_item">
+                  <a href="./contact-me.html">
+                    <p id="contact-text" class="highlight">Contact me</p>
                   </a>
                 </li>
               </ul>
@@ -120,11 +112,11 @@
           </div>
       </div>
     </section>
-    <footer class="main_footer">
+    <footer class="social_media">
       <ul class="footer_list">
         <li class="footer_li_item">
           <a href="./about-me.html">
-              <p>About me</p>
+            <p>About me</p>
           </a>
         </li>
         <li class="footer_li_item">
@@ -144,25 +136,23 @@
         </li>
         <li class="footer_li_item">
           <a href="./contact-me.html">
-              <p>Contact me</p>
+            <p>Contact me</p>
           </a>
         </li>
       </ul>
-    </footer>
-    <footer class="social_media">
       <ul class="footer_list">
         <li class="footer_li_item">
-          <a href="./about-me.html">
-              <p>LinkedIn</p>
+          <a href="">
+            <p>LinkedIn</p>
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="./skills.html">
+          <a href="">
             <p>Google Scholar</p>
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="./resume.html">
+          <a href="">
             <p>ResearchGate</p>
           </a>
         </li>

@@ -1,10 +1,8 @@
 /* Shared CSS for all pages with footer tag in it */
 
 footer {
-    display: flex;
-    position: relative;
-    background-color: #571616;
-    color: #b9936c;
+    display: block;
+    position: absolute;
     text-align: center;
 }
 
@@ -22,6 +20,11 @@ footer.main_footer, footer.social_media {
     position: relative;
     align-items: center;
     margin: 0;
+}
+
+.footer-row {
+    display: flex;
+    width: 100%;
 }
 
 ul.footer_list {
@@ -53,19 +56,15 @@ li.footer_li_item a:hover {
     transition-duration: 0.5s;
 }
 
-div.copyright {
+div#footer-copyright {
     display: block;
     position: relative;
-    width: 100%;
-    min-width: 100%;
-    background-color: #571616;
-    color: #b9936c;
     padding-top: 1.2em;
     padding-bottom: 2.5em;
     margin: 0;
 }
 
-div.copyright p {
+div#footer-copyright p {
     text-align: center;
     align-items: center;
     margin: 0;
@@ -74,6 +73,7 @@ div.copyright p {
 
 /* Apply screen size lower than 768 */
 
+/*
 @media only screen and (max-width: 768px) {
 
     section#main_section {
@@ -139,4 +139,5 @@ div.copyright p {
         margin: 0.5em 0 0.5em 2em;
         text-align: left;
     }
-}
+
+}*/

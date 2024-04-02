@@ -49,20 +49,16 @@ h2#menu_title::after {
 
 #content_div {
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    height: 50vh;
 }
 
 div#content_div p {
     text-align: center;
 }
 
-iframe#resume_pdf {
-    margin-left: 10%;
-    width: 80%;
-    height: 60vw;
+embed#resume_pdf {
+    width: 100%;
+    min-height: 100%;
 }
 
 @media only screen and (max-width: 768px) {

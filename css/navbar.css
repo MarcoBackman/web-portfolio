@@ -7,28 +7,13 @@ header {
     width: 100%;
     max-width: 100%;
     align-items: center;
-    background-color: #571616;
+    background: -webkit-linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -webkit-linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
+    background: -o-linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -o-linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
+    background: -moz-linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -moz-linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
+    background: linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
     padding: 0;
     margin: 0;
     transition-duration: 0s;
-}
-
-div#top_bar {
-    display: block;
-    width: 100%;
-}
-
-label#dark_mode_label {
-    float: right;
-    position: absolute;
-    top: 4px;
-    right: 2em;
-    z-index: 3;
-}
-
-label#checkbox_label {
-    display: none;
-    z-index: 3;
 }
 
 input#hamburger_icon {
@@ -51,7 +36,7 @@ ul#burger_menu {
 }
 
 #stripe_box:hover {
-    background-color: #411515;
+    background-color: #e9e2d0;
     transition-duration: 0.3s;
 }
 
@@ -72,13 +57,27 @@ div.header_div h1 {
     z-index: 1;
 }
 
+section#main_section {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+div#menu_title_div {
+    width: 100%;
+}
+
 h2#menu_title {
+    display: inline-block;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     font-weight: bold;
     font-size: 24px;
-    color: #b9936c;
+    color: #ea9085;
     margin: 0;
+    width: calc(100% - 1.5em);
     padding-left: 1.5em;
+    padding-right: -1.5em;
     padding-top: 1em;
     background-color: #4d4d4d;
 }
@@ -89,9 +88,12 @@ h2#menu_title::after {
     position: relative;
     margin-top: 0;
     padding-top: 0;
-    width: 55%;
-    border-bottom: 2px solid #b9936c;
+    width: 90%;
+    border-bottom: 5px solid #ea9085;
     margin-bottom: 1em;
+    transition: max-width .6s;
+    transition-duration: 3s;
+    overflow: hidden;
 }
 
 /* Blurs in and out */
@@ -144,7 +146,7 @@ h2#sub_title {
     align-items: flex-start;
     animation: 1s ease-out 0s 1 opacity_effect;
     text-align: center;
-    color: #605a14;
+    color: #ea9085;
     margin: 0 auto 1em auto;
 }
 
@@ -160,23 +162,26 @@ li#title_list a {
 }
 
 ul.inner_lists {
-    display: flex;
+    display: inline-flex;
     position: relative;
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 0;
+    margin: 0;
     transition-duration: 0s;
 }
 
 li.nav_li_item {
-    display: flex;
+    display: block;
     position: relative;
     padding: 0 0 0 1em;
 }
 
 li.nav_li_item a {
-    display: flex;
+    display: block;
     position: relative;
+    width: 15vw;
+    text-align: center;
     text-decoration: none;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -184,43 +189,34 @@ li.nav_li_item a {
     animation: 1s ease-out 0s 1 opacity_effect;
 }
 
+li.nav_li_item a p {
+    color: #ffffff;
+}
+
 ul.inner_lists a p {
     margin: 0;
-    border: 3px solid #7e4a35;
+    border: 3px solid #e9e2d0;
     border-radius: 5px;
-    color: #a2836e;
     transition-duration: 0.5s;
     padding: 1em 2em 1em 2em;
 }
 
 ul.inner_lists a p:hover {
-    border-color: #6b6b6b;
-    border-style: dotted;
-    color: #585757;
-    border-radius: 25px;
+    border-color: #a74a41;
+    border-style: solid;
+    color: #b29db5;
     transition-duration: 0.5s;
 }
 
 /* Highlights the menu tab background */
-p#highlight {
-    color: #ffffff;
-    background-color:#a2836e
+p.highlight {
+    color: #ea9085;
+    background-color: #4f323b;
+    border: 6em;
 }
 
 /* Apply screen size lower than 768 */
 @media only screen and (max-width: 768px) {
-    label#checkbox_label {
-        display: block;
-    }
-
-    input#hamburger_icon {
-        display: inline-block;
-    }
-
-    input#hamburger_icon:checked ~ header ul#menu_nav {
-        display: none;
-    }
-
     ul.outer_lists {
         display: flex;
         width: 100%;

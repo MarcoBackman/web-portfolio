@@ -1,14 +1,4 @@
 /* CSS for contact-me.html page */
-
-header {
-    display: flex;
-    position: relative;
-    width: 100%;
-    align-items: center;
-    color: #c94c4c;
-    background-color: #deeaee;
-}
-
 body {
     width: 100%;
     background-color: #ffffff;
