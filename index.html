@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000" />
     <title>Sung-Jun(Tony) Baek</title>
-    <link rel="stylesheet" href="./css/top-bar.css">
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/dark-mode.css">
+    <link rel="stylesheet" href="src/css/top-bar.css">
+    <link rel="stylesheet" href="src/css/navbar.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/dark-mode.css">
     <link href="https://fonts.cdnfonts.com/css/games" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
@@ -17,8 +17,8 @@
         $("#top-bar").load("./html/components/top-bar.html");
       });
     </script>
-    <script src="js/parse-xml.js" type="text/javascript"></script>
-    <script language="JavaScript">
+    <script src="src/js/parse-xml.js" type="text/javascript"></script>
+    <script>
       let data = parseDataForIndexPage();
       console.log(data);
       //document.getElementById("main_intro").textContent = 'data';
@@ -40,27 +40,27 @@
           <li id="category_list" class="outer_list">
             <ul class="inner_lists">
               <li class="nav_li_item">
-                <a href="html/mainPages/about-me.html">
+                <a href="src/html/mainPages/about-me.html">
                   <p>About me</p>
                 </a>
               </li>
               <li class="nav_li_item">
-                <a href="html/mainPages/skills.html">
+                <a href="src/html/mainPages/skills.html">
                   <p>Skills</p>
                 </a>
               </li>
               <li class="nav_li_item">
-                <a href="html/mainPages/projects.html">
+                <a href="src/html/mainPages/projects.html">
                   <p>Projects</p>
                 </a>
               </li>
               <li class="nav_li_item">
-                <a href="html/mainPages/resume.html">
+                <a href="src/html/mainPages/resume.html">
                   <p>Resume</p>
                 </a>
               </li>
               <li class="nav_li_item">
-                <a href="html/mainPages/contact-me.html">
+                <a href="src/html/mainPages/contact-me.html">
                   <p>Contact me</p>
                 </a>
               </li>

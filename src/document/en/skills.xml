@@ -1,12 +1,26 @@
-
-
 <?xml version="1.0" encoding="utf-8"?>
 <skills>
     <skill id="java">
         <title>Java Tech Skills</title>
         <list>
             <subject>Java version</subject>
-            <content>Used version 8 and 17</content>
+            <content>Used version 8 to utilize <bold>functional interface</bold> for <bold>stream processing</bold> and <bold>bi-functions</bold> features.</content>
+            <content>Used version 17 to utilize <bold>record class</bold>(JDK 14) for immutable object data and <bold>sealed classes</bold> for enhanced switch statement.</content>
+        </list>
+        <list>
+            <subject>Spring Boot MVC</subject>
+            <content>Implemented API endpoint services to handle user requests with <bold>Filters</bold>.</content>
+            <content>Experienced <bold>JSP</bold> with <bold>JSPS</bold> to support both frontend and backend services.</content>
+        </list>
+        <list>
+            <subject>JDBC template, JPA, HQL, Hibernate, Jooq</subject>
+            <content>Implemented API endpoint services to handle user requests</content>
+            <content>Used <bold>JDBC</bold> for simple data fetch operation with <bold>prepared statement</bold>(parameterized query) to prevent SQL injection.</content>
+        </list>
+        <list>
+            <subject>Spring Cloud Gateway API</subject>
+            <content>Incorporated <bold>Resilience4j</bold>'s <bold>rate limiter</bold> and <bold>bulkhead</bold> features to prevent DoS attack</content>
+            <content>Implemented <bold>circuit breaker</bold> to prevent <bold>cascading</bold> failovers</content>
         </list>
         <list>
             <subject>Spring Boot MCV</subject>
