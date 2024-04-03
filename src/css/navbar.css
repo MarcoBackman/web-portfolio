@@ -1,0 +1,247 @@
+/* Shared CSS for all pages with nav tag in it */
+
+
+header {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    background: -webkit-linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -webkit-linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
+    background: -o-linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -o-linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
+    background: -moz-linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -moz-linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
+    background: linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
+    padding: 0;
+    margin: 0;
+    transition-duration: 0s;
+}
+
+input#hamburger_icon {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    width: 30px;
+    height: 30px;
+}
+
+ul#menu_nav {
+    display: inline-block;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul#burger_menu {
+    display: none;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+}
+
+#stripe_box:hover {
+    background-color: #e9e2d0;
+    transition-duration: 0.3s;
+}
+
+div.header_div h1 {
+    /* Fallback: Set a background color. */
+    background-color: #383838;
+
+    /* Create the gradient. */
+    background-image: linear-gradient(
+            45deg,
+            #e3e3e3 50%,
+            #fda4a4 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 100%;
+    z-index: 1;
+}
+
+section#main_section {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+div#menu_title_div {
+    width: 100%;
+}
+
+h2#menu_title {
+    display: inline-block;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #ea9085;
+    margin: 0;
+    width: calc(100% - 1.5em);
+    padding-left: 1.5em;
+    padding-right: -1.5em;
+    padding-top: 1em;
+    background-color: #4d4d4d;
+}
+
+h2#menu_title::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    width: 90%;
+    border-bottom: 5px solid #ea9085;
+    margin-bottom: 1em;
+    transition: max-width .6s;
+    transition-duration: 3s;
+    overflow: hidden;
+}
+
+/* Blurs in and out */
+@keyframes opacity_effect {
+    10% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+  }
+
+nav#nav_bar {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+div.header_div {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+div.header_div a {
+    text-decoration:none;
+}
+
+h1#main_title {
+    display: block;
+    position: relative;
+    font-size: 50px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    align-items: flex-start;
+    animation: 1s ease-out 0s 1 opacity_effect;
+    line-height: 1.2;
+    text-align: center;
+    margin: 1em auto 0.3em auto;
+}
+
+h2#sub_title {
+    display: block;
+    position: relative;
+    font-size: 35px;
+    font-family: Georgia, serif;
+    font-weight: 500;
+    line-height: 1.2;
+    align-items: flex-start;
+    animation: 1s ease-out 0s 1 opacity_effect;
+    text-align: center;
+    color: #ea9085;
+    margin: 0 auto 1em auto;
+}
+
+li.outer_list {
+    width: 100%;
+}
+
+li#title_list,
+li#title_list a {
+    display: block;
+    width: 100%;
+    transition-duration: 0s;
+}
+
+ul.inner_lists {
+    display: inline-flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    transition-duration: 0s;
+}
+
+li.nav_li_item {
+    display: block;
+    position: relative;
+    padding: 0 0 0 1em;
+}
+
+li.nav_li_item a {
+    display: block;
+    position: relative;
+    width: 15vw;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-family: Georgia, serif;
+    animation: 1s ease-out 0s 1 opacity_effect;
+}
+
+li.nav_li_item a p {
+    color: #ffffff;
+}
+
+ul.inner_lists a p {
+    margin: 0;
+    border: 3px solid #e9e2d0;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    padding: 1em 2em 1em 2em;
+}
+
+ul.inner_lists a p:hover {
+    border-color: #a74a41;
+    border-style: solid;
+    color: #b29db5;
+    transition-duration: 0.5s;
+}
+
+/* Highlights the menu tab background */
+p.highlight {
+    color: #ea9085;
+    background-color: #4f323b;
+    border: 6em;
+}
+
+/* Apply screen size lower than 768 */
+@media only screen and (max-width: 768px) {
+    ul.outer_lists {
+        display: flex;
+        width: 100%;
+        margin: 0 0 1em 0;
+        padding: 0;
+    }
+
+    li.outer_list {
+        width: 100%;
+    }
+
+    ul.inner_lists {
+        display: inline;
+        position: relative;
+        width: 100%;
+    }
+
+    li.nav_li_item, li.nav_li_item > a {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+        animation: 1s ease-out 0s 1 opacity_effect;
+        padding: 0 1em 0 1em;
+    }
+
+}
+

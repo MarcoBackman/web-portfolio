@@ -1,0 +1,143 @@
+/* Shared CSS for all pages with footer tag in it */
+
+footer {
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+/* All footer a tag contains the same color as parent */
+a {
+    color: inherit;
+}
+
+footer.main_footer {
+    padding-top: 2em;
+}
+
+footer.main_footer, footer.social_media {
+    display: block;
+    position: relative;
+    align-items: center;
+    margin: 0;
+}
+
+.footer-row {
+    display: flex;
+    width: 100%;
+}
+
+ul.footer_list {
+    display: block;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+li.footer_li_item {
+    position: relative;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    display:inline-block;
+}
+
+li.footer_li_item a {
+    display: inherit;
+    color: #b9936c;
+    text-decoration: none;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    transition-duration: 0.5s;
+}
+
+li.footer_li_item a:hover {
+    color: #563f46;
+    transition-duration: 0.5s;
+}
+
+div#footer-copyright {
+    display: block;
+    position: relative;
+    padding-top: 1.2em;
+    padding-bottom: 2.5em;
+    margin: 0;
+}
+
+div#footer-copyright p {
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+}
+
+/* Apply screen size lower than 768 */
+
+/*
+@media only screen and (max-width: 768px) {
+
+    section#main_section {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer.main_footer, footer.social_media {
+        display: flex;
+        position: relative;
+        width: 100%;
+        background-color: #4d4d4d;
+        margin: 0;
+    }
+
+    ul.footer_list {
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer.main_footer ul.footer_list {
+        display:list-item;
+        list-style-type: ">";
+    }
+
+    footer.social_media ul.footer_list {
+        display: inline;
+        position: relative;
+    }
+
+    .main_footer ul.footer_list::after {
+        content: "";
+        display: flex;
+        position: relative;
+        padding-top: 0;
+        width: 80%;
+        border-bottom: 2px solid #b9936c;
+        margin-bottom: 1.5em;
+        margin-top: 1.5em;
+        margin-left: 10%;
+    }
+
+    li.footer_li_item {
+        display:list-item;
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    li.footer_li_item a {
+        text-decoration: underline;
+        padding: 0;
+        margin: 0;
+    }
+
+    li.footer_li_item a p {
+        width: 90%;
+        padding: 0;
+        margin: 0.5em 0 0.5em 2em;
+        text-align: left;
+    }
+
+}*/

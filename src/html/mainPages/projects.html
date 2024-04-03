@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="stylesheet" href="../../css/projects.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/dark-mode.css">
+    <script src="../../js/project.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+      $(function() {
+        $("#top-bar").load("../components/top-bar.html");
+      });
+    </script>
+    <title>Sung-Jun(Tony) Baek</title>
+  </head>
+  <body>
+    <header>
+      <div id="top-bar"></div>
+      <nav id="nav_bar">
+        <div class="header_div">
+          <ul id="menu_nav" class="outer_lists">
+            <li id="category_list" class="outer_list">
+              <ul class="inner_lists">
+                <li class="nav_li_item">
+                  <a href="../../../index.html">
+                    <p>Home</p>
+                  </a>
+                </li>
+                <li class="nav_li_item">
+                  <a href="about-me.html">
+                    <p id="about-text">About me</p>
+                  </a>
+                </li>
+                <li class="nav_li_item">
+                  <a href="skills.html">
+                    <p id="skills-text">Skills</p>
+                  </a>
+                </li>
+                <li class="nav_li_item">
+                  <a href="./projects.html">
+                    <p id="project-text" class="highlight">Projects</p>
+                  </a>
+                </li>
+                <li class="nav_li_item">
+                  <a href="resume.html">
+                    <p id="resume-text">Resume</p>
+                  </a>
+                </li>
+                <li class="nav_li_item">
+                  <a href="contact-me.html">
+                    <p id="contact-text">Contact me</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section id="main_section">
+      <div id="detail_view_box" class="detail_view">
+        <p>Expand All</p>
+      </div>
+      <div class="dev_section">
+        <div class="dev_section_title">
+          <h2 class="dev_section_class">Java Application Projects</h2>
+          <label class="view_more_label">
+            +
+            <input type="checkbox" id="first_type" class="view_more_checkbox">
+          </label>
+        </div>
+        <ul id="java_project_layout" class="project_layout_ul">
+          <li class="project_preview_text">
+            <a title="Click to see GitHub repo" class="github_link" href="https://github.com/CSE4081-d-star-team/testCaseGenerator" rel="noreferrer noopener" target="_blank">
+              Test Case Generator for D* Map
+            </a>
+            <button title="Click to see simplified detail" class="single_expand" onclick="expand(this)">+</button>
+          </li>
+          <li class="project_card_list">
+            <div class="project_card">
+              <h2>Test Case Generator for D* Map</h2>
+              <p class="project_description">
+                A txt-file based map creator.
+                D* Algorithm analyzing tool required text based map with at least 50 different map grids.<br>
+                This application helps to create txt file based map grid from GUI by clicking and dragging grid layout.<br>
+                <br>'X' : Obstacle 'W' : Wall (Border) 'R' : Starting point 'G' : Goal ' ' : Empty cell.<br>
+                <br>Take a link to see more in detail.
+              </p>
+              <h4>Used Skills</h4>
+              <ul class="used_skills_ul">
+                <li class="skill_li">Java Version: 15.0.1</li>
+                <li class="skill_li">java.awt.* / java.awt.event.*</li>
+                <li class="skill_li">java.util.*</li>
+                <li class="skill_li">java.io.File / java.io.FileReader / java.io.BufferReader</li>
+                <li class="skill_li">javax.swing.*</li>
+              </ul>
+              <h4>Demo images</h4>
+              <img class="project_image" src="https://github.com/CSE4081-d-star-team/testCaseGenerator/raw/main/img/generator.gif" alt="java project">
+              <img class="project_image" src="https://github.com/CSE4081-d-star-team/testCaseGenerator/raw/main/img/editor.gif" alt="java project">
+              <p class="img_text">First Image. Creating random map with given input</p>
+              <p class="img_text">Second Image. Loading existing map and modifying grid content with UI</p>
+            </div>
+          </li>
+          <li class="project_preview_text">
+            <a class="github_link" href="https://github.com/MarcoBackman/Snake-Game" rel="noreferrer noopener" target="_blank">
+              Snake Game
+            </a>
+            <button title="Click to see simplified detail" class="single_expand" onclick="expand(this)">+</button>
+          </li>
+          <li class="project_card_list">
+            <div class="project_card">
+              <h2>Snake game</h2>
+              <p class="project_description">
+
+              </p>
+              <h4>Used Skills</h4>
+              <ul class="used_skills_ul">
+                <li class="skill_li">Java Version: 15.0.1</li>
+                <li class="skill_li">java.awt.* / java.awt.event.*</li>
+                <li class="skill_li">java.util.*</li>
+                <li class="skill_li">java.io.File / java.io.FileReader / java.io.BufferReader</li>
+                <li class="skill_li">javax.swing.*</li>
+              </ul>
+              <h4>Demo images</h4>
+              <img class="project_image" src="https://github.com/CSE4081-d-star-team/testCaseGenerator/raw/main/img/generator.gif" alt="java project">
+              <img class="project_image" src="https://github.com/CSE4081-d-star-team/testCaseGenerator/raw/main/img/editor.gif" alt="java project">
+            </div>
+          </li>
+          <li class="project_preview_text">
+            <a class="project_link" href="https://github.com/MarcoBackman/Mine-Sweeper" rel="noreferrer noopener" target="_blank">
+              Mine Sweeper
+            </a>
+            <button class="single_expand">+</button>
+          </li>
+          <li class="project_preview_text">
+            <a class="project_link" href="https://github.com/MarcoBackman/CalendarUI" rel="noreferrer noopener" target="_blank">
+              Calander with GUI
+            </a>
+          </li>
+          <li class="project_preview_text">
+            <a class="project_link" href="https://github.com/MarcoBackman/RSSfeedJavaSpring" rel="noreferrer noopener" target="_blank">
+              RSS Provider (web deployed)
+            </a>
+          </li>
+          <li class="project_preview_text">
+            <a class="project_link" href="https://github.com/TCC2021SeniorProject/ReactiveWebpage" rel="noreferrer noopener" target="_blank">
+              File Submitssion and File Handler (web deployed)
+            </a>
+          </li>
+        </ul>
+        <div class="project_cards" id="java_project_cards">
+        </div>
+      </div>
+
+      <div class="dev_section">
+        <div class="dev_section_title">
+          <h2 class="dev_section_class">Web Application Projects</h2>
+          <label class="view_more_label">
+            +
+            <input type="checkbox" id="second_type" class="view_more_checkbox">
+          </label>
+        </div>
+        <ul id="web_project_layout" class="project_layout_ul">
+          <li class="project_preview_text">
+            <a class="project_link" href="../features/exchangeRate/exchange-rate.html" rel="noreferrer noopener" target="_blank">
+              Currency Converter
+            </a>
+          </li>
+          <li class="project_preview_text">
+            <a class="project_link" href="../rss-event-handler.html" rel="noreferrer noopener" target="_blank">
+              School Event Display and Search
+            </a>
+          </li>
+          <li class="project_preview_text">
+            Food Search Web Engine
+          </li>
+          <li class="project_preview_text">
+            Food Search Web Engine
+          </li>
+          <li class="project_preview_text">
+            Movie Viewer
+          </li>
+          <li class="project_preview_text">
+            Senior Project Web Page
+          </li>
+        </ul>
+      </div>
+
+      <div class="dev_section">
+        <div class="dev_section_title">
+          <h2 class="dev_section_class">Python Projects</h2>
+          <label class="view_more_label">
+            +
+            <input type="checkbox" id="third_type" class="view_more_checkbox">
+          </label>
+        </div>
+        <ul id="python_project_layout" class="project_layout_ul">
+          <li class="project_preview_text">
+            Snake game
+          </li>
+          <li class="project_preview_text">
+            Mine sweeper
+          </li>
+          <li class="project_preview_text">
+            Calander with GUI
+          </li>
+          <li class="project_preview_text">
+            RSS provider (web deployed)
+          </li>
+          <li class="project_preview_text">
+            File submitssion and file handler (web deployed)
+          </li>
+        </ul>
+      </div>
+
+
+    </section>
+    <footer class="main_footer">
+      <ul class="footer_list">
+        <li class="footer_li_item">
+          <a href="about-me.html">
+              <p>About me</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="skills.html">
+            <p>Marketable skills and abilities</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="./projects.html">
+            <p id="hightlight">Projects</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="resume.html">
+            <p>Resume</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="contact-me.html">
+              <p>Contact me</p>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <footer class="social_media">
+      <ul class="footer_list">
+        <li class="footer_li_item">
+          <a href="about-me.html">
+              <p>LinkedIn</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="skills.html">
+            <p>Google Scholar</p>
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="resume.html">
+            <p>ResearchGate</p>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <div class="copyright">
+      <p>&copy;&nbsp;&nbsp;2022&nbsp;-&nbsp;Tony Baek</p>
+    </div>
+  </body>
+</html>
