@@ -20,7 +20,7 @@ function setDetailPanelPosition() {
     });
 }
 
-async function getRssData(path) {
+async function getXmlFileData(path) {
     let doc = "";
     await fetch(path)
         .then(function(response) {
@@ -58,6 +58,7 @@ function convertArrayToMap(arrayData) {
  */
 function parseAndApplyBoldFromContent(contents) {
     let fullText = ""
+    console.log(contents);
     for (let contentIndex = 0; contentIndex < contents.length; contentIndex++) {
         let content = contents[contentIndex];
         for (let i = 0; i < content.childNodes.length; i++) {

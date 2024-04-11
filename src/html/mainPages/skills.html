@@ -19,7 +19,7 @@
     </script>
     <script type="module">
       let xmlDataMap;
-      await getRssData("../../document/en/skills.xml")
+      await getXmlFileData("../../document/en/skills.xml")
               .then(data => {
                 console.log(data);
         xmlDataMap = convertArrayToMap(data);
