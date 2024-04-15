@@ -5,28 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000" />
     <title>Sung-Jun(Tony) Baek</title>
-    <link rel="stylesheet" href="src/css/top-bar.css">
-    <link rel="stylesheet" href="src/css/navbar.css">
-    <link rel="stylesheet" href="src/css/footer.css">
-    <link rel="stylesheet" href="src/css/index.css">
-    <link rel="stylesheet" href="src/css/dark-mode.css">
+    <link rel="stylesheet" href="./src/css/top-bar.css">
+    <link rel="stylesheet" href="./src/css/navbar.css">
+    <link rel="stylesheet" href="./src/css/footer.css">
+    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/dark-mode.css">
     <link href="https://fonts.cdnfonts.com/css/games" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script>
-      $(function() {
-        $("#top-bar").load("./html/components/top-bar.html");
+    <script src="./src/js/xml-parser.js" type="text/javascript"></script>
+    <script type="module">
+      //Todo: Select language based on the user setup
+
+      await getXmlData(XML_FILE_TYPE.INTRO, SUPPORTED_LANGUAGES.ENGLISH, null).then(data => {
+        let xmlDataMap = convertArrayToMap(data);
+        console.log(xmlDataMap);
       });
-    </script>
-    <script src="src/js/parse-xml.js" type="text/javascript"></script>
-    <script>
-      let data = parseDataForIndexPage();
-      console.log(data);
       //document.getElementById("main_intro").textContent = 'data';
     </script>
   </head>
   <body>
     <header>
-      <div id="top-bar"></div>
+      <div id="top_bar">
+        <!--Hamburger button on mobile view-->
+        <label id="checkbox_label" class="top_label">
+          <input alt="en" checked id="hamburger_icon" name="hamburger_list" src="./src/img/hamburgerIcon.png" type="image">
+        </label>
+        <label id="dark_mode_label" class="top_label">
+          View in Dark Mode
+          <input type="checkbox" id="darkmode" name="darkmode">
+        </label>
+      </div>
       <div id="nav-bar">
         <ul id="menu_nav" class="outer_lists">
           <li id="title_list" class="outer_list">

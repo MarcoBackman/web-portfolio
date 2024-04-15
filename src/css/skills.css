@@ -258,15 +258,32 @@ gridbox.third-box-item {
 
 @media only screen and (max-width: 1650px) {
 
-    gridbox > div.skill-detail-panel-left {
-        left: 5%;
-        width: 55vw;
-        min-height: 80%;
+    section#grid-box-panel {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    #left-background {
+        display: none !important;
+        width: 0;
+    }
+
+    #right-background {
+        display: none !important;
+        width: 0;
     }
 
     div#grid-box-wrapper {
-        width: 70%;
+        width: 100%;
         min-height: 80%;
         margin: auto;
+        padding-left: 5%;
+    }
+
+    gridbox > div.skill-detail-panel-left {
+        left: 15%;
+        width: 40vw;
+        height: 55vh;
     }
 }

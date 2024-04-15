@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skill>
+    <list>
+        <content>Test <bold>bold</bold><bold>dupe bold</bold> without comma end</content>
+        <content>Test <bold>bold</bold><bold>stream processing</bold> with comma end.</content>
+    </list>
+</skill>
