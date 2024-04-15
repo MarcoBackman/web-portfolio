@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="../../css/navbar.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/dark-mode.css">
+    <link rel="stylesheet" href="../../css/top-bar.css">
     <link href="https://fonts.cdnfonts.com/css/games" rel="stylesheet">
     <script src="../../js/skills-page.js"></script>
+    <script src="../../js/xml-parser.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script defer>
       $(function() {
@@ -19,7 +21,8 @@
     </script>
     <script type="module">
       let xmlDataMap;
-      await getRssData("../../document/en/skills.xml")
+      //Todo: Select language based on the user setup
+      await getXmlData(XML_FILE_TYPE.SKILL, SUPPORTED_LANGUAGES.ENGLISH, null)
               .then(data => {
                 console.log(data);
         xmlDataMap = convertArrayToMap(data);
