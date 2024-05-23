@@ -182,15 +182,15 @@ li.nav_li_item a p {
 
 ul.inner_lists a p {
     margin: 0;
-    border: 3px solid #e9e2d0;
-    border-radius: 5px;
+    border-bottom: 1px solid #e9e2d0;
+    border-right: 1px solid #e9e2d0;
+    border-radius: 15px;
     transition-duration: 0.5s;
     padding: 1em 2em 1em 2em;
 }
 
 ul.inner_lists a p:hover {
     border-color: #a74a41;
-    border-style: solid;
     color: #b29db5;
     transition-duration: 0.5s;
 }

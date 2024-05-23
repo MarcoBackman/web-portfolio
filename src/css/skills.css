@@ -167,7 +167,6 @@ gridbox>div.skill-detail-panel {
     transition-duration: 0.5s;
     border-radius: 11px;
     pointer-events: none;
-    top: 20%;
     right: 5%;
     width: 38vw;
     min-height: 80%;

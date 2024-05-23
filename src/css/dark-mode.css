@@ -138,3 +138,7 @@ body:has(label#dark_mode_label>#dark-mode:checked) p {
     color: #c2c1c1;
 }
 
+body:has(label#dark_mode_label>#dark-mode:checked) gridbox.grid-box {
+    background-color: #b8b8b8;
+}
+
