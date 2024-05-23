@@ -1,73 +1,140 @@
-/*This feature is temporarily disabled.*/
+label#dark_mode_label {
+    display: flex;
+    position: relative;
+    float: right;
+    z-index: 3;
+}
+
+label#dark-mode_label {
+    display: block;
+    float: right;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    margin-top: 0.5em;
+}
+
+label#dark_mode_label:before {
+    display: flex;
+    position: relative;
+    content: "Dark Mode";
+    color: #d0bdf4;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    margin: 0.2em 1em 0 0;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+label#checkbox_label {
+    display: none;
+    z-index: 3;
+}
+
+label#dark_mode_label:has(input#dark-mode:checked):before {
+    content: "Bright Mode";
+    color: #727272;
+    font-weight: bold;
+}
 
 /* Checkbox */
-input#darkmode {
+input#dark-mode {
     display: inline-flex;
     position: relative;
     appearance: none;
     width: 60px;
     height: 30px;
-    background: black;
+    background: #ea9085;
     border-radius: 22px;
     cursor: pointer;
     outline: none;
     transition: .3s linear;
 }
 
-input#darkmode::before {
+input#dark-mode::before {
     content: '';
     position: relative;
     width: 30px;
     height: 30px;
-    background-color:white;
+    background-color: #ffeeee;
     border-radius: 35px;
     cursor: pointer;
     transition: .3s linear;
 }
 
-label#darkmode_label {
-    display: block;
-    float: right;
-}
-
-label#darkmode_label p {
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-    margin-top: 0.5em;
-}
-
-/* Navigation */
-input#darkmode:checked ~ header,
-input#darkmode:checked ~ footer,
-input#darkmode:checked ~ div,
-input#darkmode:checked ~ section div#menu_title_div h2#menu_title,
-input#darkmode:checked ~ section div#menu_title_div h2#menu_title::after {
-    background-color: #000000;
-    color: #FFFFFF;
+/* dark mode button when checked */
+input#dark-mode:checked{
+    background: #652739;
     transition: .3s linear;
 }
 
-input#darkmode:checked ~ section {
+input#dark-mode:checked ~ section {
     background-color: #505050;
     color: white;
     transition: .3s linear;
 }
 
-input#darkmode:checked::before {
+input#dark-mode:checked::before {
     left: 30px;
     transition: .3s linear;
+    background-color: #b6b6b6;
 }
 
-input#darkmode:checked{
-    background: rgb(12, 177, 81);
-    transition: .3s linear;
-}
-
-input#darkmode:checked + #inner_lists a p {
+input#dark-mode:checked + #inner_lists a p {
     border-color: #a2836e;
     color: #a2836e;
 }
 
-input#darkmode:checked + #inner_lists a p:hover {
+input#dark-mode:checked + #inner_lists a p:hover {
     border-color: #6b6b6b;
     color: #585757;
 }
+
+/* Navigation color change when checked */
+body:has(label#dark_mode_label>#dark-mode:checked) header {
+    background: -webkit-linear-gradient(80deg, #3b221c 35%, rgba(0, 0, 0, 0) 30%), -webkit-linear-gradient(110deg, #86263d 60%, #503c65 60%);
+    background: -o-linear-gradient(80deg, #3b221c 35%, rgba(0, 0, 0, 0) 30%), -o-linear-gradient(110deg, #86263d 60%, #503c65 60%);
+    background: -moz-linear-gradient(80deg, #3b221c 35%, rgba(0, 0, 0, 0) 30%), -moz-linear-gradient(110deg, #86263d 60%, #503c65 60%);
+    background: linear-gradient(80deg, #3b221c 35%, rgba(0, 0, 0, 0) 30%), linear-gradient(110deg, #86263d 60%, #503c65 60%);
+}
+
+/* Nav bar title/subtitle test color change */
+body:has(label#dark_mode_label>#dark-mode:checked) header h1#main_title {
+    color: #343030;
+}
+
+body:has(label#dark_mode_label>#dark-mode:checked) header h2#sub_title {
+    color: #726868;
+}
+
+
+/* Nav bar button color */
+body:has(label#dark_mode_label>#dark-mode:checked) header li.nav_li_item a p {
+    color: #969696;
+}
+
+body:has(label#dark_mode_label>#dark-mode:checked) header ul.inner_lists a p {
+    border: 3px solid #969696;
+}
+
+
+/* Footer color*/
+body:has(label#dark_mode_label>#dark-mode:checked) footer.main_footer {
+    background: -webkit-linear-gradient(80deg, #3b221c 35%, rgba(0, 0, 0, 0) 30%), -webkit-linear-gradient(110deg, #86263d 60%, #503c65 60%);
+    background: -o-linear-gradient(80deg, #3b221c 35%, rgba(0, 0, 0, 0) 30%), -o-linear-gradient(110deg, #86263d 60%, #503c65 60%);
+    background: -moz-linear-gradient(80deg, #3b221c 35%, rgba(0, 0, 0, 0) 30%), -moz-linear-gradient(110deg, #86263d 60%, #503c65 60%);
+    background: linear-gradient(80deg, #3b221c 35%, rgba(0, 0, 0, 0) 30%), linear-gradient(110deg, #86263d 60%, #503c65 60%);
+}
+
+body:has(label#dark_mode_label>#dark-mode:checked) li.footer_li_item a,
+body:has(label#dark_mode_label>#dark-mode:checked) div.copyright>p {
+    color: #a2a2a2;
+}
+
+/* Main content colors */
+body:has(label#dark_mode_label>#dark-mode:checked) section#main_section {
+    background-color: #6b6b6b;
+}
+
+body:has(label#dark_mode_label>#dark-mode:checked) p {
+    color: #c2c1c1;
+}
+

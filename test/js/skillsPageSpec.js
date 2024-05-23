@@ -46,18 +46,18 @@ describe(`
         expect(result).toMatch("");
     });
 
-    it("returns empty on invalid path", async () => {
+    it("returns about me path", async () => {
         let result = resolvePath(XML_FILE_TYPE.ABOUT, SUPPORTED_LANGUAGES.ENGLISH, null);
         expect(result).toMatch("../../document/en/about-me.xml");
     });
 
-    it("returns empty on invalid path", async () => {
+    it("returns skill path", async () => {
         let result = resolvePath(XML_FILE_TYPE.SKILL, SUPPORTED_LANGUAGES.ENGLISH, null);
         expect(result).toMatch("../../document/en/skills.xml");
     });
 
-    it("returns empty on invalid path", async () => {
+    it("returns intro path", async () => {
         let result = resolvePath(XML_FILE_TYPE.INTRO, SUPPORTED_LANGUAGES.ENGLISH, null);
-        expect(result).toMatch("../../document/en/introduction.xml");
+        expect(result).toMatch("../src/document/en/introduction.xml");
     });
 });

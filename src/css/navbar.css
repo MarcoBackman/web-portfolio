@@ -2,18 +2,18 @@
 
 
 header {
-    display: block;
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    align-items: center;
-    background: -webkit-linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -webkit-linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
-    background: -o-linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -o-linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
-    background: -moz-linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -moz-linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
-    background: linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
-    padding: 0;
-    margin: 0;
-    transition-duration: 0s;
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        align-items: center;
+        background: -webkit-linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -webkit-linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
+        background: -o-linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -o-linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
+        background: -moz-linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -moz-linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
+        background: linear-gradient(80deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), linear-gradient(110deg, #c06c84 60%, #6c5b7c 60%);
+        padding: 0;
+        margin: 0;
+        transition-duration: 0s;
 }
 
 input#hamburger_icon {
@@ -41,20 +41,7 @@ ul#burger_menu {
 }
 
 div.header_div h1 {
-    /* Fallback: Set a background color. */
-    background-color: #383838;
-
-    /* Create the gradient. */
-    background-image: linear-gradient(
-            45deg,
-            #e3e3e3 50%,
-            #fda4a4 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    background-size: 100%;
-    z-index: 1;
+    color: #ffffff;
 }
 
 section#main_section {

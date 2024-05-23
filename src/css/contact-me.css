@@ -1,7 +1,7 @@
 /* CSS for contact-me.html page */
 body {
+    display: none;
     width: 100%;
-    background-color: #ffffff;
     margin: 0;
 }
 
@@ -45,4 +45,12 @@ h2#menu_title::after {
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     padding-left: 2em;
     padding-right: 2em;
+}
+
+div#nav_head_title {
+    min-height: 90vh;
+}
+
+section#main_section {
+    background-color: #FFFFFF;
 }

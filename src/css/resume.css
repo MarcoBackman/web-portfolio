@@ -7,7 +7,10 @@ body {
 }
 
 section#main_section{
-    min-height: 750px;
+    display: block;
+    position: relative;
+    min-height: 550px;
+    height: 550px;
     background-color: #ffffff;
 }
 
@@ -27,7 +30,7 @@ section#main_section{
 }
 
 h2#menu_title {
-    position: flex;
+    display: flex;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
     color: #b9936c;
     margin: 0;
@@ -48,8 +51,9 @@ h2#menu_title::after {
 }
 
 #content_div {
+    display: block;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-    height: 50vh;
+    height: 1150px;
 }
 
 div#content_div p {
@@ -57,8 +61,9 @@ div#content_div p {
 }
 
 embed#resume_pdf {
+    display: inherit;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
 }
 
 @media only screen and (max-width: 768px) {

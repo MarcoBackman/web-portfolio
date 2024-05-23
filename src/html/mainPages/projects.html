@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="../../css/navbar.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/dark-mode.css">
-    <link rel="stylesheet" href="../../css/top-bar.css">
     <script src="../../js/project.js" defer></script>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script>
-      $(function() {
-        $("#top-bar").load("../components/top-bar.html");
-      });
+    <script src="../../../src/js/darkmode.js"></script>
+    <script type="module">
+      //Give delay to give dark mode render time
+      setTimeout(async function() {
+        document.getElementsByTagName("body")[0].style.display = "block";
+      }, 100);
     </script>
     <title>Sung-Jun(Tony) Baek</title>
   </head>
   <body>
     <header>
-      <div id="top-bar"></div>
+      <label id="dark_mode_label" class="top_label">
+        <input type="checkbox" id="dark-mode" name="dark-mode" onclick="updateDarkMode()">
+      </label>
       <nav id="nav_bar">
         <div class="header_div">
           <ul id="menu_nav" class="outer_lists">
@@ -63,6 +65,9 @@
       </nav>
     </header>
     <section id="main_section">
+      <div id="menu_title_div">
+        <h2 id="menu_title">Projects<br></h2>
+      </div>
       <div id="detail_view_box" class="detail_view">
         <p>Expand All</p>
       </div>
@@ -116,7 +121,6 @@
             <div class="project_card">
               <h2>Snake game</h2>
               <p class="project_description">
-
               </p>
               <h4>Used Skills</h4>
               <ul class="used_skills_ul">
@@ -149,14 +153,13 @@
           </li>
           <li class="project_preview_text">
             <a class="project_link" href="https://github.com/TCC2021SeniorProject/ReactiveWebpage" rel="noreferrer noopener" target="_blank">
-              File Submitssion and File Handler (web deployed)
+              File submission and File Handler (web deployed)
             </a>
           </li>
         </ul>
         <div class="project_cards" id="java_project_cards">
         </div>
       </div>
-
       <div class="dev_section">
         <div class="dev_section_title">
           <h2 class="dev_section_class">Web Application Projects</h2>
@@ -190,7 +193,6 @@
           </li>
         </ul>
       </div>
-
       <div class="dev_section">
         <div class="dev_section_title">
           <h2 class="dev_section_class">Python Projects</h2>
@@ -217,8 +219,6 @@
           </li>
         </ul>
       </div>
-
-
     </section>
     <footer class="main_footer">
       <ul class="footer_list">
@@ -248,12 +248,10 @@
           </a>
         </li>
       </ul>
-    </footer>
-    <footer class="social_media">
       <ul class="footer_list">
         <li class="footer_li_item">
           <a href="about-me.html">
-              <p>LinkedIn</p>
+            <p>LinkedIn</p>
           </a>
         </li>
         <li class="footer_li_item">
@@ -267,9 +265,9 @@
           </a>
         </li>
       </ul>
+      <div class="copyright">
+        <p>&copy;&nbsp;&nbsp;2022&nbsp;-&nbsp;Tony Baek</p>
+      </div>
     </footer>
-    <div class="copyright">
-      <p>&copy;&nbsp;&nbsp;2022&nbsp;-&nbsp;Tony Baek</p>
-    </div>
   </body>
 </html>

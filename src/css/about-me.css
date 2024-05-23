@@ -1,5 +1,6 @@
 /* CSS for about-me.css page */
 body {
+    display: none;
     width: 100%;
     background-color: #ffffff;
     margin: 0;
@@ -24,9 +25,8 @@ section#main_section{
     display: block;
     position: relative;
     width: 100%;
-    min-height: 750px;
-    height: auto;
-    background-color: #cecece;
+    min-height: 90vh;
+    background-color: #ffffff;
 }
 
 div#menu_title_div {
