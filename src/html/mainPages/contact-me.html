@@ -8,18 +8,20 @@
     <link rel="stylesheet" href="../../css/navbar.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/dark-mode.css">
-    <link rel="stylesheet" href="../../css/top-bar.css">
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script>
-      $(function() {
-        $("#top-bar").load("../components/top-bar.html");
-      });
+    <script src="../../../src/js/darkmode.js"></script>
+    <script type="module">
+      //Give delay to give dark mode render time
+      setTimeout(async function() {
+        document.getElementsByTagName("body")[0].style.display = "block";
+      }, 100);
     </script>
     <title>Sung-Jun(Tony) Baek</title>
   </head>
   <body>
     <header>
-      <div id="top-bar"></div>
+      <label id="dark_mode_label" class="top_label">
+        <input type="checkbox" id="dark-mode" name="dark-mode" onclick="updateDarkMode()">
+      </label>
       <nav id="nav_bar">
         <div class="header_div">
           <ul id="menu_nav" class="outer_lists">
@@ -67,7 +69,6 @@
         </div>
         <div id="nav_head_title">
           <div>
-              <h3>Contact me</h3>
               <ul>
                   <li class="nav_li_item">
                       <p>Mail address</p>
@@ -158,9 +159,9 @@
           </a>
         </li>
       </ul>
+      <div class="copyright">
+        <p>&copy;&nbsp;&nbsp;2024&nbsp;-&nbsp;Tony Baek</p>
+      </div>
     </footer>
-    <div class="copyright">
-      <p>&copy;&nbsp;&nbsp;2022&nbsp;-&nbsp;Tony Baek</p>
-    </div>
   </body>
 </html>

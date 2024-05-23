@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <title>Welcome!</title>
     <link rel="stylesheet" href="../../css/entrance-page.css">
-    <script src="../../js/entrance-page.js" defer></script>
-</head>
+    <script src="../../js/entrance-page.js"></script>
+    <script type="module">
+        //Give delay to give dark mode render time
+        setTimeout(async function() {
+            document.getElementsByTagName("body")[0].style.display = "block";
+        }, 100);
+    </script>
+</head>i87
 <body>
     <div>
         <p>

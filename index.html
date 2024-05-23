@@ -4,46 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000" />
-    <title>Marco Backman</title>
+    <title>Sung-Jun(Tony) Baek</title>
     <link rel="stylesheet" href="./src/css/navbar.css">
     <link rel="stylesheet" href="./src/css/footer.css">
     <link rel="stylesheet" href="./src/css/index.css">
     <link rel="stylesheet" href="./src/css/dark-mode.css">
-    <link rel="stylesheet" href="./src/css/github-btn.css">
     <link href="https://fonts.cdnfonts.com/css/games" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="./src/js/xml-parser.js" type="text/javascript"></script>
     <script src="./src/js/darkmode.js"></script>
-    <script src="./src/js/navbar.js" defer></script>
-    <script src="./src/js/scroll-effect.js"></script>
-    <script>
-      // Clear sessionStorage for animation variables
-      let topTextId = 'intro-text-section';
-      let midTextId = 'mid-title';
-      let secondMidTextId = 'second-intro-text-section';
-
-      sessionStorage.setItem(topTextId + 'ActivatedOnce', 'true');
-      sessionStorage.setItem(midTextId + 'ActivatedOnce', 'true');
-      sessionStorage.setItem(secondMidTextId + 'ActivatedOnce', 'true');
-
-      document.addEventListener("DOMContentLoaded", function () {
-        window.onscroll = function() {
-          if (typeof componentTransparentOnScroll === 'function') {
-            componentTransparentOnScroll("background", darkMode);
-            fixNavBarAtTop(darkMode);
-          } else {
-            console.log("`backgroundTransparentOnScroll` is not a function or not defined!");
-          }
-        };
-        //Top content text typewriter
-        setActiveObserverOnceByName(topTextId, 2000);
-
-        //Middle content text typewriter
-        setActiveObserverOnceByName(midTextId, 2000);
-        setActiveObserverOnceByName(secondMidTextId, 2000);
-      });
-    </script>
-    <script type="module" defer>
+    <script type="module">
       $(document).ready(function() {
         $('#demo2').click(function() {
           $.blockUI({ css: {
@@ -63,14 +33,14 @@
       //Todo: Select language based on the user setup
       await getXmlData(XML_FILE_TYPE.INTRO, SUPPORTED_LANGUAGES.ENGLISH, null).then(data => {
         let xmlDataMap = convertArrayToMap(data);
-      }).catch(reason => {
-        console.error("XML data fetch failed. Cause: " + reason);
+        console.log(xmlDataMap);
       });
 
       //Give delay to give dark mode render time
-      setTimeout(function() {
+      setTimeout(async function() {
         document.getElementsByTagName("body")[0].style.display = "block";
       }, 100);
+
     </script>
   </head>
   <body>
@@ -83,36 +53,36 @@
           <li id="title_list" class="outer_list">
             <div class="header_div">
               <a href="./index.html">
-                <h1 id="main_title">Marco Backman</h1>
-                <h2 id="sub_title">my project logs</h2>
+                <h1 id="main_title">TONY BAEK</h1>
+                <h2 id="sub_title">my portfolio</h2>
               </a>
             </div>
           </li>
           <li id="category_list" class="outer_list">
             <ul class="inner_lists">
               <li class="nav_li_item">
-                <a href="./src/html/mainPages/about-me.html" class="nav-button">
-                  About me
+                <a href="src/html/mainPages/about-me.html">
+                  <p>About me</p>
                 </a>
               </li>
               <li class="nav_li_item">
-                <a href="./src/html/mainPages/skills.html" class="nav-button">
-                  Skills
+                <a href="src/html/mainPages/skills.html">
+                  <p>Skills</p>
                 </a>
               </li>
               <li class="nav_li_item">
-                <a href="./src/html/mainPages/projects.html" class="nav-button">
-                  Projects
+                <a href="src/html/mainPages/projects.html">
+                  <p>Projects</p>
                 </a>
               </li>
               <li class="nav_li_item">
-                <a href="./src/html/mainPages/resume.html" class="nav-button">
-                  Resume
+                <a href="src/html/mainPages/resume.html">
+                  <p>Resume</p>
                 </a>
               </li>
               <li class="nav_li_item">
-                <a href="./src/html/mainPages/contact-me.html" class="nav-button">
-                  Contact me
+                <a href="src/html/mainPages/contact-me.html">
+                  <p>Contact me</p>
                 </a>
               </li>
             </ul>
@@ -120,78 +90,10 @@
         </ul>
       </div>
     </header>
-    <div id="background">
-    </div>
-    <section id="main_section" class="centered-text">
-      <div id="top-layer">
-        <div id="intro-box">
-          <div id="inner-intro-box">
-            <h2>Marco's Dynamic Portfolio</h2>
-            <div id="intro-text-section" class="typewriter">
-              <span class="intro-span-text-type-one">Fuel the digital backbone<br/></span>
-              <span class="intro-span-text-type-one">the </span>
-              <span class="intro-span-text-type-one">digital </span>
-              <span class="intro-span-text-type-one">backbone<br/></span>
-              <span class="intro-span-text-type-one">with </span>
-              <span class="intro-span-text-type-one">robust </span>
-              <span class="intro-span-text-type-two">backend </span>
-              <span class="intro-span-text-type-two">solutions<br/></span>
-            </div>
-            <p class="sub-intro-text"></p>
-            <div id="feature-work-btn" role="button">
-              <a style="text-decoration: none" href="https://github.com/MarcoBackman/bankcoresystem" target="_blank">Featured work</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="middle-layer">
-        <div id="website-tool-section">
-          <h2 id="mid-title" class="typewriter"> This website is powered by </h2>
-          <div id="tool-cards">
-            <gridbox id="html-card" class="utilized-tool trapezoid">
-              <h4>HTML</h4>
-              <img src="./src/img/logo/html.png" alt="html Logo">
-            </gridbox>
-            <gridbox id="css" class="utilized-tool">
-              <h4>CSS</h4>
-              <img src="./src/img/logo/css3.png" alt="css Logo">
-            </gridbox>
-            <gridbox id="javascript" class="utilized-tool">
-              <h4>Java Script</h4>
-              <img src="./src/img/logo/js.png" alt="javascript Logo">
-            </gridbox>
-            <gridbox id="github" class="utilized-tool">
-              <h4>Github Page</h4>
-              <img src="./src/img/logo/github-logo.png" alt="github Logo">
-            </gridbox>
-            <gridbox id="java-spring" class="utilized-tool">
-              <h4>Java Spring</h4>
-              <img src="./src/img/logo/javaspring.png" alt="javaspring Logo">
-            </gridbox>
-          </div>
-        </div>
-      </div>
-      <div id="inner-content-box" class="centered-text">
-        <h2>Focused on Agile development</h2>
-        <div id="second-intro-text-section" class="typewriter">
-          <span class="intro-span-text-type-one">Reliability </span>
-          <span class="intro-span-text-type-one">meets </span>
-          <span class="intro-span-text-type-one">innovation<br/></span>
-          <span class="intro-span-text-type-one">for </span>
-          <span class="intro-span-text-type-two">seamless </span>
-          <span class="intro-span-text-type-two">experiences </span>
-        </div>
-        <p class="sub-intro-text"></p>
-      </div>
+    <div id="background"></div>
+    <section id="main_section">
+
     </section>
-  <!-- HTML !-->
-    <section id="github-block">
-      <button title="Personal projects" class="github-wrapper" role="button">
-        <a target="_blank" href="https://github.com/MarcoBackman">Personal Git</a>
-      </button>
-      <button title="Proof of commit frequency" class="github-wrapper" role="button">
-        <a target="_blank" href="https://github.com/TonyBaek2023">Company Git</a>
-      </button>
-    </section>
+
   </body>
 </html>

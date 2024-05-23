@@ -8,23 +8,15 @@
     <link rel="stylesheet" href="../../css/navbar.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/dark-mode.css">
-    <link rel="stylesheet" href="../../css/top-bar.css">
     <link href="https://fonts.cdnfonts.com/css/games" rel="stylesheet">
+    <script src="../../js/darkmode.js"></script>
     <script src="../../js/skills-page.js"></script>
     <script src="../../js/xml-parser.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script defer>
-      $(function() {
-        $("#top-bar").load("../components/top-bar.html");
-      });
-      setDetailPanelPosition();
-    </script>
     <script type="module">
       let xmlDataMap;
       //Todo: Select language based on the user setup
       await getXmlData(XML_FILE_TYPE.SKILL, SUPPORTED_LANGUAGES.ENGLISH, null)
               .then(data => {
-                console.log(data);
         xmlDataMap = convertArrayToMap(data);
 
         let strVal = "\n"
@@ -35,17 +27,23 @@
           var title = value.getElementsByTagName("title")[0] != null ? value.getElementsByTagName("title")[0].innerText : "";
           strVal += "{" + key + " : " + title + " }\n";
         });
-        console.log("Done parsing xml data: " + strVal);
 
         //Set inner html
         setSkillContent(xmlDataMap, "java", "java-skill-detail-text");
       });
+
+      //Give delay to give dark mode render time
+      setTimeout(async function() {
+        document.getElementsByTagName("body")[0].style.display = "block";
+      }, 100);
     </script>
     <title>Sung-Jun(Tony) Baek</title>
   </head>
   <body>
     <header>
-      <div id="top-bar"></div>
+      <label id="dark_mode_label" class="top_label">
+        <input type="checkbox" id="dark-mode" name="dark-mode" onclick="updateDarkMode()">
+      </label>
       <nav id="nav_bar">
         <div class="header_div">
           <ul id="menu_nav" class="outer_lists">
@@ -217,12 +215,10 @@
           </a>
         </li>
       </ul>
-    </footer>
-    <footer class="social_media">
       <ul class="footer_list">
         <li class="footer_li_item">
           <a href="about-me.html">
-              <p>LinkedIn</p>
+            <p>LinkedIn</p>
           </a>
         </li>
         <li class="footer_li_item">
@@ -236,9 +232,9 @@
           </a>
         </li>
       </ul>
+      <div class="copyright">
+        <p>&copy;&nbsp;&nbsp;2024&nbsp;-&nbsp;Tony Baek</p>
+      </div>
     </footer>
-    <div class="copyright">
-      <p>&copy;&nbsp;&nbsp;2022&nbsp;-&nbsp;Tony Baek</p>
-    </div>
   </body>
 </html>
