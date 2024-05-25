@@ -1,0 +1,118 @@
+/* Github button */
+section#github-block {
+    display: block;
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.github-wrapper {
+    align-items: center;
+    appearance: none;
+    background-clip: padding-box;
+    background-color: initial;
+    background-image: none;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: Eina01,sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    justify-content: center;
+    line-height: 22px;
+    margin: 0;
+    min-height: 44px;
+    outline: none;
+    overflow: visible;
+    padding: 12px 22px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: auto;
+    word-break: keep-all;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.github-wrapper>a {
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .github-wrapper {
+        padding: 19px 32px;
+    }
+}
+
+.github-wrapper:before,
+.github-wrapper:after {
+    border-radius: 80px;
+}
+
+.github-wrapper:before {
+    background-image: linear-gradient(92.83deg, #c06c84 0, #6c5b7c 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+}
+
+.github-wrapper:after {
+    background-color: initial;
+    background-image: linear-gradient(#6c5b7c 0, #0c0d0d 100%);
+    bottom: 4px;
+    content: "";
+    display: block;
+    left: 4px;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    transition: all 100ms ease-out;
+    z-index: -1;
+}
+
+.github-wrapper:hover:not(:disabled):before {
+    background: linear-gradient(92.83deg, #ea9085 0%, #c06c84 100%);
+}
+
+.github-wrapper:hover:not(:disabled):after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition-timing-function: ease-in;
+    opacity: 0;
+}
+
+.github-wrapper:active:not(:disabled) {
+    color: #ccc;
+}
+
+.github-wrapper:active:not(:disabled):after {
+    background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    top: 4px;
+}
+
+.github-wrapper:disabled {
+    cursor: default;
+    opacity: .24;
+}
