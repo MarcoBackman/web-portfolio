@@ -16,15 +16,30 @@
     <script src="./src/js/darkmode.js"></script>
     <script src="./src/js/scroll-effect.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function (){
+      // Clear sessionStorage for animation variables
+      let topTextId = 'intro-text-section';
+      let midTextId = 'mid-title';
+      let secondMidTextId = 'second-intro-text-section';
+
+      sessionStorage.setItem(topTextId + 'ActivatedOnce', 'true');
+      sessionStorage.setItem(midTextId + 'ActivatedOnce', 'true');
+      sessionStorage.setItem(secondMidTextId + 'ActivatedOnce', 'true');
+
+      document.addEventListener("DOMContentLoaded", function () {
         window.onscroll = function() {
           if (typeof componentTransparentOnScroll === 'function') {
-            let opacity = componentTransparentOnScroll("background");
-            fixNavBarAtTop();
+            componentTransparentOnScroll("background", darkMode);
+            fixNavBarAtTop(darkMode);
           } else {
             console.log("`backgroundTransparentOnScroll` is not a function or not defined!");
           }
         };
+        //Top content text typewriter
+        setActiveObserverOnceByName(topTextId, 2000);
+
+        //Middle content text typewriter
+        setActiveObserverOnceByName(midTextId, 2000);
+        setActiveObserverOnceByName(secondMidTextId, 2000);
       });
     </script>
     <script type="module" defer>
@@ -47,10 +62,12 @@
       //Todo: Select language based on the user setup
       await getXmlData(XML_FILE_TYPE.INTRO, SUPPORTED_LANGUAGES.ENGLISH, null).then(data => {
         let xmlDataMap = convertArrayToMap(data);
+      }).catch(reason => {
+        console.error("XML data fetch failed. Cause: " + reason);
       });
 
       //Give delay to give dark mode render time
-      setTimeout(async function() {
+      setTimeout(function() {
         document.getElementsByTagName("body")[0].style.display = "block";
       }, 100);
     </script>
@@ -104,37 +121,75 @@
     </header>
     <div id="background">
     </div>
-    <section id="main_section">
-      <div class="top-layer">
+    <section id="main_section" class="centered-text">
+      <div id="top-layer">
         <div id="intro-box">
           <div id="inner-intro-box">
             <h2>Marco's Dynamic Portfolio</h2>
-            <div id="intro-text-section">
-              <span class="intro-span-text-type-one">Fuel </span>
+            <div id="intro-text-section" class="typewriter">
+              <span class="intro-span-text-type-one">Fuel the digital backbone<br/></span>
               <span class="intro-span-text-type-one">the </span>
               <span class="intro-span-text-type-one">digital </span>
-              <span class="intro-span-text-type-one">backbone</span>
-              <br/>
+              <span class="intro-span-text-type-one">backbone<br/></span>
               <span class="intro-span-text-type-one">with </span>
               <span class="intro-span-text-type-one">robust </span>
               <span class="intro-span-text-type-two">backend </span>
-              <span class="intro-span-text-type-two">solutions</span>
-              <br/>
-              <br/>
-              <span class="intro-span-text-type-one">Reliability </span>
-              <span class="intro-span-text-type-one">meets </span>
-              <span class="intro-span-text-type-one">innovation </span>
-              <br/>
-              <span class="intro-span-text-type-one">for </span>
-              <span class="intro-span-text-type-two">seamless </span>
-              <span class="intro-span-text-type-two">user </span>
-              <span class="intro-span-text-type-two">experiences </span>
+              <span class="intro-span-text-type-two">solutions<br/></span>
             </div>
             <p class="sub-intro-text"></p>
             <div id="feature-work-btn" role="button">
               <a>Featured work</a>
             </div>
           </div>
+        </div>
+        <div id="middle-layer">
+          <div id="website-tool-section">
+            <h2 id="mid-title" class="typewriter"> This website is powered by </h2>
+            <div id="tool-cards">
+              <a href="">
+                <gridbox id="html-card" class="utilized-tool">
+                    <h4>HTML</h4>
+                    <img src="./src/img/logo/html.png" alt="html Logo">
+                </gridbox>
+              </a>
+              <a href="">
+                <gridbox id="css" class="utilized-tool">
+                    <h4>CSS</h4>
+                    <img src="./src/img/logo/css3.png" alt="css Logo">
+                </gridbox>
+              </a>
+              <a href="">
+                <gridbox id="javascript" class="utilized-tool">
+                  <h4>Java Script</h4>
+                  <img src="./src/img/logo/js.png" alt="javascript Logo">
+                </gridbox>
+              </a>
+              <a href="">
+              <gridbox id="github" class="utilized-tool">
+                <h4>Github Page</h4>
+                <img src="./src/img/logo/github-logo.png" alt="github Logo">
+              </gridbox>
+              </a>
+              <a href="">
+                <gridbox id="java-spring" class="utilized-tool">
+                  <h4>Java Spring</h4>
+                  <img src="./src/img/logo/javaspring.png" alt="javaspring Logo">
+                </gridbox>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="inner-content-box" class="centered-text">
+          <h2>Focused on Agile development</h2>
+          <div id="second-intro-text-section" class="typewriter">
+            <span class="intro-span-text-type-one">Reliability </span>
+            <span class="intro-span-text-type-one">meets </span>
+            <span class="intro-span-text-type-one">innovation<br/></span>
+            <span class="intro-span-text-type-one">for </span>
+            <span class="intro-span-text-type-two">seamless </span>
+            <span class="intro-span-text-type-two">experiences </span>
+          </div>
+          <p class="sub-intro-text"></p>
         </div>
       </div>
     </section>

@@ -139,6 +139,7 @@ h2#sub_title {
 
 li.outer_list {
     width: 100%;
+    padding: 0.5em 0 0.5em 0;
 }
 
 li#title_list,
@@ -207,7 +208,7 @@ p.highlight {
     ul.outer_lists {
         display: flex;
         width: 100%;
-        margin: 0 0 1em 0;
+        margin: 1em 0 1em 0;
         padding: 0;
     }
 
