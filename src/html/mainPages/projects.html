@@ -14,7 +14,7 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script type="module">
       //Give delay to give dark mode render time
-      setTimeout(async function() {
+      setTimeout(function() {
         document.getElementsByTagName("body")[0].style.display = "block";
       }, 100);
     </script>
@@ -68,15 +68,46 @@
     </header>
     <section id="main_section">
       <div id="menu_title_div">
-        <h2 id="menu_title">Projects<br></h2>
+        <h2 id="menu_title" class="title-row">Projects<br></h2>
       </div>
-      <!-- Add project react -->
-      <script type="text/babel">
-        function Hello() {
-          return <h1>Hello, World!</h1>
-        }
-        ReactDOM.render(<Hello />, document.getElementById('root'));
-      </script>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');</style>
+      <section class="design-section">
+        <div class="timeline">
+
+          <div class="timeline-empty">
+          </div>
+
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class="timeline-component timeline-content">
+            <h3>HTML</h3>
+            <p>Some Text</p>
+          </div>
+          <div class="timeline-component timeline-content">
+            <h3>CSS</h3>
+            <p>Some Text.</p>
+          </div>
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class="timeline-empty">
+          </div>
+
+          <div class="timeline-empty">
+          </div>
+
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class=" timeline-component timeline-content">
+            <h3>Javascript</h3>
+            <p>Some Text.</p>
+          </div>
+
+        </div>
+        </div>
+      </section>
     </section>
     <footer class="main_footer">
       <ul class="footer_list">

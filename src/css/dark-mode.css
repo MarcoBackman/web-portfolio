@@ -158,3 +158,19 @@ body:has(label#dark_mode_label>#dark-mode:checked) div#middle-layer > div#websit
     color: #f3cba5;
     text-shadow: #9f9f9f 1px 1px 8px;
 }
+
+/***********************************************************
+ * about-me.html content dark mode
+ */
+
+body:has(label#dark_mode_label>#dark-mode:checked) section#main_section-about-me {
+    background-color: #25161b;
+}
+
+/***********************************************************
+ * contact-me.html content dark mode
+ */
+
+body:has(label#dark_mode_label>#dark-mode:checked) body#contact-me-body {
+    background-color: #25161b;
+}

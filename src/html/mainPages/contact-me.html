@@ -11,13 +11,13 @@
     <script src="../../../src/js/darkmode.js"></script>
     <script type="module">
       //Give delay to give dark mode render time
-      setTimeout(async function() {
+      setTimeout(function() {
         document.getElementsByTagName("body")[0].style.display = "block";
       }, 100);
     </script>
     <title>Sung-Jun(Tony) Baek</title>
   </head>
-  <body>
+  <body id="contact-me-body">
     <header>
       <label id="dark_mode_label" class="top_label">
         <input type="checkbox" id="dark-mode" name="dark-mode" onclick="updateDarkMode()">
@@ -65,54 +65,22 @@
     </header>
     <section id="main_section">
       <div id="menu_title_div">
-          <h2 id="menu_title">Contact Me<br></h2>
-        </div>
-        <div id="nav_head_title">
-          <div>
-              <ul>
-                  <li class="nav_li_item">
-                      <p>Mail address</p>
-                      <p>
-                          150W University Blvd
-                          <br>Melbroune, FL, 32901
-                          <br>Box number: 150005
-                      </p>
-                  </li>
-                  <li class="nav_li_item">
-                      <p>Email address</p>
-                      <a href="">
-                          <p>
-                              uj02013@naver.com
-                          </p>
-                      </a>
-                  </li>
-                  <li class="nav_li_item">
-                      <p>Phone number</p>
-                      <p>+1 321-977-4717</P>
-                  </li>
-              </ul>
-              <form>
-                <ul id="input_lists">
-                  <li class="nav_li_item">
-                    <label> name
-                      <input type="text">
-                    </label>
-                  </li>
-                  <li class="nav_li_item">
-                    <label> email
-                      <input type="text">
-                    </label>
-                  </li>
-                  <li class="nav_li_item">
-                    <label> phone
-                      <input type="text">
-                    </label>
-                  </li>
-                </ul>
-                <button type="button">Submit</button>
-            </form>
-          </div>
+        <h2 id="menu_title" class="title-row">Contact me<br></h2>
       </div>
+      <form class="form">
+        <h2 id="contact-text-header">LEAVE A MESSAGE</h2>
+        <p class="contact-text" type="Name:">
+          <input class="contact-input-field" placeholder="Write your name here.."></classinput></p>
+        <p class="contact-text" type="Email:">
+          <input class="contact-input-field" placeholder="Let us know how to contact you back.."></input></p>
+        <p class="contact-text" type="Message:">
+          <input class="contact-input-field" placeholder="What would you like to tell us.."></input></p>
+        <button id="send-button">Send Message</button>
+        <div class="bottom-info-panel">
+          <span class="fa fa-phone"></span>+1 732-298-0397
+          <span class="fa fa-envelope-o"></span> baeksoungjun@gmail.com
+        </div>
+      </form>
     </section>
     <footer class="social_media">
       <ul class="footer_list">

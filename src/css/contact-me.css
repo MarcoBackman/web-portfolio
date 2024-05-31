@@ -1,56 +1,94 @@
 /* CSS for contact-me.html page */
 body {
     display: none;
+    position: relative;
     width: 100%;
     margin: 0;
+    overflow-x: hidden;
 }
 
-#inner_lists a p#high_light_tab {
-    border-color: #563f46;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    color: #563f46;
+body#contact-me-body {
+    background-color: #ddbfa1;
 }
 
-#inner_lists a p#high_light_tab:hover {
-    border-color: #bbab9b;
-    color: #bbab9b;
-    transition-duration: 0.3s;
-    border-radius: 25px;
-}
-
-
-h2#menu_title {
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-    color: #b9936c;
-    margin: 0;
-    padding-left: 1.5em;
-    padding-top: 1em;
-    background-color: #c0ded7;
-}
-
-h2#menu_title::after {
-    content: "";
-    display: inline-block;
+.form {
+    width: 340px;
+    height: 440px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(50vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
     position: relative;
-    margin-top: 0;
-    padding-top: 0;
-    width: 55%;
-    border-bottom: 2px solid #b9936c;
-    margin-bottom: 1em;
 }
 
-#nav_head_title {
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-    padding-left: 2em;
-    padding-right: 2em;
+h2#contact-text-header {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    font-size: 18px;
+    width: 180px;
+    color: #78788c;
+    border-bottom: 3px solid #78788c;
+}
+input.contact-input-field {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
 }
 
-div#nav_head_title {
-    min-height: 90vh;
+input.contact-input-field:focus {
+    border-bottom: 2px solid #78788c;
 }
 
-section#main_section {
-    background-color: #FFFFFF;
+p.contact-text:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #5a5a5a;
+}
+
+button#send-button {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button#send-button:hover {
+    background: #78788c;
+    color: #fff;
+}
+
+div.bottom-info-panel {
+    content: "Hi";
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: #50505a;
+    color: #fff;
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000;
+}
+
+.bottom-info-panel > span {
+    margin: 0 5px 0 15px;
 }
