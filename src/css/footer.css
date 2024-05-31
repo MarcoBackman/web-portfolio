@@ -2,8 +2,10 @@
 
 footer {
     display: block;
-    position: absolute;
+    position: relative;
     text-align: center;
+    margin: 0;
+    padding: 0;
     background: -webkit-linear-gradient(110deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -webkit-linear-gradient(80deg, #c06c84 60%, #6c5b7c 60%);
     background: -o-linear-gradient(110deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -o-linear-gradient(80deg, #c06c84 60%, #6c5b7c 60%);
     background: -moz-linear-gradient(110deg, #ea9085 35%, rgba(0, 0, 0, 0) 30%), -moz-linear-gradient(80deg, #c06c84 60%, #6c5b7c 60%);

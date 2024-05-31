@@ -6,19 +6,21 @@
     <meta name="theme-color" content="#000000" />
     <link rel="stylesheet" href="../../css/navbar.css">
     <link rel="stylesheet" href="../../css/footer.css">
-    <link rel="stylesheet" href="../../css/about-me.css">
     <link rel="stylesheet" href="../../css/dark-mode.css">
+    <link rel="stylesheet" href="../../css/about-me.css">
     <link href="https://fonts.cdnfonts.com/css/games" rel="stylesheet">
     <script src="../../../src/js/darkmode.js"></script>
+    <script src="../../../src/js/about-me.js"></script>
     <script type="module">
+      flipCard();
       //Give delay to give dark mode render time
-      setTimeout(async function() {
+      setTimeout(function() {
         document.getElementsByTagName("body")[0].style.display = "block";
       }, 100);
     </script>
     <title>Sung-Jun(Tony) Baek</title>
   </head>
-  <body>
+  <body id="content-body">
     <header>
       <label id="dark_mode_label" class="top_label">
         <input type="checkbox" id="dark-mode" name="dark-mode" onclick="updateDarkMode()">
@@ -64,7 +66,103 @@
         </div>
       </nav>
     </header>
-    <section id="main_section">
+    <section id="main_section-about-me">
+
+      <div id="menu_title_div">
+        <h2 id="menu_title" class="title-row">About me<br></h2>
+      </div>
+      <div id="card-section">
+        <div class='card-wrapper'>
+          <div class='card' data-toggle-class='flipped'>
+            <div class='card-front'>
+              <div class='layer'>
+                <h1>Marco Backman</h1>
+                <p style="text-align: center; color: #1f1f1f; font-weight: bold">click to flip</p>
+                <div class='corner'></div>
+                <div class='corner'></div>
+                <div class='corner'></div>
+                <div class='corner'></div>
+              </div>
+            </div>
+            <div class='card-back'>
+              <div class='layer'>
+                <div class='top'>
+                  <div class="top-left">
+                    <h1>Tony Baek</h1>
+                    <h2>Software Developer</h2>
+                  </div>
+                  <div class="top-middle">
+                    <!-- empty field -->
+                  </div>
+                  <div class="top-right">
+                    <img src="../../img/myimage-no-background.png"></img>
+                  </div>
+                </div>
+                <div class='bottom'>
+                  <h3>
+                    Phone:
+                    <a href='tel:+1 732-298-0397'>+1 732-298-0397</a>
+                  </h3>
+                  <h3>
+                    Email: baeksoungjun@gmail.com
+                  </h3>
+                  <h3>
+                    LinkedIn:
+                    <a href='https://www.linkedin.com/in/sung-jun-baek-9b505b11a/' target='_blank'>sung-jun-baek-9b505b11a</a>
+                  </h3>
+                  <h3>
+                    Kakao ID: poni2006
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="timeline-section">
+        <h1>My Career Journey</h1>
+        <div class="timeline">
+
+          <h2 class="timeline__item timeline__item--year">2016</h2>
+          <div class="timeline__item">
+            <h3 class="timeline__title">Joined Florida Institute of Technology</h3>
+            <p>Graduated in 2022 as Bachelor's degree in computer science.</p>
+          </div>
+
+          <h2 class="timeline__item timeline__item--year">2019</h2>
+          <div class="timeline__item">
+            <h3 class="timeline__title">Joined ROK Navy</h3>
+            <p>Computation/Signaller crew member of Fleet Command's DDH-977 destroyer.</p>
+            <p>Computation/Administration specialist of Fleet Command's 59 Squadron.</p>
+            <p>Completed military service in 2021 as Petty Officer 2nd rank.</p>
+          </div>
+
+          <h2 class="timeline__item timeline__item--year">2021</h2>
+          <div class="timeline__item">
+            <h3 class="timeline__title">Project Team Leader - Model Based IoT</h3>
+            <p>Graduation Project, <span style="font-weight: bolder; color: #fafafa">Team Leader</span> - took second place in project contest in FIT.</p>
+          </div>
+
+          <h2 class="timeline__item timeline__item--year">2022</h2>
+          <div class="timeline__item">
+            <h3 class="timeline__title">Joined BeaconFire</h3>
+            <p>Java Backend Software Developer Position.</p>
+            <p><span style="font-weight: bolder; color: #fafafa">Team Leader</span> during training session - beacon-team-agile.</p>
+          </div>
+
+          <h2 class="timeline__item timeline__item--year">2022</h2>
+          <div class="timeline__item">
+            <h3 class="timeline__title">Joined DriveWealth Projects</h3>
+            <p>Served Finance Brokerage Company as a client.</p>
+            <p>Consultant of Post-trade team and Mutual-Fund team.</p>
+          </div>
+
+          <h2 class="timeline__item timeline__item--year">2024</h2>
+
+        </div>
+      </div>
+
     </section>
     <footer class="main_footer">
       <ul class="footer_list">

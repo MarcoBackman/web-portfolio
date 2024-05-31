@@ -1,253 +1,87 @@
 /* CSS for projects.html page */
-
 body {
-    width: 100%;
-    background-color: #ffffff;
-    margin: 0;
-}
-
-img {
-    max-width: 100%;
-    max-height: 35vh;
-}
-
-/* Highlights the related button on present page */
-#inner_lists a p#high_light_tab {
-    border-color: #563f46;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    color: #563f46;
-}
-
-#inner_lists a p#high_light_tab:hover {
-    border-color: #bbab9b;
-    color: #bbab9b;
-    transition-duration: 0.3s;
-    border-radius: 25px;
-}
-
-h2#menu_title {
-    display: block;
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-    color: #b9936c;
-    margin: 0;
-    padding-top: 1em;
-    padding-left: 1.5em;
-    background-color: #c0ded7;
-}
-
-h2#menu_title::after {
-    content: "";
-    display: inline-block;
+    display: none;
     position: relative;
-    margin-top: 0;
-    padding-top: 0;
-    width: 55%;
-    border-bottom: 2px solid #b9936c;
-    margin-bottom: 1em;
+    height: 10vh;
+    margin: 0;
+    overflow-x: hidden;
 }
 
-section#main_section{
-    background-color: #FFFFFF;
-    min-height: 90vh;
-}
 
-div.dev_section {
-    display: block;
-    position: relative;
-}
-
-div.dev_section_title {
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+.design-section {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f1f1f;
+    min-height: 100vh;
+    padding: 100px 0;
+    font-family: Jost;
 }
 
-@keyframes slideInFromLeft {
-    0% {
-        opacity: 0.5;
-        transform: translateX(-80%);
-    }
-    100% {
-        opacity: 0.9;
-        transform: translateX(0);
-    }
-  }
-
-h2.dev_section_class {
-    display: block;
-    margin-left: 1em;
-    color: #5c2121;
-    animation: 1s ease-out 0s 1 slideInFromLeft;
+.design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-h2.dev_section_class::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 250px;
-    margin-top: 0.2em;
-    border: 1px solid#5c2121;
-}
-
-h2.dev_section_class:hover {
-    cursor: default;
-}
-
-label.view_more_label {
-    display: inline-flex;
-    position: absolute;
-    border: 2px solid #563f46;
-    border-radius: 25px;
-    max-height : 18px;
-    padding: 0.5em 0.8em 0.5em 0.8em;
-    margin: 1em 0 0 1em;
-    left: 25%;
-    transition-duration: 0.3s;
-    font-weight: 700;
-}
-
-label.view_more_label:hover {
-    background-color: #bbab9b;
-    transition-duration: 0.3s;
-    cursor: pointer;
-}
-
-input.view_more_checkbox {
-    display: none;
-}
-
-div#detail_view_box {
-    display: none;
-    position: absolute;
-    left: auto;
-    top: auto;
-    z-index: 100;
-}
-
-div#detail_view_box p {
-    text-align: center;
-    padding: 2px 5px 2px 5px;
-    border: 1px solid #563f46;
-    border-radius: 5px;
-    background-color: #ffffff;
-}
-
-ul.project_layout_ul {
-    margin: 0 0 0 3em;
-    padding: 0;
-}
-
-li.project_card_list {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    resize: both;
+.timeline {
     width: 80%;
-    height: 0px;
-    opacity: 1;
-    padding: 0;
-    transition-duration: 0.8s;
-    background-color: #e1e1e1;
-    background-image: url("../img/main_background_2.jpg");
-    background-position: center;
-    background-repeat: repeat-x;
-    background-size: 55%;
-    box-shadow: 0 5px 5px #6f6f6f;
-    border-radius: 10px;
-    margin: 0 10% 0 10%;
-    list-style: none;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
-div.project_card {
-    width: 60%;
-    margin: 1em 20% 1em 20%;
-    padding: 1em 0 1em 0;
-    border: 2px solid #5c2121;
-    border-radius: 10px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-p.project_description {
-    margin: 0 28% 0 28%;
-    text-align: left;
-}
-
-li.project_preview_text {
-    margin: 2px 0 2px 0;
-}
-
-a.github_link,
-a.project_link {
-    display: inline-block;
-    padding: 5px 1em 5px 1em;
-    border-radius: 10px;
-    background-color: #ececec;
-    text-decoration: none;
-    text-align: right;
-    width: 350px;
-    transition-duration: 0.5s;
-}
-
-a.github_link:hover,
-a.project_link:hover {
-    color: #ffffff;
-    background-color: #5c2121;
-    transition-duration: 0.3s;
-}
-
-button.single_expand {
-    background-color: #ffffff;
-    border: 1px solid #6f6f6f;
-    border-radius: 15px;
-    font-weight: 700;
-    text-align: center;
-    padding: 0 1px 1px 0;
-    margin: 0 0 0 1em;
-    width: 20px;
-    height: 20px;
-
-}
-
-button.single_expand:hover {
-    background-color: #6f6f6f;
-    color: color-contranst(#6f6f6f);
-}
-
-ul.used_skills_ul {
-    margin: 1em 0 1em 0;
-    padding: 0;
-}
-
-li.skill_li {
-    margin: 0 35% 0 35%;
-    list-style: none;
-    text-align: left;
-}
-
-img.project_image {
-
-    width: auto;
-    max-height: 350px;
+.timeline-content {
+    padding: 20px;
+    background: #1f1f1f;
+    -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+    box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
     border-radius: 5px;
+    color: white;
+    padding: 1.75rem;
+    transition: 0.4s ease;
+    overflow-wrap: break-word !important;
+    margin: 1rem;
+    margin-bottom: 20px;
+    border-radius: 6px;
 }
 
-p.img_text {
-    margin: 0.5em 0 0.5em 0;
+.timeline-component {
+    margin: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .timeline {
+        display: grid;
+        grid-template-columns: 1fr 3px 1fr;
+    }
+    .timeline-middle {
+        position: relative;
+        background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+        width: 3px;
+        height: 100%;
+    }
+    .main-middle {
+        opacity: 0;
+    }
+    .timeline-circle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
 }
 
 @media only screen and (max-width: 768px) {
 
-    ul.project_layout_ul {
-        margin: 0 1em 0 1em;
-        padding: 0;
-    }
 
-    p.project_description {
-        margin: 0 1em 0 1em;
-    }
-
-    li.skill_li {
-        margin: 0 1em 0 1em;
-    }
 }
