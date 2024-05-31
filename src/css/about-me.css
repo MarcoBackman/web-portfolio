@@ -292,7 +292,7 @@ h1 {
     background-color: #4d4d4d;
     line-height: 1;
     border-image: none;
-    padding: 0.7rem 1rem 1rem;
+    padding: 0.7yrem 1rem 1rem;
 }
 .timeline__item--year:before {
     display: none;

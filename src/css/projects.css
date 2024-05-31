@@ -5,6 +5,7 @@ body {
     height: 10vh;
     margin: 0;
     overflow-x: hidden;
+    background-color: #ddbfa1;
 }
 
 
@@ -14,7 +15,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #1f1f1f;
     min-height: 100vh;
     padding: 100px 0;
     font-family: Jost;
@@ -79,6 +79,12 @@ body {
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
     }
+}
+
+.unavailable-link {
+    color: #5c2121;
+    text-decoration: line-through;
+    cursor: not-allowed;
 }
 
 @media only screen and (max-width: 768px) {
