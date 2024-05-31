@@ -7,8 +7,8 @@ body {
     overflow-x: hidden;
 }
 
-body#contact-me-body {
-    background-color: #ddbfa1;
+section {
+    height: 100vh;
 }
 
 .form {

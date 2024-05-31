@@ -170,7 +170,14 @@ body:has(label#dark_mode_label>#dark-mode:checked) section#main_section-about-me
 /***********************************************************
  * contact-me.html content dark mode
  */
+body:has(label#dark_mode_label>#dark-mode:checked) section#contact-me-main_section {
+    background-color: #1f1f1f;
+}
 
-body:has(label#dark_mode_label>#dark-mode:checked) body#contact-me-body {
-    background-color: #25161b;
+/***********************************************************
+ * projects.html content dark mode
+ */
+
+body:has(label#dark_mode_label>#dark-mode:checked) section#projects-main_section {
+    background-color: #1f1f1f;
 }
