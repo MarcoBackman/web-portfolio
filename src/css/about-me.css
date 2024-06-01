@@ -152,8 +152,8 @@ div#card-section {
     width: 100%;
 }
 .card-front .layer h1 {
-    font-size: 32px;
-    font-weight: 400;
+    font-size: 36px;
+    font-weight: 500;
     letter-spacing: -2px;
     margin: 0 auto;
     padding: 6px 18px 4px;
@@ -287,12 +287,12 @@ h1 {
 .timeline__item--year {
     text-align: center;
     max-width: 150px;
-    margin: 2px 48px 0 auto;
+    margin: 0 48px 0 auto;
     font-size: 1.8rem;
     background-color: #4d4d4d;
     line-height: 1;
     border-image: none;
-    padding: 0.7yrem 1rem 1rem;
+    padding: 0.5rem 1rem 1rem;
 }
 .timeline__item--year:before {
     display: none;

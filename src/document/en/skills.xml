@@ -5,7 +5,7 @@
         <list>
             <subject>Java version</subject>
             <content>Used version 8 to utilize <bold>functional interface</bold> for <bold>stream processing</bold> and <bold>bi-functions</bold> features.</content>
-            <content>Used version 17 to utilize <bold>record class</bold>(JDK 14) for immutable object data and <bold>sealed classes</bold> for enhanced switch statement.</content>
+            <content>Used version 17 to utilize <bold>record class</bold>(JDK 14) for immutable object data, enhanced switch statement, and <bold>sealed classes</bold> for extend restriction.</content>
         </list>
         <list>
             <subject>Spring Boot MVC</subject>
