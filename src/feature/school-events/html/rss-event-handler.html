@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RSS Event Handler</title>
+
+    <link rel="stylesheet" href="../../../css/navbar.css">
+    <link rel="stylesheet" href="../../../css/footer.css">
+    <link rel="stylesheet" href="../../../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/school-event.css">
+    <script src="../js/project-event.js" defer></script>
+
+</head>
+<body>
+    <div id="menu_title_div">
+        <h2 id="menu_title">My Event Manager<br></h2>
+        <h3 class="sub_title">Description</h3>
+        <p class="project_description">
+            This project used self deployed RSS feed data built with JavaSpring<br>
+            The website generally returns the RSS data just by requesting the connection to it<br>
+            Then, based on the returned feed,
+            Created on Feb 2022. By Sung-Jun(Tony) Baek.
+        </p>
+        <h3 class="sub_title">How to use</h3>
+        <p class="">
+            Select origin currency to desired currency you wish to convert.<br>
+            Enter the origin money amount. After pressing submit, the result will be shown in the result box.
+        </p>
+        <h3 class="sub_title">Additional development info</h3>
+        <p>
+            Exchange rate provided by Bank of Canada: <a href="https://www.bankofcanada.ca">https://www.bankofcanada.ca</a>
+        </p>
+        <h3 class="sub_title">GitHub</h3>
+        <p>
+            View java script code:
+            <a href="https://github.com/MarcoBackman/RSSfeedJavaSpring.git">
+                https://github.com/MarcoBackman/RSSfeedJavaSpring.git
+            </a>
+            <br>
+        </p>
+        <p>Download currency rate data API from 2017 to current date
+            <button>
+                <a href="https://www.bankofcanada.ca/valet/observations/group/FX_RATES_DAILY/xml?start_date=2017-01-03">
+                    Download
+                </a>
+            </button>
+        </p>
+        <div>
+            <p>
+                event.rss from the webserver
+            </p>
+            <iframe id="rss_code" src="../data/events.rss">
+
+            </iframe>
+        </div>
+    </div>
+    <h3 class="sub_title">Program Demo</h3>
+    <div id="filter_div">
+        <ul id="filter_ul">
+            <li class="filter_li">
+                <div class="filter_input">
+                    <label for="title_input">Title</label>
+                    <input type="text" id="title_input" name="title_input" value="">
+                </div>
+            </li>
+            <li class="filter_li">
+                <div class="filter_input">
+                    <label for="desc_input">Desc</label>
+                    <input type="text" id="desc_input" name="desc_input" value="">
+                </div>
+            </li>
+            <li class="filter_li">
+                <div class="filter_input">
+                    <label for="date_input">Date</label>
+                    <input type="text" id="date_input" name="date_input" value="MM/DD/YYYY">
+                </div>
+            </li>
+            <li class="filter_li">
+                <div class="button_container">
+                    <button id="filter_submit">
+                        Submit
+                    </button>
+                    <button id="filter_clear">
+                        Clear Filters
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="box_repeater">
+    </div>
+</body>
+</html>
