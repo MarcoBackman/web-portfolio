@@ -53,11 +53,40 @@ body {
 
 .timeline-content div.inner-reference h3 {
     margin: 0 1em 0 0;
-    color: #a67faf;
+    color: #cb74dc;
+    width: 75%;
 }
 
 .timeline-content div.inner-reference a {
-    margin: auto 1em auto 0
+    float: right;
+    margin: auto 1em auto 0;
+    text-decoration: none;
+    background-color: #c1ac98;
+    width: 25%;
+    text-align: center;
+    border-radius: 20px;
+    transition-duration: 0.3s;
+}
+
+.timeline-content div.inner-reference a:hover {
+    color: #000000;
+    background-color: #f1e0ce;
+}
+
+a.website-btn  {
+    color: #000000 !important;
+    background-color: #b89ff6 !important;
+    box-shadow: 0 0 9px #FFFFFF;
+}
+
+a.website-btn:hover  {
+    color: #727272 !important;
+    background-color: #cab9f6 !important;
+}
+
+a.website-btn:hover {
+    color: #000000;
+    background-color: #f1e0ce;
 }
 
 .timeline-component {
@@ -109,6 +138,15 @@ div.tech-stack-div img {
     box-shadow: 0 0 7px white;
     margin: 0 0.4em;
     padding: 0;
+    transition-duration: 0.2s;
+}
+
+div.tech-stack-div img:hover {
+    transform: scale(1.6);
+}
+
+span.bold {
+    font-weight: bold;
 }
 
 .unavailable-link {
@@ -133,10 +171,15 @@ div.company-logo h3 {
 }
 
 div.company-logo img {
-    width: 75px;
-    height: 75px;
     border-radius: 50%;
+    width: 95px;
+    height: 95px;
     border: solid 2px #0c0d0d;
+    transition: transform 0.25s ease;
+}
+
+div.company-logo img:hover {
+    transform: scale(1.2);
 }
 
 @media only screen and (max-width: 768px) {

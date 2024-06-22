@@ -11,6 +11,7 @@
     <link href="https://fonts.cdnfonts.com/css/games" rel="stylesheet">
     <script src="../../../src/js/darkmode.js"></script>
     <script src="../../../src/js/about-me.js"></script>
+    <script src="../../../src/js/navbar.js" defer></script>
     <script type="module">
       flipCard();
       //Give delay to give dark mode render time
@@ -31,33 +32,33 @@
             <li id="category_list" class="outer_list">
               <ul class="inner_lists">
                 <li class="nav_li_item">
-                  <a href="../../../index.html">
-                    <p>Home</p>
+                  <a href="../../../index.html" class="nav-button">
+                    Home
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="./about-me.html">
-                    <p id="about-text" class="highlight">About me</p>
+                  <a href="about-me.html" class="nav-button highlight">
+                    About me
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="skills.html">
-                    <p id="skills-text">Skills</p>
+                  <a href="skills.html" class="nav-button">
+                    Skills
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="projects.html">
-                    <p id="project-text">Projects</p>
+                  <a href="projects.html" class="nav-button">
+                    Projects
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="resume.html">
-                    <p id="resume-text">Resume</p>
+                  <a href="./resume.html" class="nav-button">
+                    Resume
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="contact-me.html">
-                    <p id="contact-text">Contact me</p>
+                  <a href="contact-me.html" class="nav-button">
+                    Contact me
                   </a>
                 </li>
               </ul>
@@ -67,10 +68,6 @@
       </nav>
     </header>
     <section id="main_section-about-me">
-
-      <div id="menu_title_div">
-        <h2 id="menu_title" class="title-row">About me<br></h2>
-      </div>
       <div id="card-section">
         <div class='card-wrapper'>
           <div class='card' data-toggle-class='flipped'>

@@ -1,15 +1,15 @@
 /* CSS for about-me.css page */
 body {
-    display: block;
+    display: flex;
     position: relative;
     width: 100%;
-    min-height: 100vh;
     margin: 0;
+    padding: 0;
     overflow-x: hidden;
-    background-image: linear-gradient(to bottom, #c06c84, #757575);
 }
 
 #main_section-about-me {
+    display: block;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@ body {
 div#card-section {
     display: block;
     position: relative;
-    height: 500px;
+    height: 400px;
 }
 
 
@@ -190,7 +190,7 @@ div#card-section {
 
 .card-wrapper {
     top: 13%;
-    margin: 1em auto 0 auto;
+    margin: 0 auto 0 auto;
     height: 271.7647058824px;
     max-width: 520px;
     perspective: 300px;
@@ -250,6 +250,7 @@ h1 {
     border: 2px solid hotpink;
     border-image: linear-gradient(to right, skyblue 0%, hotpink 100%);
     border-image-slice: 1;
+    background-color: rgba(110, 87, 115, 0.78);
     position: relative;
     margin: 1rem 3rem 1rem 1rem;
     clear: both;

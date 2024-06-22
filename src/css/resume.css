@@ -2,16 +2,8 @@
 
 body {
     width: 100%;
-    background-color: #ffffff;
+    background-color: #726868;
     margin: 0;
-}
-
-section#main_section{
-    display: block;
-    position: relative;
-    min-height: 550px;
-    height: 550px;
-    background-color: #ffffff;
 }
 
 #inner_lists a p#high_light_tab {
@@ -27,27 +19,6 @@ section#main_section{
     color: #bbab9b;
     transition-duration: 0.3s;
     border-radius: 25px;
-}
-
-h2#menu_title {
-    display: flex;
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
-    color: #b9936c;
-    margin: 0;
-    padding-top: 1em;
-    padding-left: 1.5em;
-    background-color: #c0ded7;
-}
-
-h2#menu_title::after {
-    content: "";
-    display: inline-block;
-    position: relative;
-    margin-top: 0;
-    padding-top: 0;
-    width: 55%;
-    border-bottom: 2px solid #b9936c;
-    margin-bottom: 1em;
 }
 
 #content_div {

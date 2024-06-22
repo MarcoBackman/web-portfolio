@@ -179,5 +179,5 @@ body:has(label#dark_mode_label>#dark-mode:checked) section#contact-me-main_secti
  */
 
 body:has(label#dark_mode_label>#dark-mode:checked) section#projects-main_section {
-    background-color: #1f1f1f;
+    background-color: #393939;
 }
