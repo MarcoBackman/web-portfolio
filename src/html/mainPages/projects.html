@@ -12,6 +12,7 @@
     <script src="../../../src/js/darkmode.js"></script>
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="../../../src/js/navbar.js" defer></script>
     <script type="module">
       //Give delay to give dark mode render time
       setTimeout(function() {
@@ -31,33 +32,33 @@
             <li id="category_list" class="outer_list">
               <ul class="inner_lists">
                 <li class="nav_li_item">
-                  <a href="../../../index.html">
-                    <p>Home</p>
+                  <a href="../../../index.html" class="nav-button">
+                    Home
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="about-me.html">
-                    <p id="about-text">About me</p>
+                  <a href="about-me.html" class="nav-button">
+                    About me
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="skills.html">
-                    <p id="skills-text">Skills</p>
+                  <a href="skills.html" class="nav-button">
+                    Skills
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="./projects.html">
-                    <p id="project-text" class="highlight">Projects</p>
+                  <a href="projects.html" class="highlight nav-button">
+                    Projects
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="resume.html">
-                    <p id="resume-text">Resume</p>
+                  <a href="./resume.html" class="nav-button">
+                    Resume
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="contact-me.html">
-                    <p id="contact-text">Contact me</p>
+                  <a href="contact-me.html" class="nav-button">
+                    Contact me
                   </a>
                 </li>
               </ul>
@@ -67,20 +68,16 @@
       </nav>
     </header>
     <section id="projects-main_section">
-      <div id="menu_title_div">
-        <h2 id="menu_title" class="title-row">Projects<br></h2>
-      </div>
       <style>@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');</style>
       <section class="design-section">
         <div class="timeline">
-
           <!-- Right -->
           <div class="timeline-empty"></div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
           </div>
           <div class="timeline-component timeline-content">
-            <h3>Integration testing with finance system <span style="font-weight: lighter;font-size: 14px">2024</span></h3>
+            <h3>Integration testing with finance system demo <span style="font-weight: lighter;font-size: 14px">2024</span></h3>
             <div class="tech-stack-div">
               <img title="java spring" src="../../img/logo/javaspring.png">
               <img title="maven" src="../../img/logo/maven.png">
@@ -97,11 +94,11 @@
             <p>Personal project that enables banking service with integration testing tool that runs in docker environment.</p>
             <div class="inner-reference">
               <h3>Integration test tool:</h3>
-              <a href="https://github.com/MarcoBackman/integration-testing-tool">View Code</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/integration-testing-tool">View Code</a>
             </div>
             <div class="inner-reference">
               <h3>Core banking application:</h3>
-              <a href="https://github.com/MarcoBackman/bankcoresystem">View Code</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/bankcoresystem">View Code</a>
             </div>
           </div>
 
@@ -118,8 +115,14 @@
             </div>
             <p>A simple personal project that mimics retail service tool</p>
             <p>Utilized Swagger, h2 DB, h2-console, and jdbc template with prepared statement</p>
-            <a href="https://github.com/MarcoBackman/retailAPI">View Code</a>
-            <a href="" class="unavailable-link">Download</a>
+            <div class="inner-reference">
+              <h3>Retail service code</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/retailAPI">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>View demo</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://54.160.158.7:8082/swagger-ui/index.html" class="website-btn">View API Website</a>
+            </div>
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
@@ -155,8 +158,8 @@
             <p>Data reconciliation system that ensures fund price data and share holding amounts on three-point data sources.</p>
             <p>Reports various types of reports in Excel files to Slack message.</p>
             <p>Applied Cursor, lazy DB record fetch, optimistic locks to avoid DB data corruption and false alarm.</p>
-            <a href="" class="unavailable-link">View Code</a>
-            <a href="" class="unavailable-link">Download</a>
+            <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">View Code</a>
+            <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">Download</a>
           </div>
 
           <!-- Left -->
@@ -196,8 +199,8 @@
             <p>Event Driven Architecture for core service system which handles mutual fund trade orders.</p>
             <p>Relays order from different services to other vendor applications via Kafka, AMQ, and S3 bucket.</p>
             <p>Conducted and implemented performance testing system on each endpoint after completion of SI.</p>
-            <a href="" class="unavailable-link">View Code</a>
-            <a href="" class="unavailable-link">Download</a>
+            <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">View Code</a>
+            <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">Download</a>
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
@@ -228,8 +231,8 @@
             <p>Utilized parallel stream, Dynamo parallel scan, and caffeine cache to maximize the operation speed.</p>
             <p>Used GPG decryption tool to manage encrypted files.</p>
             <p>Used 'itextpdf' library for pdf file modification and content generation.</p>
-            <a href="" class="unavailable-link">View Code</a>
-            <a href="" class="unavailable-link">Download</a>
+            <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">View Code</a>
+            <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">Download</a>
           </div>
 
           <!-- Left -->
@@ -250,8 +253,8 @@
             <p>A project to resolve and enhance the bottleneck of unbalanced kafka events among different partitions.</p>
             <p>Utilized KafkaTemplate, applied FactoryPattern for Consumer and Producer in KStream.</p>
             <p>Deep understanding of Kafka architecture - Zookeeper, Broker, Consumer, Producer.</p>
-            <a href="" class="unavailable-link">View Code</a>
-            <a href="" class="unavailable-link">Download</a>
+            <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">View Code</a>
+            <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">Download</a>
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
@@ -284,10 +287,13 @@
             <p>Team project in BeaconFire for HR management microservice app</p>
             <p>Collaborated project as a team leader of 4 developers</p>
             <p>Utilized cloud services such as RDS, EC2, AtlasMongoDB, and S3 bucket</p>
-            <p>Application comprises gateway, authentication server, Eureka server, email service, composite service for business services.</p>
+            <p>Application comprises <span class="bold">gateway, authentication server,
+              Eureka server, email service, composite service</span> for business services.</p>
             <p>Test coverages with Junit5 and Jacoco</p>
-            <a href="https://github.com/beacon-team-agile">View Code</a>
-            <a href="" class="unavailable-link">Download</a>
+            <div class="inner-reference">
+              <h3>All service repositories</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/beacon-team-agile">View Code</a>
+            </div>
           </div>
 
           <!-- Left -->
@@ -302,8 +308,14 @@
               <img title="postman" src="../../img/logo/postman.svg">
             </div>
             <p>Java Spring Hibernate(ORM for MySQL) with Spring Security to restrict unauthorized API access.</p>
-            <a href="https://github.com/MarcoBackman/hibernateAOPwSecurity">View Code</a>
-            <a href="" class="unavailable-link">Download</a>
+            <div class="inner-reference">
+              <h3>Project repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/hibernateAOPwSecurity">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>Download repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/hibernateAOPwSecurity/archive/refs/heads/main.zip">Download</a>
+            </div>
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
@@ -319,15 +331,27 @@
             <h3>Java Spring Quiz App <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
             <div class="tech-stack-div">
               <img title="javaspring" src="../../img/logo/javaspring.png">
+              <img title="css" src="../../img/logo/EC2.png">
+              <img title="css" src="../../img/logo/rds.png">
               <img title="mysql" src="../../img/logo/mysql.png">
               <img title="hibernate" src="../../img/logo/hibernate.jpg">
               <img title="maven" src="../../img/logo/maven.png">
               <img title="css" src="../../img/logo/css3.png">
             </div>
-            <p>Personal Project for quiz app using jdbc/hibernate, JSP&JSTL, mySQL.</p>
-            <a href="https://github.com/MarcoBackman/hibernate_quiz_webapp">View Code(Hibernate)</a>
-            <a href="https://github.com/MarcoBackman/jdbc-quizwebapp">View Code(JDBC)</a>
-            <a href="" class="unavailable-link">Download</a>
+            <p>Personal Project for quiz app using jdbc/hibernate, JSP&JSTL, mySQL with Amazon RDS.</p>
+            <p>Hosted with ec2 packaged with war extension for static web model views</p>
+            <div class="inner-reference">
+              <h3>Hibernate version code</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/hibernate_quiz_webapp">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>JDBC version code</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/jdbc-quizwebapp">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>View Demo</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://54.160.158.7:8081/home" class="website-btn">View Website</a>
+            </div>
           </div>
 
           <!-- Left -->
@@ -337,8 +361,14 @@
               <img title="java" src="../../img/logo/java-logo.png">
             </div>
             <p>Fast nearest neighbor searching algorithm</p>
-            <a href="https://github.com/MarcoBackman/RangeSearchAnalysis">View Code</a>
-            <a href="" class="unavailable-link">Download</a>
+            <div class="inner-reference">
+              <h3>Project repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/RangeSearchAnalysis">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>Download repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/RangeSearchAnalysis/archive/refs/heads/main.zip">Download</a>
+            </div>
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
@@ -367,9 +397,18 @@
             </div>
             <p>Team leader of Florida Tech Senior Project. Second Place in the contest</p>
             <p>Translates UI-based diagram into executable codes for various embedded IoT devices: Roomba, RaspberryPi, Lidar.</p>
-            <a href="https://github.com/TCC2021SeniorProject">View Code</a>
-            <a href="https://tcc2021seniorproject.github.io/">View Website</a>
-            <a href="https://docs.google.com/presentation/d/e/2PACX-1vTh9g5zqGzarbx02DTe307dhtr2jh2ZGw2s3z_i5PmHWZLLvUaUmvNoTafaaiM74w/pub?start=false&loop=false&delayms=3000">View Poster</a>
+            <div class="inner-reference">
+              <h3>Project repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/TCC2021SeniorProject">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>View Project Website</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://tcc2021seniorproject.github.io/" class="website-btn">View Website</a>
+            </div>
+            <div class="inner-reference">
+              <h3>View Project Poster</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/e/2PACX-1vTh9g5zqGzarbx02DTe307dhtr2jh2ZGw2s3z_i5PmHWZLLvUaUmvNoTafaaiM74w/pub?start=false&loop=false&delayms=3000" class="website-btn">View Poster</a>
+            </div>
           </div>
 
           <!-- Left -->
@@ -382,8 +421,14 @@
               <img title="matplotlib" src="../../img/logo/matplotlib.png">
             </div>
             <p>Understanding and applying the graphics theory and visualize with Python</p>
-            <a href="https://github.com/MarcoBackman/Graphics?tab=readme-ov-file">View Code</a>
-            <a href="" class="unavailable-link">Download</a>
+            <div class="inner-reference">
+              <h3>Project repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Graphics?tab=readme-ov-file">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>Download repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Graphics/archive/refs/heads/main.zip">Download</a>
+            </div>
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
@@ -395,23 +440,6 @@
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
           </div>
-          <div class="timeline-component timeline-content">
-            <h3>(MERN) React Mini Project - Food search app <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
-            <div class="tech-stack-div">
-              <img title="react" src="../../img/logo/react-logo.png">
-              <img title="express" src="../../img/logo/express.png">
-              <img title="mongodb" src="../../img/logo/mongodb.png">
-              <img title="javascript" src="../../img/logo/JavaScript-logo.png">
-              <img title="css" src="../../img/logo/css3.png">
-              <img title="ec2" src="../../img/logo/EC2.png">
-            </div>
-            <p>React Project powered by AWS EC2, MongoDB, and ExpressJS</p>
-            <p>Utilized Hook, Router, axios, context, history, state handling, mongoose</p>
-            <a href="https://github.com/MarcoBackman/ReactProjects/tree/main/FoodRecipeServer">View Code</a>
-            <a href="" class="unavailable-link">Download</a>
-          </div>
-
-          <!-- Left -->
           <div class=" timeline-component timeline-content">
             <h3>(MERN) React Mini Project - Movie/TV show service provider app <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
             <div class="tech-stack-div">
@@ -423,8 +451,39 @@
               <img title="ec2" src="../../img/logo/EC2.png">
             </div>
             <p>React Project powered by AWS EC2, MongoDB, and ExpressJS</p>
-            <a href="https://github.com/MarcoBackman/d-star-algorithm">View Code</a>
-            <a href="" class="unavailable-link">Download</a>
+            <p>Utilized useEffect hook, Context Router, axios, history, state handling, mongoose</p>
+            <div class="inner-reference">
+              <h3>Project repository</h3>
+              <a target="_blank" rel="noopener noreferrer"  href="https://github.com/MarcoBackman/MovieService">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>View demo</h3>
+              <a target="_blank" rel="noopener noreferrer"  href="http://100.26.141.195:8084" class="website-btn">View Website</a>
+            </div>
+          </div>
+
+
+          <!-- Left -->
+          <div class="timeline-component timeline-content">
+            <h3>(MERN) React Mini Project - Food search app <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
+            <div class="tech-stack-div">
+              <img title="react" src="../../img/logo/react-logo.png">
+              <img title="express" src="../../img/logo/express.png">
+              <img title="mongodb" src="../../img/logo/mongodb.png">
+              <img title="javascript" src="../../img/logo/JavaScript-logo.png">
+              <img title="css" src="../../img/logo/css3.png">
+              <img title="ec2" src="../../img/logo/EC2.png">
+            </div>
+            <p>React Project powered by AWS EC2, MongoDB, and ExpressJS</p>
+            <p>Utilized Hook, Router, axios, history, state handling, mongoose</p>
+            <div class="inner-reference">
+              <h3>Project repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/FoodRecipeSearcher">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>View demo</h3>
+              <a target="_blank" rel="noopener noreferrer" href="http://100.26.141.195:8082/" class="website-btn">View Website</a>
+            </div>
           </div>
           <div class="timeline-empty"></div>
           <div class="timeline-middle">
@@ -446,13 +505,13 @@
             <p>A simple website project</p>
             <div class="inner-reference">
               <h3>Exchange rate viewer with external API:</h3>
-              <a href="https://github.com/MarcoBackman/web-portfolio/blob/main/src/feature/exchangeRate">View Code</a>
-              <a href="../../feature/exchangeRate/html/exchange-rate.html">View Website</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/web-portfolio/blob/main/src/feature/exchangeRate">View Code</a>
+              <a target="_blank" class="website-btn" rel="noopener noreferrer" href="../../feature/exchangeRate/html/exchange-rate.html">View Website</a>
             </div>
             <div class="inner-reference">
               <h3>School event viewer:</h3>
-              <a href="https://github.com/MarcoBackman/web-portfolio/blob/main/src/feature/school-events">View Code</a>
-              <a href="../../feature/school-events/html/rss-event-handler.html">View Website</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/web-portfolio/blob/main/src/feature/school-events">View Code</a>
+              <a target="_blank" class="website-btn" rel="noopener noreferrer" href="../../feature/school-events/html/rss-event-handler.html">View Website</a>
             </div>
           </div>
 
@@ -466,8 +525,14 @@
             </div>
             <p>Map discovery with path finding algorithm for infinite size of the map</p>
             <p>Utilized pygame library for visualization</p>
-            <a href="https://github.com/MarcoBackman/d-star-algorithm">View Code</a>
-            <a href="https://github.com/MarcoBackman/d-star-algorithm/archive/refs/heads/main.zip">Download</a>
+            <div class="inner-reference">
+              <h3>Project repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/d-star-algorithm">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>Download repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/d-star-algorithm/archive/refs/heads/main.zip">Download</a>
+            </div>
           </div>
           <div class="timeline-empty"></div>
           <div class="timeline-middle">
@@ -493,12 +558,18 @@
             <p>WebOS project to enhance IoT environment for integrated Automobile/Home/Finance.</p>
             <p>hosted by LG for home IoT.</p>
             <p>Utilized NodeJS, JWT, PostgresSQL, EC2, JavaScript </p>
-            <a href="https://github.com/MarcoBackman/2021ESWContest_webOS_3007">View Code</a>
-            <a href="" class="unavailable-link">Download</a>
+            <div class="inner-reference">
+              <h3>Project repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/2021ESWContest_webOS_3007">View Code</a>
+            </div>
           </div>
 
           <!-- Left -->
           <div class="timeline-component timeline-content">
+            <div class="company-logo">
+              <h3>Navy private project</h3>
+              <img style="background-color: whitesmoke;" title="ROKN" src="../../img/logo/rokn.svg">
+            </div>
             <h3>Calender UI in Java Swing/AWT<span style="font-weight: lighter;font-size: 14px">2020</span></h3>
             <div class="tech-stack-div">
               <img title="java" src="../../img/logo/java-logo.png">
@@ -506,8 +577,15 @@
             </div>
             <p>Java GUI mini project to show the Calendar</p>
             <p>Applied mouse scroll listeners with multi-panel UI based on calendar data</p>
-            <a href="https://github.com/MarcoBackman/CalendarUI">View Code</a>
-            <a href="https://github.com/MarcoBackman/CalendarUI/archive/refs/heads/main.zip">Download</a>
+            <p>Only partial demo code is avaiable due to the security reason.</p>
+            <div class="inner-reference">
+              <h3>Project repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/CalendarUI">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>Download repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/CalendarUI/archive/refs/heads/main.zip">Download</a>
+            </div>
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
@@ -520,16 +598,26 @@
             <div class="timeline-circle"></div>
           </div>
           <div class="timeline-component timeline-content">
+            <div class="company-logo">
+              <h3>Navy private project</h3>
+              <img style="background-color: whitesmoke;" title="ROKN" src="../../img/logo/rokn.svg">
+            </div>
             <h3>Password Generator in Java Swing/AWT <span style="font-weight: lighter;font-size: 14px">2019</span></h3>
             <div class="tech-stack-div">
               <img title="java" src="../../img/logo/java-logo.png">
               <img title="batch file" src="../../img/logo/batch.png">
             </div>
-            <p>My third java GUI mini project.</p>
+            <p>Java GUI project to automate the repetitive administration work.</p>
             <p>Generates random password based on the desired user setting.</p>
-            <p></p>
-            <a href="https://github.com/MarcoBackman/PasswordGenerator">View Code</a>
-            <a href="https://github.com/MarcoBackman/PasswordGenerator/archive/refs/heads/main.zip">Download</a>
+            <p>Only partial demo code is avaiable due to the security reason.</p>
+            <div class="inner-reference">
+              <h3>Project repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/PasswordGenerator">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>Download repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/PasswordGenerator/archive/refs/heads/main.zip">Download</a>
+            </div>
           </div>
 
           <!-- Left -->
@@ -541,8 +629,14 @@
             </div>
             <p>My second java GUI mini project.</p>
             <p>Utilized AWT action listeners with Adjacent search. Used LinkedHashMap with DFS Traverse Algorithm</p>
-            <a href="https://github.com/MarcoBackman/Mine-Sweeper">View Code</a>
-            <a href="https://github.com/MarcoBackman/Mine-Sweeper/archive/refs/heads/main.zip">Download</a>
+            <div class="inner-reference">
+              <h3>Project repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Mine-Sweeper">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>Download repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Mine-Sweeper/archive/refs/heads/main.zip">Download</a>
+            </div>
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
@@ -561,9 +655,14 @@
               <img title="java" src="../../img/logo/java-logo.png">
               <img title="batch file" src="../../img/logo/batch.png">
             </div>
-            <p>My first java GUI mini project.</p>
-            <a href="https://github.com/MarcoBackman/Snake-Game">View Code</a>
-            <a href="https://github.com/MarcoBackman/Snake-Game/archive/refs/heads/main.zip">Download</a>
+            <div class="inner-reference">
+              <h3>Project repository</h3>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Snake-Game">View Code</a>
+            </div>
+            <div class="inner-reference">
+              <h3>Download repository</h3>
+              <a target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer"  href="https://github.com/MarcoBackman/Snake-Game/archive/refs/heads/main.zip">Download</a>
+            </div>
           </div>
           <div class="timeline-empty"></div>
           <div class="timeline-middle">
@@ -577,44 +676,44 @@
     <footer class="main_footer">
       <ul class="footer_list">
         <li class="footer_li_item">
-          <a href="about-me.html">
+          <a target="_blank" rel="noopener noreferrer" href="about-me.html">
               <p>About me</p>
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="skills.html">
+          <a target="_blank" rel="noopener noreferrer" href="skills.html">
             <p>Marketable skills and abilities</p>
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="./projects.html">
+          <a target="_blank" rel="noopener noreferrer" href="./projects.html">
             <p id="hightlight">Projects</p>
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="resume.html">
+          <a target="_blank" rel="noopener noreferrer" href="resume.html">
             <p>Resume</p>
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="contact-me.html">
+          <a target="_blank" rel="noopener noreferrer" href="contact-me.html">
               <p>Contact me</p>
           </a>
         </li>
       </ul>
       <ul class="footer_list">
         <li class="footer_li_item">
-          <a href="about-me.html">
+          <a target="_blank" rel="noopener noreferrer" href="about-me.html">
             <p>LinkedIn</p>
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="skills.html">
+          <a target="_blank" rel="noopener noreferrer" href="skills.html">
             <p>Google Scholar</p>
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="resume.html">
+          <a target="_blank" rel="noopener noreferrer" href="resume.html">
             <p>ResearchGate</p>
           </a>
         </li>

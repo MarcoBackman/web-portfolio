@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/dark-mode.css">
     <script src="../../../src/js/darkmode.js"></script>
+    <script src="../../../src/js/navbar.js" defer></script>
     <script type="module">
       //Give delay to give dark mode render time
       setTimeout(function() {
@@ -28,33 +29,33 @@
             <li id="category_list" class="outer_list">
               <ul class="inner_lists">
                 <li class="nav_li_item">
-                  <a href="../../../index.html">
-                    <p>Home</p>
+                  <a class="nav-button" href="../../../index.html">
+                    Home
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="about-me.html">
-                    <p id="about-text">About me</p>
+                  <a class="nav-button" href="about-me.html">
+                    About me
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="skills.html">
-                    <p id="skills-text">Skills</p>
+                  <a class="nav-button" href="skills.html">
+                    Skills
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="projects.html">
-                    <p id="project-text">Projects</p>
+                  <a class="nav-button" href="projects.html">
+                    Projects
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="resume.html">
-                    <p id="resume-text">Resume</p>
+                  <a href="./resume.html" class="highlight nav-button">
+                    Resume
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="./contact-me.html">
-                    <p id="contact-text" class="highlight">Contact me</p>
+                  <a class="nav-button" href="contact-me.html">
+                    Contact me
                   </a>
                 </li>
               </ul>
@@ -64,9 +65,6 @@
       </nav>
     </header>
     <section id="contact-me-main_section">
-      <div id="menu_title_div">
-        <h2 id="menu_title" class="title-row">Contact me<br></h2>
-      </div>
       <form class="form">
         <h2 id="contact-text-header">LEAVE A MESSAGE</h2>
         <p class="contact-text" type="Name:">
