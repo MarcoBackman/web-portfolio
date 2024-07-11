@@ -241,6 +241,13 @@ p.img_text {
     margin: 0.5em 0 0.5em 0;
 }
 
+img.project-hover-image {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: 1em 0 1em 0;
+}
+
 @media only screen and (max-width: 768px) {
 
     ul.project_layout_ul {
