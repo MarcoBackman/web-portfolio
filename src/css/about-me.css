@@ -13,6 +13,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #756897;
 }
 
 /*------------------*
@@ -100,6 +101,12 @@ div#card-section {
 
 .card-back .layer .top {
     top: 12%;
+}
+
+div.layer p {
+    text-align: center;
+    color: #000000;
+    font-weight: 700;
 }
 
 .top div.top-left h1 {

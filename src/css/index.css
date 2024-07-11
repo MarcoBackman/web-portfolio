@@ -240,6 +240,7 @@ div#tool-cards {
     margin: 5em auto 3em auto;
     width: fit-content;
 }
+
 gridbox.utilized-tool {
     display: block;
     margin: 0 2em 0 2em;
@@ -250,7 +251,44 @@ gridbox.utilized-tool {
     border: solid 2px #727272;
     border-radius: 5px;
     background-color: rgba(223, 223, 223, 0.34);
-    box-shadow: 2px 0 25px #383838;
+    perspective: 1000px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25), 0px 20px 40px rgba(0, 0, 0, 0.15);
+    transition-duration: 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+gridbox.utilized-tool:hover {
+    transition-duration: 1s;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    transition: transform 1s;
+    transform: scaleY(0.6) perspective(700px) rotateX(45deg);
+    box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.25), 0px 40px 80px rgba(0, 0, 0, 0.15);
+}
+
+.utilized-tool:hover img {
+    transition-duration: 1s;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    transition: transform 1s;
+    transform: scaleY(0.9) perspective(1600px) rotateX(25deg);
+}
+
+.utilized-tool h4 {
+    /* Add transition for smooth movement */
+    transition-duration: 1s;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    transition: transform 1s;
+}
+
+.utilized-tool:hover h4 {
+    transition-duration: 1s;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    transform: translateY(-90px) rotateX(-35deg) scaleY(3);
 }
 
 div#tool-cards a {
@@ -272,7 +310,14 @@ gridbox.utilized-tool img {
     width: 150px;
 }
 
-
+p.tool-card-detail {
+    display: flex;
+    position: absolute;
+    bottom: -7em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #503c65;
+}
 
 /* Github hover button */
 #feature-work-btn {

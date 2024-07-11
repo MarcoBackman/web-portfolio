@@ -182,6 +182,13 @@ div.company-logo img:hover {
     transform: scale(1.2);
 }
 
+img.project-hover-image {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: 1em 0 1em 0;
+}
+
 @media only screen and (max-width: 768px) {
 
 

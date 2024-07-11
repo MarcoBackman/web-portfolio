@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../css/navbar.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/dark-mode.css">
+    <link rel="stylesheet" href="../../css/language-mode.css">
     <script src="../../js/project.js" defer></script>
     <script src="../../../src/js/darkmode.js"></script>
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
@@ -23,9 +24,18 @@
   </head>
   <body>
     <header>
-      <label id="dark_mode_label" class="top_label">
-        <input type="checkbox" id="dark-mode" name="dark-mode" onclick="updateDarkMode()">
-      </label>
+      <div class="container">
+        <label id="dark_mode_label" class="top_label">
+          <input type="checkbox" id="dark-mode" name="dark-mode" onclick="updateDarkMode()">
+        </label>
+        <div class="dropdown">
+          <button class="dropbtn">Language/언어</button>
+          <div class="dropdown-content">
+            <a href="projects-kr.html">한글/Korean</a>
+            <a href="projects.html">영어/English</a>
+          </div>
+        </div>
+      </div>
       <nav id="nav_bar">
         <div class="header_div">
           <ul id="menu_nav" class="outer_lists">
@@ -290,6 +300,10 @@
             <p>Application comprises <span class="bold">gateway, authentication server,
               Eureka server, email service, composite service</span> for business services.</p>
             <p>Test coverages with Junit5 and Jacoco</p>
+            <a href="../../img/agile-architecture-diagram.png" target="_blank">
+              <h3 style="text-align: center">System Architecture</h3>
+              <img title="diagram" class="project-hover-image" src="../../img/agile-architecture-diagram.png">
+            </a>
             <div class="inner-reference">
               <h3>All service repositories</h3>
               <a target="_blank" rel="noopener noreferrer" href="https://github.com/beacon-team-agile">View Code</a>
@@ -308,6 +322,10 @@
               <img title="postman" src="../../img/logo/postman.svg">
             </div>
             <p>Java Spring Hibernate(ORM for MySQL) with Spring Security to restrict unauthorized API access.</p>
+            <a href="../../img/ER%20diagram.png" target="_blank">
+              <h3 style="text-align: center">ER Diagram</h3>
+              <img title="diagram" class="project-hover-image" src="../../img/ER%20diagram.png">
+            </a>
             <div class="inner-reference">
               <h3>Project repository</h3>
               <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/hibernateAOPwSecurity">View Code</a>
@@ -340,6 +358,10 @@
             </div>
             <p>Personal Project for quiz app using jdbc/hibernate, JSP&JSTL, mySQL with Amazon RDS.</p>
             <p>Hosted with ec2 packaged with war extension for static web model views</p>
+            <a href="../../img/Quiz-ER_Diagram.png" target="_blank">
+              <h3 style="text-align: center">ER Diagram</h3>
+              <img title="diagram" class="project-hover-image" src="../../img/Quiz-ER_Diagram.png">
+            </a>
             <div class="inner-reference">
               <h3>Hibernate version code</h3>
               <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/hibernate_quiz_webapp">View Code</a>

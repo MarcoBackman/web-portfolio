@@ -162,6 +162,7 @@ a.nav-button {
     text-align: center;
     text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
     transition: all .5s;
+    text-decoration: none;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
