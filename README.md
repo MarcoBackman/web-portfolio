@@ -7,7 +7,7 @@ This repository is for github page. No local file should be read directly since 
 <br/>
 Most of the reference documents will be fetched from public repository.
 
-[Repo Link](https://github.com/MarcoBackman/RSSDocs/tree/main/xmlfiles) 
+[Repo Link](https://marcobackman.github.io/web-portfolio/) 
 
 This frontend project uses following language tools
 - HTML5
