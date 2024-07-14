@@ -9,11 +9,11 @@ function languageSelected() {
     console.log("click!");
     if(this.value === '한국어') {
         setTimeout(function(){
-            window.location.replace('./html/mainPages/homepage-kr.html');
+            window.location.replace('./src/html/mainPages/homepage-kr.html');
         }, 1500);
     } else if (this.value === 'English') {
         setTimeout(function(){
-            window.location.replace('./html/mainPages/homepage.html');
+            window.location.replace('./src/html/mainPages/homepage.html');
         }, 1500);
     }
 }
