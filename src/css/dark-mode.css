@@ -152,9 +152,9 @@ body:has(label#dark_mode_label>#dark-mode:checked) gridbox.grid-box {
 }
 
 /***********************************************************
- * index.html content dark mode
+ * homepage.html content dark mode
  */
-body:has(label#dark_mode_label>#dark-mode:checked) div#middle-layer > div#website-tool-section h2 {
+body:has(label#dark_mode_label>#dark-mode:checked) div#middle-layer > div#website-tool-section h2#mid-title {
     color: #f3cba5;
     text-shadow: #9f9f9f 1px 1px 8px;
 }

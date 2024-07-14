@@ -1,3 +1,49 @@
+body {
+    display: block;
+    background: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+div.language-selection {
+    display: block;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin: 15% auto;
+    text-align: center;
+}
+
+h2.language-selection-title {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+div.card-wrapper {
+    display: block;
+    justify-content: center;
+    width: 100%;
+}
+
+input.language-card {
+    flex: 1;
+    width: 30%;
+    height: 25vh;
+    margin: 0 10px;  /* modify this value according to your needs */
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    font-size: 2.5vw;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 5px #828282;
+}
+
+input.language-card:hover {
+    cursor: pointer;
+    background-color: #a2d2ff;
+    box-shadow: inset 0 0 15px rgba(75, 75, 75, 0.63);
+}
 
 #html-spinner, #svg-spinner{
     -webkit-transition-property: -webkit-transform;
@@ -36,33 +82,42 @@
 
 /* spinner positioning */
 
-#html-spinner, #svg-spinner{
-    position:absolute;
-    top:47vh;
-    left:50vw;
-}
-
-body {
+div#loading-screen {
+    display: none;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
     -webkit-animation: glow linear 1s infinite;
-    animation: multicolor ease 4s infinite;
+    animation: multicolor ease 2s infinite;
 }
 
 @keyframes multicolor {
     0% {
-        background-color:  #679bd7;
+        background-color:  #ea9085;
     }
-    20% {
-        background-color: #4877b0;
+    25% {
+        background-color: #c06c84;
     }
-    24% {
-        background-color: #4277af;
+    50% {
+        background-color: #89606b;
     }
-    66% {
+    75% {
         background-color: #4877b0;
     }
     100% {
         background-color: #679bd7;
     }
+}
+
+#html-spinner, #svg-spinner{
+    position:relative;
+    top:47vh;
+    left:50vw;
 }
 
 #svg-spinner>circle {

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000" />
-    <link rel="stylesheet" href="../../css/contact-me.css">
+    <link rel="stylesheet" href="../../css/resume.css">
     <link rel="stylesheet" href="../../css/navbar.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/dark-mode.css">
@@ -28,8 +28,8 @@
         <div class="dropdown">
           <button class="dropbtn">Language/언어</button>
           <div class="dropdown-content">
-            <a href="contact-me-kr.html">한글/Korean</a>
-            <a href="contact-me.html">영어/English</a>
+            <a href="resume-kr.html">한글/Korean</a>
+            <a href="resume.html">영어/English</a>
           </div>
         </div>
       </div>
@@ -39,33 +39,33 @@
             <li id="category_list" class="outer_list">
               <ul class="inner_lists">
                 <li class="nav_li_item">
-                  <a class="nav-button" href="homepage.html">
-                    Home
+                  <a href="homepage-kr.html" class="nav-button">
+                    메인
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a class="nav-button" href="about-me.html">
-                    About me
+                  <a href="about-me-kr.html" class="nav-button">
+                    본인 소개
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a class="nav-button" href="skills.html">
-                    Skills
+                  <a href="skills-kr.html" class="nav-button">
+                    기술
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a class="nav-button" href="projects.html">
-                    Projects
+                  <a href="projects-kr.html" class="nav-button">
+                    프로젝트
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a href="./resume.html" class="nav-button">
-                    Resume
+                  <a href="./resume-kr.html" class="nav-button highlight">
+                    이력서
                   </a>
                 </li>
                 <li class="nav_li_item">
-                  <a class="nav-button highlight" href="contact-me.html">
-                    Contact me
+                  <a href="contact-me-kr.html" class="nav-button">
+                    연락처
                   </a>
                 </li>
               </ul>
@@ -74,63 +74,53 @@
         </div>
       </nav>
     </header>
-    <section id="contact-me-main_section">
-      <form class="form">
-        <h2 id="contact-text-header">LEAVE A MESSAGE</h2>
-        <p class="contact-text" type="Name:">
-          <input class="contact-input-field" placeholder="Write your name here.."></classinput></p>
-        <p class="contact-text" type="Email:">
-          <input class="contact-input-field" placeholder="Let us know how to contact you back.."></input></p>
-        <p class="contact-text" type="Message:">
-          <input class="contact-input-field" placeholder="What would you like to tell us.."></input></p>
-        <button id="send-button">Send Message</button>
-        <div class="bottom-info-panel">
-          <span class="fa fa-envelope-o"></span> baeksoungjun@gmail.com
-          <br>
-        </div>
-      </form>
-    </section>
-    <footer class="social_media">
+    <div id="main_section">
+      <div id="content_div">
+        <embed id="resume_pdf" src="../../data/RESUME_KOR.pdf" type="application/pdf">
+          <p>이력서 수정일: 2024/07/12</p>
+      </div>
+    </div>
+    <footer class="main_footer">
+        <ul class="footer_list">
+          <li class="footer_li_item">
+            <a href="about-me.html">
+                <p>About me</p>
+            </a>
+          </li>
+          <li class="footer_li_item">
+            <a href="skills.html">
+              <p>Marketable skills and abilities</p>
+            </a>
+          </li>
+          <li class="footer_li_item">
+            <a href="projects.html">
+              <p>Projects</p>
+            </a>
+          </li>
+          <li class="footer_li_item">
+            <a href="./resume.html">
+              <p>Resume</p>
+            </a>
+          </li>
+          <li class="footer_li_item">
+            <a href="contact-me.html">
+                <p>Contact me</p>
+            </a>
+          </li>
+        </ul>
       <ul class="footer_list">
         <li class="footer_li_item">
           <a href="about-me.html">
-            <p>About me</p>
-          </a>
-        </li>
-        <li class="footer_li_item">
-          <a href="skills.html">
-            <p>Marketable skills and abilities</p>
-          </a>
-        </li>
-        <li class="footer_li_item">
-          <a href="projects.html">
-            <p>Projects</p>
-          </a>
-        </li>
-        <li class="footer_li_item">
-          <a href="resume.html">
-            <p>Resume</p>
-          </a>
-        </li>
-        <li class="footer_li_item">
-          <a href="./contact-me.html">
-            <p>Contact me</p>
-          </a>
-        </li>
-      </ul>
-      <ul class="footer_list">
-        <li class="footer_li_item">
-          <a href="">
             <p>LinkedIn</p>
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="">
+          <a href="skills.html">
             <p>Google Scholar</p>
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="">
+          <a href="./resume.html">
             <p>ResearchGate</p>
           </a>
         </li>
@@ -139,5 +129,5 @@
         <p>&copy;&nbsp;&nbsp;2024&nbsp;-&nbsp;Tony Baek</p>
       </div>
     </footer>
-  </body>
+    </body>
 </html>

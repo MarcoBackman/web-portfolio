@@ -142,7 +142,7 @@ li.nav_li_item {
     display: block;
     position: relative;
     padding: 0 0 0 1em;
-    width: 15%;
+    width: 13vw;
 }
 
 a.nav-button {
@@ -166,7 +166,6 @@ a.nav-button {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 250px;
     height: 3em;
 }
 
@@ -175,7 +174,7 @@ a.nav-button:after {
     display: flex;
     position: absolute;
     border-radius: 7em;
-    width: 250px;
+    width: 13vw;
     height: 100%;
     opacity: 0;
     transition: all 0.5s;

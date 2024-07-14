@@ -1,17 +1,24 @@
 let spinner = document.querySelector("#svg-spinner");
 
-setTimeout(function(){
-    spinner.setAttribute("display" , "none");
-}, 2000);
 
+//Loading screen
+let loadingScreen = document.getElementById('loading-screen');
 
-//Check request
+function languageSelected() {
+    loadingScreen.style.display = 'block';
+    console.log("click!");
+    if(this.value === '한국어') {
+        setTimeout(function(){
+            window.location.replace('./html/mainPages/homepage-kr.html');
+        }, 1500);
+    } else if (this.value === 'English') {
+        setTimeout(function(){
+            window.location.replace('./html/mainPages/homepage.html');
+        }, 1500);
+    }
+}
 
-//Check token
-
-//rate limit
-
-setTimeout(function(){
-    window.location.replace('./../index.html');
-}, 1000);
-
+document.querySelectorAll('.language-card')
+    .forEach(function(element) {
+    element.addEventListener('click', languageSelected);
+});

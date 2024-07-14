@@ -1,4 +1,4 @@
-/* CSS for index.html page */
+/* CSS for homepage.html page */
 
 body {
     display: none;
@@ -147,14 +147,13 @@ div#middle-layer {
     margin: 30rem 0 3em 0;
 }
 
-div#middle-layer > div#website-tool-section {
+div#middle-layer > div.website-tool-section {
     text-align: center;
 }
 
-div#middle-layer > div#website-tool-section h2 {
+div#middle-layer > div.website-tool-section h2 {
     font-family: Monospace, serif;
     font-weight: 700;
-    color: #6c5b7c;
     text-shadow: #595959 1px 1px 8px;
 }
 
@@ -235,7 +234,7 @@ span.intro-span-text-type-two {
  * gridbox tool cards
  */
 
-div#tool-cards {
+div.tool-cards {
     display: flex;
     margin: 5em auto 3em auto;
     width: fit-content;
@@ -291,7 +290,7 @@ gridbox.utilized-tool:hover {
     transform: translateY(-90px) rotateX(-35deg) scaleY(3);
 }
 
-div#tool-cards a {
+div.tool-cards a {
     text-decoration: none;
 }
 
