@@ -25,7 +25,7 @@ function componentTransparentOnScroll(componentId, isDarkMode) {
     return scrollWeight;
 }
 
-function fixNavBarAtTop(isDarkMode) {
+function fixNavBarAtTop(isDarkMode, scrollPos) {
     let scrollPosition = getScrollPositionRatio();
     let navBarComponent = document.getElementById("category_list");
     let backgroundColor;
@@ -36,7 +36,7 @@ function fixNavBarAtTop(isDarkMode) {
     }
 
     if (navBarComponent) {
-        if (scrollPosition >= 0.195) {
+        if (scrollPosition >= scrollPos && window.innerWidth > 780) {
             navBarComponent.style.top = "0";
             navBarComponent.style.position = "fixed";
             navBarComponent.style.zIndex = "1000";

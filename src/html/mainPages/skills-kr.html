@@ -15,7 +15,18 @@
     <script src="../../js/skills-page.js"></script>
     <script src="../../js/xml-parser.js"></script>
     <script src="../../js/navbar.js" defer></script>
+    <script src="../../js/scroll-effect.js"></script>
     <script type="module">
+      document.addEventListener("DOMContentLoaded", function () {
+        window.onscroll = function() {
+          if (typeof componentTransparentOnScroll === 'function') {
+            fixNavBarAtTop(darkMode, 0.03);
+          } else {
+            console.log("`backgroundTransparentOnScroll` is not a function or not defined!");
+          }
+        };
+      });
+
       try {
         const xmlData = await getXmlData(XML_FILE_TYPE.SKILL, SUPPORTED_LANGUAGES.KOREAN, null);
         const xmlDataMap = convertArrayToMap(xmlData);

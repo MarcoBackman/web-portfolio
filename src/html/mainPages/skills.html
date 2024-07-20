@@ -15,32 +15,47 @@
     <script src="../../js/skills-page.js"></script>
     <script src="../../js/xml-parser.js"></script>
     <script src="../../js/navbar.js" defer></script>
+    <script src="../../js/scroll-effect.js"></script>
     <script type="module">
-      let xmlDataMap;
-      //Todo: Select language based on the user setup
-      await getXmlData(XML_FILE_TYPE.SKILL, SUPPORTED_LANGUAGES.ENGLISH, null)
-              .then(data => {
-        xmlDataMap = convertArrayToMap(data);
+      document.addEventListener("DOMContentLoaded", function () {
+        window.onscroll = function() {
+          if (typeof componentTransparentOnScroll === 'function') {
+            fixNavBarAtTop(darkMode, 0.03);
+          } else {
+            console.log("`backgroundTransparentOnScroll` is not a function or not defined!");
+          }
+        };
+      });
 
-        let strVal = "\n"
+      try {
+        const xmlData = await getXmlData(XML_FILE_TYPE.SKILL, SUPPORTED_LANGUAGES.ENGLISH, null);
+        const xmlDataMap = convertArrayToMap(xmlData);
+
+        let strVal = "\n";
         xmlDataMap.forEach((value, key) => {
           if (value == null) {
             return;
           }
-          var title = value.getElementsByTagName("title")[0] != null ? value.getElementsByTagName("title")[0].innerText : "";
-          strVal += "{" + key + " : " + title + " }\n";
+          const titleElement = value.getElementsByTagName("title")[0];
+          const title = titleElement != null ? titleElement.innerText : "";
+          strVal += `{${key} : ${title}}\n`;
         });
 
-        //Set inner html
+        // Set inner html
         setSkillContent(xmlDataMap, "java", "java-skill-detail-text");
-      });
 
-      setDetailPanelPosition();
+        setDetailPanelPosition();
 
-      //Give delay to give dark mode render time
-      setTimeout(function() {
-        document.getElementsByTagName("body")[0].style.display = "block";
-      }, 100);
+        // Give delay to give dark mode render time
+        // This is not a recommended way to wait for rendering. It would be much more reliable to set a CSS transition or similar.
+        setTimeout(() => {
+          document.getElementsByTagName("body")[0].style.display = "block";
+        }, 100);
+
+      } catch (error) {
+        // handle your error in case the await fails
+        console.error('An error occurred:', error);
+      }
     </script>
     <title>Sung-Jun(Tony) Baek</title>
   </head>

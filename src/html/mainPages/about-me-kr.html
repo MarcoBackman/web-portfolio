@@ -13,8 +13,20 @@
     <script src="../../../src/js/darkmode.js"></script>
     <script src="../../../src/js/about-me.js"></script>
     <script src="../../../src/js/navbar.js" defer></script>
+    <script src="../../js/scroll-effect.js"></script>
     <script type="module">
       flipCard();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        window.onscroll = function() {
+          if (typeof componentTransparentOnScroll === 'function') {
+            fixNavBarAtTop(darkMode, 0.03);
+          } else {
+            console.log("`backgroundTransparentOnScroll` is not a function or not defined!");
+          }
+        };
+      });
+
       //Give delay to give dark mode render time
       setTimeout(function() {
         document.getElementsByTagName("body")[0].style.display = "block";
