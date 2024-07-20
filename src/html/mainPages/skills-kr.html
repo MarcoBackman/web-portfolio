@@ -16,33 +16,37 @@
     <script src="../../js/xml-parser.js"></script>
     <script src="../../js/navbar.js" defer></script>
     <script type="module">
-      let xmlDataMap;
-      //Todo: Select language based on the user setup
-      await getXmlData(XML_FILE_TYPE.SKILL, SUPPORTED_LANGUAGES.ENGLISH, null)
-              .then(data => {
-        xmlDataMap = convertArrayToMap(data);
+      try {
+        const xmlData = await getXmlData(XML_FILE_TYPE.SKILL, SUPPORTED_LANGUAGES.KOREAN, null);
+        const xmlDataMap = convertArrayToMap(xmlData);
 
-        let strVal = "\n"
+        let strVal = "\n";
         xmlDataMap.forEach((value, key) => {
           if (value == null) {
             return;
           }
-          var title = value.getElementsByTagName("title")[0] != null ? value.getElementsByTagName("title")[0].innerText : "";
-          strVal += "{" + key + " : " + title + " }\n";
+          const titleElement = value.getElementsByTagName("title")[0];
+          const title = titleElement != null ? titleElement.innerText : "";
+          strVal += `{${key} : ${title}}\n`;
         });
 
-        //Set inner html
+        // Set inner html
         setSkillContent(xmlDataMap, "java", "java-skill-detail-text");
-      });
 
-      setDetailPanelPosition();
+        setDetailPanelPosition();
 
-      //Give delay to give dark mode render time
-      setTimeout(function() {
-        document.getElementsByTagName("body")[0].style.display = "block";
-      }, 100);
+        // Give delay to give dark mode render time
+        // This is not a recommended way to wait for rendering. It would be much more reliable to set a CSS transition or similar.
+        setTimeout(() => {
+          document.getElementsByTagName("body")[0].style.display = "block";
+        }, 100);
+
+      } catch (error) {
+        // handle your error in case the await fails
+        console.error('An error occurred:', error);
+      }
     </script>
-    <title>Sung-Jun(Tony) Baek</title>
+    <title>백승준 포트폴리오</title>
   </head>
   <body>
     <header>
@@ -106,10 +110,10 @@
         </div>
         <div id="grid-box-wrapper">
           <section id="first-box-row" class="grid-box-row">
-            <gridbox id="java-box" class="grid-box first-box-item">
+            <gridbox type="button" id="java-box" class="grid-box first-box-item" onclick="viewDescription()">
               <img src="../../img/logo/java-logo.png" alt="Java Logo">
               <figcaption>자바 기술</figcaption>
-              <div class="skill-detail-panel skill-detail-panel-right">
+              <div class="skill-detail-panel">
                 <div id="java-skill-detail-text" class="skill-detail-inner-panel">
                   <!-- script loaded content -->
                 </div>
@@ -118,7 +122,7 @@
             <gridbox id="python-box" class="grid-box second-box-item">
               <img src="../../img/logo/python-logo.png" alt="Python Logo">
               <figcaption>파이선 기술</figcaption>
-              <div class="skill-detail-panel skill-detail-panel-right">
+              <div class="skill-detail-panel">
                 <div id="python-skill-detail-text" class="skill-detail-inner-panel">
                   <!-- script loaded content -->
                 </div>
@@ -127,7 +131,7 @@
             <gridbox id="react-box" class="grid-box third-box-item">
               <img src="../../img/logo/react-logo.png" alt="React Logo">
               <figcaption>프론트앤드 기술</figcaption>
-              <div class="skill-detail-panel skill-detail-panel-left">
+              <div class="skill-detail-panel">
                 <div id="front-end-skill-detail-text" class="skill-detail-inner-panel">
                   <!-- script loaded content -->
                 </div>
@@ -138,7 +142,7 @@
             <gridbox id="aws-box" class="grid-box first-box-item">
               <img src="../../img/logo/aws_cloud_logo.png" alt="AWS Logo">
               <figcaption>AWS 기술</figcaption>
-              <div class="skill-detail-panel skill-detail-panel-right">
+              <div class="skill-detail-panel">
                 <div id="aws-skill-detail-text" class="skill-detail-inner-panel">
                   <!-- script loaded content -->
                 </div>
@@ -147,7 +151,7 @@
             <gridbox id="database-box" class="grid-box second-box-item">
               <img src="../../img/logo/datrabase-logo.png" alt="Database Logo">
               <figcaption>데이터 베이스 기술</figcaption>
-              <div class="skill-detail-panel skill-detail-panel-right">
+              <div class="skill-detail-panel">
                 <div id="database-skill-detail-text" class="skill-detail-inner-panel">
                   <!-- script loaded content -->
                 </div>
@@ -156,7 +160,7 @@
             <gridbox id="script-box" class="grid-box third-box-item">
               <img width="100" height="100" src="https://img.icons8.com/avantgarde/100/documents.png" alt="documents"/>
               <figcaption>배치 기술</figcaption>
-              <div class="skill-detail-panel skill-detail-panel-left">
+              <div class="skill-detail-panel">
                 <div id="batch-skill-detail-text" class="skill-detail-inner-panel">
                   <!-- script loaded content -->
                 </div>
@@ -167,7 +171,7 @@
             <gridbox id="ci-cd-box" class="grid-box first-box-item">
               <img src="../../img/logo/jenkins-logo.png" alt="Jenkins Logo">
               <figcaption>CI/CD 기술</figcaption>
-              <div class="skill-detail-panel skill-detail-panel-right">
+              <div class="skill-detail-panel">
                 <div id="cicd-skill-detail-text" class="skill-detail-inner-panel">
                   <!-- script loaded content -->
                 </div>
@@ -176,7 +180,7 @@
             <gridbox id="cloud-tool-box" class="grid-box second-box-item">
               <img src="../../img/logo/cloud-service_256.png" alt="Jenkins Logo">
               <figcaption>클라우드 서비스 기술</figcaption>
-              <div class="skill-detail-panel skill-detail-panel-right">
+              <div class="skill-detail-panel">
                 <div id="cloud-skill-detail-text" class="skill-detail-inner-panel">
                   <!-- script loaded content -->
                 </div>
@@ -185,7 +189,7 @@
             <gridbox id="extra-tool-box" class="grid-box third-box-item">
               <img src="../../img/logo/toolbox-logo.png" alt="Jenkins Logo">
               <figcaption>기타 기술</figcaption>
-              <div class="skill-detail-panel skill-detail-panel-left">
+              <div class="skill-detail-panel">
                 <div id="extra-skill-detail-text" class="skill-detail-inner-panel">
                   <!-- script loaded content -->
                 </div>
@@ -201,45 +205,50 @@
     <footer class="main_footer">
       <ul class="footer_list">
         <li class="footer_li_item">
-          <a href="about-me.html">
-              <p>About me</p>
+          <a href="homepage-kr.html" class="">
+            메인
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="./skills.html">
-            <p>Skills</p>
+          <a href="about-me-kr.html" class="">
+            본인 소개
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="projects.html">
-            <p>Projects</p>
+          <a href="skills-kr.html" class="highlight">
+            기술
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="resume.html">
-            <p>Resume</p>
+          <a href="projects-kr.html" class="">
+            프로젝트
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="contact-me.html">
-              <p>Contact me</p>
+          <a href="./resume-kr.html" class="">
+            이력서
+          </a>
+        </li>
+        <li class="footer_li_item">
+          <a href="contact-me-kr.html" class="">
+            연락처
           </a>
         </li>
       </ul>
       <ul class="footer_list">
         <li class="footer_li_item">
-          <a href="about-me.html">
-            <p>LinkedIn</p>
+          <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/sung-jun-baek-9b505b11a">
+            링크드인
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="./skills.html">
-            <p>Google Scholar</p>
+          <a target="_blank" rel="noopener noreferrer" href="https://marcobackman.tistory.com/">
+            블로그
           </a>
         </li>
         <li class="footer_li_item">
-          <a href="resume.html">
-            <p>ResearchGate</p>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman">
+            깃헙
           </a>
         </li>
       </ul>

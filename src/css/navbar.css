@@ -194,13 +194,6 @@ a.nav-button:active:after {
     padding: 0;
 }
 
-a.nav-button:active {
-    top: 1px;
-    outline: 0;
-    margin: 0;
-    padding: 0;
-}
-
 a.nav-button:hover {
     transition-duration: 0.1s;
     box-shadow: rgb(255, 173, 173) 0 1px 30px;
@@ -213,8 +206,13 @@ a.highlight {
 
 /* Apply screen size lower than 768 */
 @media only screen and (max-width: 768px) {
+    nav#nav_bar {
+        display: flex;
+    }
+
     ul.outer_lists {
         display: flex;
+        position: relative;
         width: 100%;
         margin: 1em 0 1em 0;
         padding: 0;
@@ -224,20 +222,28 @@ a.highlight {
         width: 100%;
     }
 
-    a.nav-button {
-        display: inline;
-        position: relative;
-        width: 100%;
+    ul.inner_lists {
+        display: flex;
+        flex-direction: column; /* Add this */
     }
 
     li.nav_li_item, li.nav_li_item > a {
-        display: block;
+        display: flex;
         position: relative;
         text-decoration: none;
+        width: 90%;
         font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
         animation: 1s ease-out 0s 1 opacity_effect;
-        padding: 0 1em 0 1em;
+        margin: 2px auto;
+        padding: 0;
     }
+
+
+    a.nav-button:after {
+        width: 100%;
+        height: 100%;
+    }
+
 
 }
 

@@ -215,12 +215,12 @@ span.intro-span-text-type-two {
 
 #mid-title.typewriter.active {
     opacity: 1;
-    animation: typing 3.5s steps(80, end);
+    animation: typing 1.5s steps(180, end);
 }
 
 #second-intro-text-section.typewriter.active {
     opacity: 1;
-    animation: typing 3.5s steps(80, end);
+    animation: typing 1.5s steps(180, end);
 }
 
 /* The typing effect */
@@ -372,15 +372,81 @@ p.tool-card-detail {
     outline: 0;
 }
 
-@media (min-width: 768px) {
-    #feature-work-btn {
-        padding: 0 40px;
+@media only screen and (max-width: 1350px) {
+    span.intro-span-text-type-one {
+        font-size: 32px;
+        font-weight: 800;
+        color: #ffffff;
+        text-shadow: #4d4d4d 1px 1px 3px;
+    }
+
+    span.intro-span-text-type-two {
+        font-size: 32px;
+        font-weight: 600;
+        color: #423031;
+        text-shadow: #d5d5d5 1px 1px 3px;
+    }
+
+    .typewriter {
+        letter-spacing: 0;
+    }
+
+
+    div.tool-cards {
+        display: block;
+        margin: 5em auto 3em auto;
+        width: fit-content;
+    }
+
+    gridbox.utilized-tool {
+        margin: 2em auto;
+    }
+
+    span#main_description {
+        margin: 0;
+        padding: 0;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    span#main_name:after {
+    #feature-work-btn {
+        padding: 0 40px;
+    }
 
+    #mid-title {
+        font-size: 16px;
+    }
+
+    #second-intro-text-section {
+        font-size: 12px;
+    }
+
+    .typewriter {
+        letter-spacing: 0;
+    }
+
+    span.intro-span-text-type-one {
+        font-size: 22px;
+        font-weight: 800;
+        color: #ffffff;
+        text-shadow: #4d4d4d 1px 1px 3px;
+    }
+
+    span.intro-span-text-type-two {
+        font-size: 22px;
+        font-weight: 600;
+        color: #423031;
+        text-shadow: #d5d5d5 1px 1px 3px;
+    }
+
+    div.tool-cards {
+        display: block;
+        margin: 5em auto 3em auto;
+        width: fit-content;
+    }
+
+    gridbox.utilized-tool {
+        margin: 2em auto;
     }
 
     span#main_description {

@@ -5,7 +5,6 @@ body {
     background-color: #a8968e;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 section#main_section{
@@ -55,15 +54,14 @@ div#grid-box-wrapper {
     margin: 0 auto 0 auto;
     background: -webkit-linear-gradient(to right, #a8968e, #a38f85);
     background: linear-gradient(to right, #a8968e, #a38f85);
-    padding-bottom: 2em;
+    padding-bottom: 1em;
 }
 
 section.grid-box-row {
     display: block;
     position: relative;
-    left: 5%;
-    width: 50%;
-    right: 95%;
+    margin: auto auto;
+    width: 60%
 }
 
 section#first-box-row {
@@ -108,10 +106,11 @@ gridbox.grid-box {
 }
 
 gridbox.grid-box > img {
-    display: inline-block;
-    width: 160px;
-    height: 150px;
-    margin: auto;
+    display: flex;
+    width: 60%;
+    height: 60%;
+    padding: 20%;
+    margin: auto auto;
 }
 
 gridbox.grid-box > figcaption {
@@ -156,25 +155,28 @@ gridbox:hover {
     z-index: 1;
 }
 
-gridbox>div.skill-detail-panel {
+gridbox>.skill-detail-panel {
     display: block;
-    opacity: 0;
     position: fixed;
-    background-color: rgba(79, 50, 59, 0.76);
+    background-color: rgba(75, 75, 75, 0.94);
     color: floralwhite;
-    border-color: #EA9085FF;
+    border-color: #ffffff;
     border-style: solid;
     transition-duration: 0.5s;
     border-radius: 11px;
     pointer-events: none;
-    right: 5%;
-    width: 38vw;
+    width: 70%;
     min-height: 80%;
-    z-index: 1;
+    z-index: 0;
+    opacity: 0;
+    left: 15%;
 }
 
-div.skill-detail-inner-panel {
-    margin: 1em;
+gridbox:hover div.skill-detail-panel {
+    display: flow-root;
+    position: fixed;
+    position: -ms-device-fixed;
+    opacity: 1;
 }
 
 div.skill-detail-inner-panel>h2 {
@@ -212,13 +214,6 @@ div.skill-detail-inner-panel>ul>li>p>span>span.bold-span {
     color: #d0bdf4;
 }
 
-gridbox:hover div.skill-detail-panel {
-    display: flow-root;
-    position: fixed;
-    position: -ms-device-fixed;
-    opacity: 1;
-}
-
 figure:hover img {
     transform: scale(1.2);
     transition-duration: 2s;
@@ -247,22 +242,14 @@ gridbox.third-box-item {
 }
 
 @media only screen and (min-width: 1650px) and (max-width: 2050px) {
-
-    gridbox > div.skill-detail-panel-left {
-        left: 15%;
-        width: 35vw;
-        height: 55vh;
+    section.grid-box-row {
+        display: block;
+        position: relative;
     }
 }
 
 
 @media only screen and (max-width: 1650px) {
-
-    section#grid-box-panel {
-        display: block;
-        position: relative;
-        width: 100%;
-    }
 
     #left-background {
         display: none !important;
@@ -275,8 +262,117 @@ gridbox.third-box-item {
     }
 
     div#grid-box-wrapper {
-        width: 70%;
-        min-height: 80%;
-        margin: auto;
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0 auto 0 auto;
     }
+
+    section#grid-box-panel {
+        display: flex;
+    }
+
+    section.grid-box-row {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile view */
+@media only screen and (max-width: 868px) {
+    div#grid-box-wrapper {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0 auto 0 auto;
+    }
+
+    section.grid-box-row {
+        display: flex;
+        position: relative;
+        height: 1500px;
+        width: 50%;
+    }
+
+    gridbox.grid-box {
+        display: block;
+        position: relative;
+        border-style: solid;
+        border-width: 5px;
+        width: 250px;
+        height: 240px;
+        overflow: hidden;
+        cursor: pointer;
+        transition-duration: 2s;
+        margin: 0 0 2em 0;
+    }
+
+    section#first-box-row {
+        display: block;
+        position: relative;
+        min-height: 52em;
+        max-height: 45em;
+    }
+    section#second-box-row {
+        display: block;
+        position: relative;
+        min-height: 52em;
+        max-height: 45em;
+    }
+
+    section#third-box-row {
+        display: block;
+        position: relative;
+        min-height: 52em;
+        max-height: 45em;
+        margin-bottom: 10em;
+    }
+
+    gridbox.first-box-item {
+        top: 0;
+        left: 0;
+        margin: 2em auto 2em auto;
+    }
+
+    gridbox.second-box-item {
+        top: 0;
+        left: 0;
+        margin: 2em auto 2em auto;
+    }
+
+    gridbox.third-box-item {
+        top: 0;
+        left: 0;
+        margin: 2em auto 2em auto;
+    }
+
+    gridbox:hover figcaption{
+        --_i: 0%;
+    }
+
+    gridbox:hover img {
+        width: 70%;
+        height: 70%;
+        padding: 15%;
+        filter: brightness(0) saturate(100%) invert(91%) sepia(0%) saturate(118%) hue-rotate(138deg) brightness(93%) contrast(82%);
+        -webkit-filter: brightness(0) saturate(100%) invert(91%) sepia(0%) saturate(118%) hue-rotate(138deg) brightness(93%) contrast(82%);
+        transition-duration: 0.1s;
+        -webkit-transition-duration: 0.1s;
+    }
+
+    gridbox:hover {
+        width: 250px;
+        height: 240px;
+        min-width: 250px;
+        min-height: 240px;
+        transition-duration: 0.1s;
+        -webkit-transition-duration: 0.1s;
+        z-index: 1;
+    }
+
 }

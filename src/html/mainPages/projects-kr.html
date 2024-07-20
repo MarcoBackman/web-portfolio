@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="../../css/language-mode.css">
     <script src="../../js/project.js" defer></script>
     <script src="../../js/darkmode.js"></script>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="../../js/navbar.js" defer></script>
     <script type="module">
         //Give delay to give dark mode render time
@@ -20,7 +18,7 @@
             document.getElementsByTagName("body")[0].style.display = "block";
         }, 100);
     </script>
-    <title>Sung-Jun(Tony) Baek</title>
+    <title>백승준 포트폴리오</title>
 </head>
 <body>
 <header>
@@ -90,7 +88,7 @@
                 <h3>통합 테스팅 툴 & 은행 거래 시스템 데모 <span style="font-weight: lighter;font-size: 14px">2024</span></h3>
                 <div class="tech-stack-div">
                     <img title="java spring" src="../../img/logo/javaspring.png">
-                    <img title="maven" src="../../img/logo/maven.png">
+                    <img title="maven" src="../../img/logo/maven.png" alt="">
                     <img title="java" src="../../img/logo/java-logo.png">
                     <img title="postgresSQL" src="../../img/logo/psql.jpg">
                     <img title="flyway" src="../../img/logo/flyway.svg">
@@ -101,14 +99,14 @@
                     <img title="Docker" src="../../img/logo/docker.png">
                     <img title="junit5" src="../../img/logo/junit5.png">
                 </div>
-                <p>Personal project that enables banking service with integration testing tool that runs in docker environment.</p>
+                <p>은행 시스템을 위한 개인 프로젝트. DB, Kafka, Flyway와 같은 서비스들을 간편하게 로컬로 돌릴 수 있는 Docker 서비스 포함.</p>
                 <div class="inner-reference">
-                    <h3>Integration test tool:</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/integration-testing-tool">View Code</a>
+                    <h3>로컬 테스팅 툴:</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/integration-testing-tool">코드 보기</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>Core banking application:</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/bankcoresystem">View Code</a>
+                    <h3>코어 은행 거래 프로그램 코드:</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/bankcoresystem">코드 보기</a>
                 </div>
             </div>
 
@@ -123,15 +121,15 @@
                     <img title="H2" src="../../img/logo/h2.png">
                     <img title="Swagger" src="../../img/logo/swagger-logo.png">
                 </div>
-                <p>A simple personal project that mimics retail service tool</p>
-                <p>Utilized Swagger, h2 DB, h2-console, and jdbc template with prepared statement</p>
+                <p>간단한 상품 구매 서비스 프로그램</p>
+                <p>Swagger, h2 DB, h2-콘솔, and jdbc template 그리고 prepared statement를 활용.</p>
                 <div class="inner-reference">
-                    <h3>Retail service code</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/retailAPI">View Code</a>
+                    <h3>깃헙 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/retailAPI">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>View demo</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://54.160.158.7:8082/swagger-ui/index.html" class="website-btn">View API Website</a>
+                    <h3>API 서비스 확인해 보기</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://54.160.158.7:8082/swagger-ui/index.html" class="website-btn">사이트 보기</a>
                 </div>
             </div>
             <div class="timeline-middle">
@@ -146,7 +144,7 @@
             </div>
             <div class="timeline-component timeline-content">
                 <div class="company-logo">
-                    <h3>Company Project</h3>
+                    <h3>회사 프로젝트</h3>
                     <img title="Drive Wealth" src="../../img/logo/drivewealth.png">
                 </div>
                 <h3>금융 정보 검토 시스템 <span style="font-weight: lighter;font-size: 14px">2024</span></h3>
@@ -165,17 +163,20 @@
                     <img title="Swagger" src="../../img/logo/swagger-logo.png">
                     <img title="junit5" src="../../img/logo/junit5.png">
                 </div>
-                <p>Data reconciliation system that ensures fund price data and share holding amounts on three-point data sources.</p>
-                <p>Reports various types of reports in Excel files to Slack message.</p>
-                <p>Applied Cursor, lazy DB record fetch, optimistic locks to avoid DB data corruption and false alarm.</p>
-                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">View Code</a>
-                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">Download</a>
+                <p>다른 DB에 저장된 거래금액 데이터들의 오차를 판독해 Spring Scheduler의 설정에 맞추어 실행 후 Slack 봇과 AWS S3버킷으로 보고서 업로드 기능 개발.</p>
+                <p>DynamoDB, PostgreSQL, 그리고 MSSql의 세개의 데이터 베이스의 매일 몇십만개의 금융 거래 내역을 조회 하여 Cursor Streaming 기법으로 금액 비교.</p>
+                <p>Inner Join, Temp table, range 파티셔닝을 통해 빠른 데이터 인덱싱 검색 활용.</p>
+                <p>Lazy DB 데이터 탐색을 이용해 서버 메모리 절약. Optimistic lock을 사용해 의도치 않은 데이터 값 변경과 오보도 방지.</p>
+                <p>Java Record와 jackson 아티팩트랄 활용하여 획일화된 csv 보고서 파일 구축.</p>
+                <p>SOLID principle, Generics, Marker(tagging) interface를 적극적으로 활용하여 다른 종류의 보고서도 중복 코드없이 확장이 용이하게 구현.</p>
+                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">깃헙 코드</a>
+                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">다운로드</a>
             </div>
 
             <!-- Left -->
             <div class="timeline-component timeline-content">
                 <div class="company-logo">
-                    <h3>Company Project</h3>
+                    <h3>회사 프로젝트</h3>
                     <img title="Drive Wealth" src="../../img/logo/drivewealth.png">
                 </div>
                 <h3>상호 펀드 주문 시스템 <span style="font-weight: lighter;font-size: 14px">2023-2024</span></h3>
@@ -206,11 +207,13 @@
                     <img title="VisualVM" src="../../img/logo/visualvm.png">
                     <img title="Json" src="../../img/logo/json.png">
                 </div>
-                <p>Event Driven Architecture for core service system which handles mutual fund trade orders.</p>
-                <p>Relays order from different services to other vendor applications via Kafka, AMQ, and S3 bucket.</p>
-                <p>Conducted and implemented performance testing system on each endpoint after completion of SI.</p>
-                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">View Code</a>
-                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">Download</a>
+                <p>상호펀드거래를 위한 코어 펀드 서비스 개발 (Event Driven 아키텍처 서비스).</p>
+                <p>Frontend의 서버에서 요청된 거래 요청을 AWS DynamoDB의 Streaming으로 트리거하여 Kafka Message 서비스로 받아 금융 거래를 처래하는 방식.</p>
+                <p>Kafka의 load-balancing 전략과 customized partitioning으로 짧은 시간에 발생한 다량의 주문을 지연과 오류없이 처리.</p>
+                <p>다른 서비스와의 소통을 S3버킷-Visual Cron과 Apache AMQ서비스로 활용하여 스케줄 기반의 처리와 실시간 처리의 기능을 동시에 지원.</p>
+                <p>BDD(Business Driven Development)의 기간에 맞추어 CI/CD의 개발 환경에서 DEV->UAT->QA->PROD의 단계별 테스팅 환경을 통해 담당 테스터들과 소통하여 안정적이고 기능이 보장된 서비스를 배포.</p>
+                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">깃헙 코드</a>
+                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">다운로드</a>
             </div>
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
@@ -224,7 +227,7 @@
             </div>
             <div class="timeline-component timeline-content">
                 <div class="company-logo">
-                    <h3>Company Project</h3>
+                    <h3>회사 프로젝트</h3>
                     <img title="Drive Wealth" src="../../img/logo/drivewealth.png">
                 </div>
                 <h3>세무 보고 자동화 시스템 <span style="font-weight: lighter;font-size: 14px">2023</span></h3>
@@ -237,18 +240,18 @@
                     <img title="junit5" src="../../img/logo/junit5.png">
                     <img title="json" src="../../img/logo/json.png">
                 </div>
-                <p>Tax reporting system in monolithic architecture for single time execution.</p>
-                <p>Utilized parallel stream, Dynamo parallel scan, and caffeine cache to maximize the operation speed.</p>
-                <p>Used GPG decryption tool to manage encrypted files.</p>
-                <p>Used 'itextpdf' library for pdf file modification and content generation.</p>
-                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">View Code</a>
-                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">Download</a>
+                <p>연초 마다 있을 IRS 세무보고를 위해 이용 고객들에게 금융거래에 의한 세무정보를 자동으로 수집 후 보고서를 배포하는 시스템 개발.</p>
+                <p>Parallel 스트리밍, DynamoDB parallel 스캐닝, Caffeine 캐싱을 활용해 네트워크 이용을 줄이고 프로그램 프로세스 속도를 극적으로 향상.</p>
+                <p>GPG decryption, encryption을 사용해요 고객들의 금융 정보를 안전하게 전달.</p>
+                <p>'itextpdf' 라이버리를 활용해 pdf 내용 수정 및 내용 추가.</p>
+                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">깃헙 코드</a>
+                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">다운로드</a>
             </div>
 
             <!-- Left -->
             <div class="timeline-component timeline-content">
                 <div class="company-logo">
-                    <h3>Company Project</h3>
+                    <h3>회사 프로젝트</h3>
                     <img title="Drive Wealth" src="../../img/logo/drivewealth.png">
                 </div>
                 <h3>카프카 파티션 솔루션 <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
@@ -260,11 +263,11 @@
                     <img title="Java Mission Control" src="../../img/logo/jmc.png">
                     <img title="shell script" src="../../img/logo/batch-logo.png">
                 </div>
-                <p>A project to resolve and enhance the bottleneck of unbalanced kafka events among different partitions.</p>
-                <p>Utilized KafkaTemplate, applied FactoryPattern for Consumer and Producer in KStream.</p>
-                <p>Deep understanding of Kafka architecture - Zookeeper, Broker, Consumer, Producer.</p>
-                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">View Code</a>
-                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">Download</a>
+                <p>카프카 파티션 중 병목현상이 생기는 특정 키를 커스텀 파티셔닝으로 해결하는 프로젝트.</p>
+                <p>카프카 Template, KStream을 위한 Consumer와 Producer을 의도에 맞게 생성해주는 팩토리 디자인 패턴을 활용.</p>
+                <p>카프카의 심도 있는 분석과 이해를 요구한 프로젝트 - Zookeeper, SASL, TLS/SSL, Broker, Consumer, Producer.</p>
+                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">깃헙 코드</a>
+                <a target="_blank" rel="noopener noreferrer" href="" class="unavailable-link">다운로드</a>
             </div>
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
@@ -278,7 +281,7 @@
             </div>
             <div class="timeline-component timeline-content">
                 <div class="company-logo">
-                    <h3>Company's training project</h3>
+                    <h3>사내 교육 프로젝트</h3>
                     <img title="BeaconFire" src="../../img/logo/beaconfire_solution_logo.jpg">
                 </div>
                 <h3>인사 체계 관리 시스템 <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
@@ -294,19 +297,17 @@
                     <img title="postman" src="../../img/logo/postman.svg">
                     <img title="junit5" src="../../img/logo/junit5.png">
                 </div>
-                <p>Team project in BeaconFire for HR management microservice app</p>
-                <p>Collaborated project as a team leader of 4 developers</p>
-                <p>Utilized cloud services such as RDS, EC2, AtlasMongoDB, and S3 bucket</p>
-                <p>Application comprises <span class="bold">gateway, authentication server,
-              Eureka server, email service, composite service</span> for business services.</p>
-                <p>Test coverages with Junit5 and Jacoco</p>
+                <p>사내 교육 프로젝트 팀리더로 4인조를 팀으로 하여 인사담당체계 마이크로서비스들을 개발.</p>
+                <p>AWS RDS, EC2, AtlasMongoDB, AWS S3 bucket과 같은 클라우드 서비스들을 활용.</p>
+                <p>비즈니스 모델을 구현하기 위한 마이크로서비스 아키텍처 구성 - <span class="bold">게이트웨이, 보안 인증 서버, Eureka 서비스 탐색 서버, 이메일 서버, 복합 서비스.</span>.</p>
+                <p>JUnit5과 JaCoCo를 이용한 TDD 구현.</p>
                 <a href="../../img/agile-architecture-diagram.png" target="_blank">
-                    <h3 style="text-align: center">System Architecture</h3>
+                    <h3 style="text-align: center">시스템 구조</h3>
                     <img title="diagram" class="project-hover-image" src="../../img/agile-architecture-diagram.png">
                 </a>
                 <div class="inner-reference">
-                    <h3>All service repositories</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/beacon-team-agile">View Code</a>
+                    <h3>서비스 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/beacon-team-agile">깃헙 코드</a>
                 </div>
             </div>
 
@@ -321,18 +322,18 @@
                     <img title="mysql" src="../../img/logo/mysql.png">
                     <img title="postman" src="../../img/logo/postman.svg">
                 </div>
-                <p>Java Spring Hibernate(ORM for MySQL) with Spring Security to restrict unauthorized API access.</p>
+                <p> Spring Security의 비허가 API 접근 제한 기능을 동반한 Java Spring Hibernate(MySQL을 위한 ORM) 이용.</p>
                 <a href="../../img/ER%20diagram.png" target="_blank">
-                    <h3 style="text-align: center">ER Diagram</h3>
+                    <h3 style="text-align: center">ER 다이어그램</h3>
                     <img title="diagram" class="project-hover-image" src="../../img/ER%20diagram.png">
                 </a>
                 <div class="inner-reference">
-                    <h3>Project repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/hibernateAOPwSecurity">View Code</a>
+                    <h3>프로젝트 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/hibernateAOPwSecurity">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>Download repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/hibernateAOPwSecurity/archive/refs/heads/main.zip">Download</a>
+                    <h3>코드 다운받기</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/hibernateAOPwSecurity/archive/refs/heads/main.zip">다운로드</a>
                 </div>
             </div>
             <div class="timeline-middle">
@@ -356,23 +357,23 @@
                     <img title="maven" src="../../img/logo/maven.png">
                     <img title="css" src="../../img/logo/css3.png">
                 </div>
-                <p>Personal Project for quiz app using jdbc/hibernate, JSP&JSTL, mySQL with Amazon RDS.</p>
-                <p>Hosted with ec2 packaged with war extension for static web model views</p>
+                <p>jdbc/hibernate, JSP&JSTL, Amazon RDS(mySQL)을 이용한 개인 퀴즈 어플리케이션.</p>
+                <p>EC2 인스턴스에 WAR파일 배포하여 정적 웹 모델 뷰 작동.</p>
                 <a href="../../img/Quiz-ER_Diagram.png" target="_blank">
-                    <h3 style="text-align: center">ER Diagram</h3>
+                    <h3 style="text-align: center">ER 다이어그램</h3>
                     <img title="diagram" class="project-hover-image" src="../../img/Quiz-ER_Diagram.png">
                 </a>
                 <div class="inner-reference">
-                    <h3>Hibernate version code</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/hibernate_quiz_webapp">View Code</a>
+                    <h3>Hibernate 버전 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/hibernate_quiz_webapp">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>JDBC version code</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/jdbc-quizwebapp">View Code</a>
+                    <h3>JDBC 버전 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/jdbc-quizwebapp">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>View Demo</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://54.160.158.7:8081/home" class="website-btn">View Website</a>
+                    <h3>사이트 보기</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://54.160.158.7:8081/home" class="website-btn">사이트 보기</a>
                 </div>
             </div>
 
@@ -382,14 +383,14 @@
                 <div class="tech-stack-div">
                     <img title="java" src="../../img/logo/java-logo.png">
                 </div>
-                <p>Fast nearest neighbor searching algorithm</p>
+                <p>네비게이션, 배달앱에 사용 될 수 있는 가장 가까운 이웃 고속 탐색 알고리즘을 구현.</p>
                 <div class="inner-reference">
-                    <h3>Project repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/RangeSearchAnalysis">View Code</a>
+                    <h3>프로젝트 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/RangeSearchAnalysis">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>Download repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/RangeSearchAnalysis/archive/refs/heads/main.zip">Download</a>
+                    <h3>코드 다운받기</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/RangeSearchAnalysis/archive/refs/heads/main.zip">다운로드</a>
                 </div>
             </div>
             <div class="timeline-middle">
@@ -404,7 +405,7 @@
             </div>
             <div class="timeline-component timeline-content">
                 <div class="company-logo">
-                    <h3>Graduation Project</h3>
+                    <h3>공과대 졸업 프로젝트</h3>
                     <img title="Florida Tech" src="../../img/logo/FloridaTech.svg">
                 </div>
                 <h3>IoT 모델 번역기 <span style="font-weight: lighter;font-size: 14px">2021-2022</span></h3>
@@ -417,39 +418,39 @@
                     <img title="javascript" src="../../img/logo/JavaScript-logo.png">
                     <img title="css" src="../../img/logo/css3.png">
                 </div>
-                <p>Team leader of Florida Tech Senior Project. Second Place in the contest</p>
-                <p>Translates UI-based diagram into executable codes for various embedded IoT devices: Roomba, RaspberryPi, Lidar.</p>
+                <p>UPPAL이라 불리는 State Machine Diagram의 UI 기반의 툴의 파일을 읽어들여 자동으로 임베디드 디바이스들(Roomba, RaspberryPi, Lidar)에서 실행 가능한 파이선 코드로 변환해주는 IoT 보조 프로그램.</p>
+                <p>졸업 프로젝트 팀 리더로서 역활을 수행하고 프로젝트 학과 2위 달성.</p>
                 <div class="inner-reference">
-                    <h3>Project repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/TCC2021SeniorProject">View Code</a>
+                    <h3>프로젝트 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/TCC2021SeniorProject">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>View Project Website</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://tcc2021seniorproject.github.io/" class="website-btn">View Website</a>
+                    <h3>대표 프로젝트 사이트</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://tcc2021seniorproject.github.io/" class="website-btn">사이트 보기</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>View Project Poster</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/e/2PACX-1vTh9g5zqGzarbx02DTe307dhtr2jh2ZGw2s3z_i5PmHWZLLvUaUmvNoTafaaiM74w/pub?start=false&loop=false&delayms=3000" class="website-btn">View Poster</a>
+                    <h3>프로젝트 포스터 보기</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/e/2PACX-1vTh9g5zqGzarbx02DTe307dhtr2jh2ZGw2s3z_i5PmHWZLLvUaUmvNoTafaaiM74w/pub?start=false&loop=false&delayms=3000" class="website-btn">포스터 보기</a>
                 </div>
             </div>
 
             <!-- Left -->
             <div class="timeline-component timeline-content">
-                <h3>그래픽스 수업 실습 <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
+                <h3>그래픽 수업 실습 <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
                 <div class="tech-stack-div">
                     <img title="python" src="../../img/logo/python-logo.png">
                     <img title="jupyter" src="../../img/logo/jupyter.png">
                     <img title="opencv" src="../../img/logo/opencv.jpg">
                     <img title="matplotlib" src="../../img/logo/matplotlib.png">
                 </div>
-                <p>Understanding and applying the graphics theory and visualize with Python</p>
+                <p>소프트웨어 그래픽 이론의 이해와 그래픽 기법을 파이선으로 적용해서 시각화 실습.</p>
                 <div class="inner-reference">
-                    <h3>Project repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Graphics?tab=readme-ov-file">View Code</a>
+                    <h3>프로젝트 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Graphics?tab=readme-ov-file">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>Download repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Graphics/archive/refs/heads/main.zip">Download</a>
+                    <h3>코드 다운로드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Graphics/archive/refs/heads/main.zip">다운로드</a>
                 </div>
             </div>
             <div class="timeline-middle">
@@ -463,7 +464,7 @@
                 <div class="timeline-circle"></div>
             </div>
             <div class=" timeline-component timeline-content">
-                <h3>(MERN) 리액트 미니 프로젝트 - 영화 서비스 제공 어플 <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
+                <h3>(MERN) 리액트 학과 과제 - 영화 서비스 제공 어플 <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
                 <div class="tech-stack-div">
                     <img title="react" src="../../img/logo/react-logo.png">
                     <img title="express" src="../../img/logo/express.png">
@@ -472,22 +473,22 @@
                     <img title="css" src="../../img/logo/css3.png">
                     <img title="ec2" src="../../img/logo/EC2.png">
                 </div>
-                <p>React Project powered by AWS EC2, MongoDB, and ExpressJS</p>
-                <p>Utilized useEffect hook, Context Router, axios, history, state handling, mongoose</p>
+                <p>AWS EC2, MongoDB와 ExpressJS를 이용한 리액트 프로젝트.</p>
+                <p>useEffect hook, Context Router, axios, history, 상태 제어, mongoose를 활용.</p>
                 <div class="inner-reference">
-                    <h3>Project repository</h3>
-                    <a target="_blank" rel="noopener noreferrer"  href="https://github.com/MarcoBackman/MovieService">View Code</a>
+                    <h3>프로젝트 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer"  href="https://github.com/MarcoBackman/MovieService">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>View demo</h3>
-                    <a target="_blank" rel="noopener noreferrer"  href="http://100.26.141.195:8084" class="website-btn">View Website</a>
+                    <h3>서비스 사용해보기</h3>
+                    <a target="_blank" rel="noopener noreferrer"  href="http://100.26.141.195:8084" class="website-btn">사이트 보기</a>
                 </div>
             </div>
 
 
             <!-- Left -->
             <div class="timeline-component timeline-content">
-                <h3>(MERN) 리액트 미니 프로젝트 - 레시피 검색 어플 <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
+                <h3>(MERN) 리액트 학과 과제 - 레시피 검색 어플 <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
                 <div class="tech-stack-div">
                     <img title="react" src="../../img/logo/react-logo.png">
                     <img title="express" src="../../img/logo/express.png">
@@ -496,15 +497,15 @@
                     <img title="css" src="../../img/logo/css3.png">
                     <img title="ec2" src="../../img/logo/EC2.png">
                 </div>
-                <p>React Project powered by AWS EC2, MongoDB, and ExpressJS</p>
-                <p>Utilized Hook, Router, axios, history, state handling, mongoose</p>
+                <p>AWS EC2, MongoDB와 ExpressJS를 이용한 리액트 프로젝트.</p>
+                <p>useEffect hook, Context Router, axios, history, 상태 제어, mongoose를 활용.</p>
                 <div class="inner-reference">
-                    <h3>Project repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/FoodRecipeSearcher">View Code</a>
+                    <h3>프로젝트 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/FoodRecipeSearcher">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>View demo</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="http://100.26.141.195:8082/" class="website-btn">View Website</a>
+                    <h3>서비스 사용해보기</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="http://100.26.141.195:8082/" class="website-btn">사이트 보기</a>
                 </div>
             </div>
             <div class="timeline-empty"></div>
@@ -518,22 +519,22 @@
                 <div class="timeline-circle"></div>
             </div>
             <div class="timeline-component timeline-content">
-                <h3>개인 웹 프로젝트 <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
+                <h3>학과 웹사이트 과제 <span style="font-weight: lighter;font-size: 14px">2022</span></h3>
                 <div class="tech-stack-div">
                     <img title="html" src="../../img/logo/html.png">
                     <img title="css" src="../../img/logo/css3.png">
                     <img title="javascript" src="../../img/logo/JavaScript-logo.png">
                 </div>
-                <p>A simple website project</p>
+                <p>HTML, CSS, JavaScript를 활용한 간단한 웹사이트</p>
                 <div class="inner-reference">
-                    <h3>Exchange rate viewer with external API:</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/web-portfolio/blob/main/src/feature/exchangeRate">View Code</a>
-                    <a target="_blank" class="website-btn" rel="noopener noreferrer" href="../../feature/exchangeRate/html/exchange-rate.html">View Website</a>
+                    <h3>은행 API를 활용한 환율 정보뷰어</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/web-portfolio/blob/main/src/feature/exchangeRate">깃헙 코드</a>
+                    <a target="_blank" class="website-btn" rel="noopener noreferrer" href="../../feature/exchangeRate/html/exchange-rate.html">사이트 보기</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>School event viewer:</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/web-portfolio/blob/main/src/feature/school-events">View Code</a>
-                    <a target="_blank" class="website-btn" rel="noopener noreferrer" href="../../feature/school-events/html/rss-event-handler.html">View Website</a>
+                    <h3>교내 이벤트 뷰어:</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/web-portfolio/blob/main/src/feature/school-events">깃헙 코드</a>
+                    <a target="_blank" class="website-btn" rel="noopener noreferrer" href="../../feature/school-events/html/rss-event-handler.html">사이트 보기</a>
                 </div>
             </div>
 
@@ -545,15 +546,15 @@
                     <img title="matplot" src="../../img/logo/matplotlib.png">
                     <img title="pygame" src="../../img/logo/pygame.png">
                 </div>
-                <p>Map discovery with path finding algorithm for infinite size of the map</p>
-                <p>Utilized pygame library for visualization</p>
+                <p>실시간 무한 확장형 지도 탐색 알고리즘 - 미확인 지형 탐사, 동적으로 변형되는 지형에 활용.</p>
+                <p>pygame 라이브러리를 이용한 시각화</p>
                 <div class="inner-reference">
-                    <h3>Project repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/d-star-algorithm">View Code</a>
+                    <h3>프로젝트 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/d-star-algorithm">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>Download repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/d-star-algorithm/archive/refs/heads/main.zip">Download</a>
+                    <h3>코드 다운로드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/d-star-algorithm/archive/refs/heads/main.zip">다운로드</a>
                 </div>
             </div>
             <div class="timeline-empty"></div>
@@ -577,36 +578,35 @@
                     <img title="Raspberry Pi 4" src="../../img/logo/Raspberry_Pi_logo.jpg">
                     <img title="WebOS" src="../../img/logo/webos.png">
                 </div>
-                <p>WebOS project to enhance IoT environment for integrated Automobile/Home/Finance.</p>
-                <p>hosted by LG for home IoT.</p>
-                <p>Utilized NodeJS, JWT, PostgresSQL, EC2, JavaScript </p>
+                <p>LG에서 주관하는 통합 자동차&홈&금융 IoT를 위한 WebOS 프로젝트.</p>
+                <p>WebOS, JWT, NodeJS, PostgresSQL, EC2, JavaScript 활용.</p>
                 <div class="inner-reference">
-                    <h3>Project repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/2021ESWContest_webOS_3007">View Code</a>
+                    <h3>프로젝트 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/2021ESWContest_webOS_3007">깃헙 코드</a>
                 </div>
             </div>
 
             <!-- Left -->
             <div class="timeline-component timeline-content">
                 <div class="company-logo">
-                    <h3>Navy private project</h3>
+                    <h3>해군부대 프로젝트</h3>
                     <img style="background-color: whitesmoke;" title="ROKN" src="../../img/logo/rokn.svg">
                 </div>
-                <h3>달력 어플 - Java Swing/AWT<span style="font-weight: lighter;font-size: 14px">2020</span></h3>
+                <h3>당직프로그램 <span style="font-weight: lighter;font-size: 14px">2020</span></h3>
                 <div class="tech-stack-div">
                     <img title="java" src="../../img/logo/java-logo.png">
                     <img title="batch file" src="../../img/logo/batch.png">
                 </div>
-                <p>Java GUI mini project to show the Calendar</p>
-                <p>Applied mouse scroll listeners with multi-panel UI based on calendar data</p>
-                <p>Only partial demo code is avaiable due to the security reason.</p>
+                <p>Java Swing/AWT를 이용해서 달력 GUI를 구현해 당직을 쉽게 짤수 있도록 도운 프로그램 개발.</p>
+                <p>각종 외부입력(마우스/키보드) 이벤트를 사용하여 사용자와 빠르게 상호작용하고 다중 패널을 활용해 필요한 정보를 전달.</p>
+                <p>보안 이유로 코드 공개가 불가, 달력 기능만 제공.</p>
                 <div class="inner-reference">
-                    <h3>Project repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/CalendarUI">View Code</a>
+                    <h3>프로젝트 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/CalendarUI">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>Download repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/CalendarUI/archive/refs/heads/main.zip">Download</a>
+                    <h3>코드 다운로드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/CalendarUI/archive/refs/heads/main.zip">다운로드</a>
                 </div>
             </div>
             <div class="timeline-middle">
@@ -621,7 +621,7 @@
             </div>
             <div class="timeline-component timeline-content">
                 <div class="company-logo">
-                    <h3>Navy private project</h3>
+                    <h3>해군부대 프로젝트</h3>
                     <img style="background-color: whitesmoke;" title="ROKN" src="../../img/logo/rokn.svg">
                 </div>
                 <h3>비밀번호 생성기 - Java Swing/AWT <span style="font-weight: lighter;font-size: 14px">2019</span></h3>
@@ -629,16 +629,16 @@
                     <img title="java" src="../../img/logo/java-logo.png">
                     <img title="batch file" src="../../img/logo/batch.png">
                 </div>
-                <p>Java GUI project to automate the repetitive administration work.</p>
-                <p>Generates random password based on the desired user setting.</p>
-                <p>Only partial demo code is avaiable due to the security reason.</p>
+                <p>Java Swing/AWT를 이용해서 어플리케이션 GUI를 구현해 부대 비밀번호 교체 시기마다 필요한 비밀번호를 자동으로 생해주는 프로그램.</p>
+                <p>사용자 설정에 의해 자동으로 비밀번호 생성.</p>
+                <p>보안 이유로 코드 공개가 불가, 기본적은 GUI기능만 제공.</p>
                 <div class="inner-reference">
-                    <h3>Project repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/PasswordGenerator">View Code</a>
+                    <h3>프로젝트 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/PasswordGenerator">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>Download repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/PasswordGenerator/archive/refs/heads/main.zip">Download</a>
+                    <h3>코드 다운로드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/PasswordGenerator/archive/refs/heads/main.zip">다운로드</a>
                 </div>
             </div>
 
@@ -649,15 +649,15 @@
                     <img title="java" src="../../img/logo/java-logo.png">
                     <img title="batch file" src="../../img/logo/batch.png">
                 </div>
-                <p>My second java GUI mini project.</p>
-                <p>Utilized AWT action listeners with Adjacent search. Used LinkedHashMap with DFS Traverse Algorithm</p>
+                <p>두번째 java GUI 개인 프로젝트.</p>
+                <p>Swing 액션 라이브러리 활용. 빠른 블록 색인을 위한 LinkedHashMap 이용. DFS 탐색 알고리즘 활용.</p>
                 <div class="inner-reference">
-                    <h3>Project repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Mine-Sweeper">View Code</a>
+                    <h3>프로젝트 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Mine-Sweeper">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>Download repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Mine-Sweeper/archive/refs/heads/main.zip">Download</a>
+                    <h3>코드 다운로드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Mine-Sweeper/archive/refs/heads/main.zip">다운로드</a>
                 </div>
             </div>
             <div class="timeline-middle">
@@ -672,18 +672,18 @@
             </div>
             <div class=" timeline-component timeline-content">
                 <h3>뱀 게임 - Java Swing/AWT <span style="font-weight: lighter;font-size: 14px">2017</span></h3>
-                <p>Utilized AWT action listeners with keyboard IO. Used LinkedList</p>
+                <p>키보드와 마우스 I/O 인식을 위해 AWT 액션 리스너 활용. LinkedList로 오브젝트 연결 활용.</p>
                 <div class="tech-stack-div">
                     <img title="java" src="../../img/logo/java-logo.png">
                     <img title="batch file" src="../../img/logo/batch.png">
                 </div>
                 <div class="inner-reference">
-                    <h3>Project repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Snake-Game">View Code</a>
+                    <h3>프로젝트 코드</h3>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman/Snake-Game">깃헙 코드</a>
                 </div>
                 <div class="inner-reference">
-                    <h3>Download repository</h3>
-                    <a target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer"  href="https://github.com/MarcoBackman/Snake-Game/archive/refs/heads/main.zip">Download</a>
+                    <h3>코드 다운로드</h3>
+                    <a target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer"  href="https://github.com/MarcoBackman/Snake-Game/archive/refs/heads/main.zip">다운로드</a>
                 </div>
             </div>
             <div class="timeline-empty"></div>
@@ -698,50 +698,55 @@
 <footer class="main_footer">
     <ul class="footer_list">
         <li class="footer_li_item">
-            <a target="_blank" rel="noopener noreferrer" href="about-me.html">
-                <p>About me</p>
+            <a href="homepage-kr.html" class="">
+                메인
             </a>
         </li>
         <li class="footer_li_item">
-            <a target="_blank" rel="noopener noreferrer" href="skills.html">
-                <p>Marketable skills and abilities</p>
+            <a href="about-me-kr.html" class="">
+                본인 소개
             </a>
         </li>
         <li class="footer_li_item">
-            <a target="_blank" rel="noopener noreferrer" href="./projects.html">
-                <p id="hightlight">Projects</p>
+            <a href="skills-kr.html" class="">
+                기술
             </a>
         </li>
         <li class="footer_li_item">
-            <a target="_blank" rel="noopener noreferrer" href="resume.html">
-                <p>Resume</p>
+            <a href="projects-kr.html" class="highlight">
+                프로젝트
             </a>
         </li>
         <li class="footer_li_item">
-            <a target="_blank" rel="noopener noreferrer" href="contact-me.html">
-                <p>Contact me</p>
+            <a href="./resume-kr.html" class="">
+                이력서
+            </a>
+        </li>
+        <li class="footer_li_item">
+            <a href="contact-me-kr.html" class="">
+                연락처
             </a>
         </li>
     </ul>
     <ul class="footer_list">
         <li class="footer_li_item">
-            <a target="_blank" rel="noopener noreferrer" href="about-me.html">
-                <p>LinkedIn</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/sung-jun-baek-9b505b11a">
+                링크드인
             </a>
         </li>
         <li class="footer_li_item">
-            <a target="_blank" rel="noopener noreferrer" href="skills.html">
-                <p>Google Scholar</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://marcobackman.tistory.com/">
+                블로그
             </a>
         </li>
         <li class="footer_li_item">
-            <a target="_blank" rel="noopener noreferrer" href="resume.html">
-                <p>ResearchGate</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcoBackman">
+                깃헙
             </a>
         </li>
     </ul>
     <div class="copyright">
-        <p>&copy;&nbsp;&nbsp;2022&nbsp;-&nbsp;Tony Baek</p>
+        <p>&copy;&nbsp;&nbsp;2024&nbsp;-&nbsp;Tony Baek</p>
     </div>
 </footer>
 </body>

@@ -3,6 +3,7 @@ const BASE_PATH_INDEX_PAGE = "../src/document/"
 const ABOUT_ME_FILE_NAME = "/about-me.xml"
 const INTRO_FILE_NAME = "/introduction.xml"
 const SKILLS_FILE_NAME = "/skills.xml"
+const SKILLS_FILE_NAME_KR = "/skills.xml"
 
 const SUPPORTED_LANGUAGES = Object.freeze({
     ENGLISH : "en",
@@ -66,7 +67,7 @@ async function getXmlData(pathName, language, overridePath) {
         })
         .then(function(html) {
             // Initialize the DOM parser
-            var parser = new DOMParser();
+            const parser = new DOMParser();
 
             // Parse the text
             doc = parser.parseFromString(html, "text/html");

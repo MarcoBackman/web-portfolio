@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skills>
+    <skill id="java">
+        <title>자바 스킬 셋</title>
+        <list>
+            <subject>Java 버젼</subject>
+            <content><bold>functional interface</bold>을 기반을 한<bold>stream 프로세싱</bold>과 <bold>bi-functions</bold> 기능을 활용한 자바 8 to utilize.</content>
+            <content>Used version 17 to utilize <bold>record class</bold>(JDK 14) for immutable object data, enhanced switch statement, and <bold>sealed classes</bold> for extend restriction.</content>
+        </list>
+        <list>
+            <subject>Spring Boot MVC</subject>
+            <content>Implemented API endpoint services to handle user requests with <bold>Filters</bold>.</content>
+            <content>Experienced <bold>JSP</bold> with <bold>JSPS</bold> to support both frontend and backend services.</content>
+        </list>
+        <list>
+            <subject>JDBC template, JPA, HQL, Hibernate, Jooq</subject>
+            <content>Implemented API endpoint services to handle user requests</content>
+            <content>Used <bold>JDBC</bold> for simple data fetch operation with <bold>prepared statement</bold>(parameterized query) to prevent SQL injection.</content>
+        </list>
+        <list>
+            <subject>Spring Cloud Gateway API</subject>
+            <content>Incorporated <bold>Resilience4j</bold>'s <bold>rate limiter</bold> and <bold>bulkhead</bold> features to prevent DoS attack</content>
+            <content>Implemented <bold>circuit breaker</bold> to prevent <bold>cascading</bold> failovers</content>
+        </list>
+        <list>
+            <subject>Spring Boot MCV</subject>
+            <content>Implemented API endpoint services to handle user requests</content>
+        </list>
+    </skill>
+    <skill id="python">
+
+    </skill>
+    <skill id="front-end">
+
+    </skill>
+    <skill id="aws">
+
+    </skill>
+    <skill id="database">
+
+    </skill>
+    <skill id="script">
+
+    </skill>
+    <skill id="ci/cd">
+
+    </skill>
+    <skill id="cloud-service">
+
+    </skill>
+    <skill id="extra">
+        <list>
+            <subject>Maven</subject>
+            <content>Used maven to improve spring projects package management</content>
+        </list>
+        <list>
+            <subject>Gradle</subject>
+            <content>Used gradle to improve spring projects package management</content>
+        </list>
+    </skill>
+
+</skills>
