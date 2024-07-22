@@ -1,48 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <skills>
     <skill id="java">
-        <title>자바 스킬 셋</title>
+        <title>자바 기술</title>
         <list>
             <subject>Java 버젼</subject>
-            <content><bold>functional interface</bold>을 기반을 한<bold>stream 프로세싱</bold>과 <bold>bi-functions</bold> 기능을 활용한 자바 8 to utilize.</content>
-            <content>Used version 17 to utilize <bold>record class</bold>(JDK 14) for immutable object data, enhanced switch statement, and <bold>sealed classes</bold> for extend restriction.</content>
+            <content>자바 8의 <bold>functional interface</bold>을 기반을 한<bold>stream 프로세싱</bold>, <bold>Consumer/Supplier, Lambda Function</bold>과 <bold>bi-functions</bold> 기능을 활용.</content>
+            <content>자바 17의 immutable 오브젝트을 위한 <bold>record 클라스</bold>(JDK 14+), 보완된 switch statement, 그리고 접근 제한을 구현하기 위한<bold>sealed 클라스</bold></content>
         </list>
         <list>
-            <subject>Spring Boot MVC</subject>
-            <content>Implemented API endpoint services to handle user requests with <bold>Filters</bold>.</content>
-            <content>Experienced <bold>JSP</bold> with <bold>JSPS</bold> to support both frontend and backend services.</content>
+            <subject>스프링 부트 MVC</subject>
+            <content><bold>모델, 뷰, 컨트롤러</bold>의 기법으로, <bold>Filter</bold>로 처리된 사용자의 요청에 따라 컨트롤러를 정의하고 요청에 따른 비지니스 모델을 생성해 다시 사용자에게 뷰를 제공해주는 웹 어플리케이션 제작.</content>
+            <content>Experienced <bold>JSP</bold> with <bold>JSTL</bold> to support both frontend and backend services.</content>
         </list>
         <list>
-            <subject>JDBC template, JPA, HQL, Hibernate, Jooq</subject>
-            <content>Implemented API endpoint services to handle user requests</content>
-            <content>Used <bold>JDBC</bold> for simple data fetch operation with <bold>prepared statement</bold>(parameterized query) to prevent SQL injection.</content>
-        </list>
-        <list>
-            <subject>Spring Cloud Gateway API</subject>
-            <content>Incorporated <bold>Resilience4j</bold>'s <bold>rate limiter</bold> and <bold>bulkhead</bold> features to prevent DoS attack</content>
-            <content>Implemented <bold>circuit breaker</bold> to prevent <bold>cascading</bold> failovers</content>
-        </list>
-        <list>
-            <subject>Spring Boot MCV</subject>
-            <content>Implemented API endpoint services to handle user requests</content>
+            <subject>스프링을 위한 JDBC template, Hibernate(JPA, HQL), Jooq 활용</subject>
+            <content>유연하고 정확한 DB매핑을 위한 다양한 <bold>ORM툴</bold>들을 활용.</content>
+            <content>1회성 테스팅 용도를 위해 <bold>Jdbc Template</bold>을 활용화고 <bold>Prepared Statement(parameterized query)</bold>를 접목시켜 SQL 인젝션 어택을 예방.</content>
+            <content>가성비가 좋으면서 반복적 Query 요청이 많이 발생할 때 캐시를 효과적으로 다룰 수 있는 <bold>Hibernate</bold>를 활용</content>
+            <content>Java의 데이터 타입의 호환성이 매우 뛰어난 장점을 이용해 다양한 더 효과적으로 Query 로직을 Transaction을 DB로 보내는 <bold>Jooq ORM 프레임워크</bold> 활용.</content>
         </list>
     </skill>
     <skill id="python">
-
+        <title>파이선 기술</title>
+        <list>
+            <subject>Java 버젼</subject>
+            <content>자바 8의 <bold>functional interface</bold>을 기반을 한<bold>stream 프로세싱</bold>, <bold>Consumer/Supplier, Lambda Function</bold>과 <bold>bi-functions</bold> 기능을 활용.</content>
+            <content>자바 17의 immutable 오브젝트을 위한 <bold>record 클라스</bold>(JDK 14+), 보완된 switch statement, 그리고 접근 제한을 구현하기 위한<bold>sealed 클라스</bold></content>
+        </list>
     </skill>
     <skill id="front-end">
-
-    </skill>
-    <skill id="aws">
 
     </skill>
     <skill id="database">
 
     </skill>
-    <skill id="script">
+    <skill id="os">
 
     </skill>
-    <skill id="ci/cd">
+    <skill id="cicd">
 
     </skill>
     <skill id="cloud-service">

@@ -1,34 +1,13 @@
-const PANEL_TOP_POSITION = "150px";
+const SUFFIX = '-skill-detail-text';
 
-function setDetailPanelPosition() {
-    //On initial loads
-    $(document).ready(function () {
-        if (window.scrollY < 150) {
-            $(".skill-detail-panel").css("top", PANEL_TOP_POSITION);
-        } else {
-            $(".skill-detail-panel").css("top", "5%");
-        }
-    });
-
-    //Dynamic scroll event
-    window.addEventListener('scroll', (event) => {
-        if (this.scrollY < 100) {
-            $(".skill-detail-panel").css("top", PANEL_TOP_POSITION);
-        } else if (this.scrollY > 1400) { //Todo: refactor this to calculate the percentage instead
-            $(".skill-detail-panel").css("top", "1%");
-        } else {
-            $(".skill-detail-panel").css("top", "5%");
-        }
-    });
+//Call this after xml.parse.js is loaded
+function setSkillContentToHtml(xmlDataMap) {
+    setSkillContent(xmlDataMap, "java", "java" + SUFFIX);
+    setSkillContent(xmlDataMap, "python", "python" + SUFFIX);
+    setSkillContent(xmlDataMap, "front-end", "front-end" + SUFFIX);
+    setSkillContent(xmlDataMap, "database", "database" + SUFFIX);
+    setSkillContent(xmlDataMap, "os", "os" + SUFFIX);
+    setSkillContent(xmlDataMap, "cicd", "cicd" + SUFFIX);
+    setSkillContent(xmlDataMap, "cloud-service", "cloud" + SUFFIX);
+    setSkillContent(xmlDataMap, "extra", "extra" + SUFFIX);
 }
-
-// function viewDescription() {
-//     document.querySelectorAll('gridbox').forEach(function(element) {
-//         element.addEventListener('click', function() {
-//             const skillDetailPanel = this.querySelector('.skill-detail-panel');
-//             if (skillDetailPanel) {
-//                 skillDetailPanel.style.visibility = 'visible';
-//             }
-//         });
-//     });
-// }

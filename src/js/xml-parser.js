@@ -138,5 +138,5 @@ function setSkillContent(xmlDataMap, xmlId, htmlId) {
     listComp += '</ul>';
 
     //set html components
-    document.getElementById(htmlId).innerHTML = titleComp + listComp;
+    document.getElementById(htmlId).innerHTML = listComp;
 }
