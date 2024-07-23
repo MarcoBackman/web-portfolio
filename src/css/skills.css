@@ -167,29 +167,41 @@ div.skill-detail-inner-panel>h2 {
 }
 
 div.skill-detail-inner-panel>ul {
+    padding: 0;
+    margin: 0 5px 0 5px;
 }
 
-div.skill-detail-inner-panel>ul>li {
-    margin: 0;
-    padding-right: 5px;
+.description-list {
+    display: block;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: left;
+    border: 2px #c7c7c7 solid;
+    margin: 1em 0 1em 0;
+    padding: 0;
+    border-radius: 5px;
 }
 
-div.skill-detail-inner-panel>ul>li>p {
-    margin: 0 0 0 0;
-    font-size: 18px;
-    color: #000000;
-    font-weight: bolder;
-    padding: 0 0 7px 0;
+.sub-title {
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    color: #363636;
+    text-align: left;
+    margin: 1px 0 7px 0;
+
 }
 
-div.skill-detail-inner-panel>ul>li>p>span {
-    font-size: 15px;
-    font-weight: normal;
-    color: #3d3d3d;
-    padding: 0 0 15px 0;
+.description-text {
+    display: block;
+    color: #4d4d4d;
+    font-size: 17px;
+    word-wrap: break-word;
+    overflow-wrap:break-word;
+    margin: 0 0 4px 0;
 }
 
-div.skill-detail-inner-panel>ul>li>p>span>span.bold-span {
+.bold-span {
     font-size: 15px;
     font-weight: bold;
     color: #5f6dff;

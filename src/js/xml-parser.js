@@ -94,8 +94,10 @@ function convertArrayToMap(arrayData) {
  * @param contents
  */
 function parseAndApplyBoldFromContent(contents) {
+    if (contents === "") return "";
     let fullText = ""
     for (let contentIndex = 0; contentIndex < contents.length; contentIndex++) {
+        fullText += "<p class='description-text'>";
         let content = contents[contentIndex];
         for (let i = 0; i < content.childNodes.length; i++) {
             if (content.childNodes[i].hasChildNodes() === true &&
@@ -106,11 +108,15 @@ function parseAndApplyBoldFromContent(contents) {
                 fullText += content.childNodes[i].data;
             }
         }
+        fullText = fullText.trim();
         //Add comma if sentence does not end with comma
-        if (fullText.endsWith(".") === false) {
-            fullText += ".";
+        if (fullText.endsWith('.') || fullText.endsWith('.\n') || fullText === "<p class='description-text'>") {
+            // Do nothing, already properly ended.
+        } else {
+            // Add a dot at the end but not a newline
+            fullText += '.';
         }
-        fullText += '</br>'
+        fullText += '</p>';
     }
     return fullText;
 }
@@ -118,8 +124,12 @@ function parseAndApplyBoldFromContent(contents) {
 function setSkillContent(xmlDataMap, xmlId, htmlId) {
     let mappedXmlContent = xmlDataMap.get(xmlId);
     //Read title
-    let title = mappedXmlContent.getElementsByTagName("title")[0] != null ?
-        mappedXmlContent.getElementsByTagName("title")[0].innerText : "";
+    let titles = mappedXmlContent.getElementsByTagName("title");
+    let title = "";
+
+    if (titles && titles.length > 0 && titles[0] !== undefined && titles[0].innerText !== undefined) {
+        title = titles[0].innerText || "";
+    }
 
     //define title html component
     let titleComp = '<h2>' + title + '</h2>'
@@ -127,12 +137,17 @@ function setSkillContent(xmlDataMap, xmlId, htmlId) {
 
     //Set html child components by each list
     for(let i = 0; i < mappedXmlContent.getElementsByTagName("list").length; i++) {
-        listComp += '<li>'
+        listComp += '<li class="description-list">'
         let list = mappedXmlContent.getElementsByTagName("list")[i];
-        let subCategory = list.getElementsByTagName("subject")[0].innerText;
+
+        let subCategories = list.getElementsByTagName("subject");
+        let subCategory = "";
+        if (subCategories && subCategories.length > 0 && subCategories[0] !== undefined && subCategories[0].innerText !== undefined) {
+            subCategory = subCategories[0].innerText || "";
+        }
         let content = parseAndApplyBoldFromContent(list.getElementsByTagName("content"));
-        listComp += '<p>' + subCategory.toUpperCase()
-            + '<span class="box-subcategory-title">:</br> ' + content + '</span>' + '</p>';
+        listComp += '<p class="sub-title">' + (subCategory !== "" ? (subCategory
+            + '<span>:</br> ') : "") + content + '</span>' + '</p>';
         listComp += '</li>'
     }
     listComp += '</ul>';
