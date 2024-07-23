@@ -81,6 +81,11 @@ div.copyright>p {
     font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
 }
 
+.footer-highlight {
+    color: rgba(146, 17, 17, 0.79) !important;
+    font-weight: bolder;
+}
+
 /* Apply screen size lower than 768 */
 
 @media only screen and (max-width: 768px) {
