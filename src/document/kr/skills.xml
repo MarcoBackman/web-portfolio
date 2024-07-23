@@ -16,32 +16,207 @@
             <subject>스프링을 위한 JDBC template, Hibernate(JPA, HQL), Jooq 활용</subject>
             <content>유연하고 정확한 DB매핑을 위한 다양한 <bold>ORM툴</bold>들을 활용.</content>
             <content>1회성 테스팅 용도를 위해 <bold>Jdbc Template</bold>을 활용화고 <bold>Prepared Statement(parameterized query)</bold>를 접목시켜 SQL 인젝션 어택을 예방.</content>
-            <content>가성비가 좋으면서 반복적 Query 요청이 많이 발생할 때 캐시를 효과적으로 다룰 수 있는 <bold>Hibernate</bold>를 활용</content>
+            <content>가성비가 좋으면서 반복적 Query 요청이 많이 발생할 때 캐시를 효과적으로 다룰 수 있는 <bold>JPA 기반의 Hibernate</bold>를 <bold>Criteria</bold> ORM 기법와 같이 활용</content>
             <content>Java의 데이터 타입의 호환성이 매우 뛰어난 장점을 이용해 다양한 더 효과적으로 Query 로직을 Transaction을 DB로 보내는 <bold>Jooq ORM 프레임워크</bold> 활용.</content>
+        </list>
+        <list>
+            <subject>Spring AOP</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>Spring Scheduler / Quartz Scheduler</subject>
+            <content>획일화되고 통일된 스케줄링 서비스를 위해 Spring Scheduler를 사용</content>
+            <content>복잡한 분산 클러스터의 독립적인 스케줄링을 위해 명시된 jobStore에 의거한 Quartz 스케줄러 사용</content>
+        </list>
+        <list>
+            <subject>Java 보안/JWT</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>로깅 기능 활용</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>병렬 연산/프로세싱 활용</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>디자인 패턴 활용</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>데이터 스트리밍</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>스레드락 분석 및 방지</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>비 동기 프로세싱</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>마이크로 서비스를 위한 프레임워크들 활용</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>서비스 다운 방지</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>가독성을 상향시키기 위한 기능별 패키징 설정</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>서비스간의 커뮤니케이션 및 정보 전달</subject>
+            <content>OpenFiegn을 활용한 마이크로 서비스간의 Synchronous 소통 구현</content>
         </list>
     </skill>
     <skill id="python">
         <title>파이선 기술</title>
         <list>
-            <subject>Java 버젼</subject>
-            <content>자바 8의 <bold>functional interface</bold>을 기반을 한<bold>stream 프로세싱</bold>, <bold>Consumer/Supplier, Lambda Function</bold>과 <bold>bi-functions</bold> 기능을 활용.</content>
-            <content>자바 17의 immutable 오브젝트을 위한 <bold>record 클라스</bold>(JDK 14+), 보완된 switch statement, 그리고 접근 제한을 구현하기 위한<bold>sealed 클라스</bold></content>
+            <subject>Python for RaspberryPi</subject>
+            <content>
+
+            </content>
+        </list>
+        <list>
+            <subject>asyncio</subject>
+            <content>
+
+            </content>
+        </list>
+        <list>
+            <subject>numpy</subject>
+            <content>
+                복잡한 수치 계산이나 대규모 데이터 집합에 대한 연산을 포함하는
+                프로젝트에는 Numpy가 효율적인 처리를 가능하게 했고, 고성능 수학
+                계산이 필요한 프로젝트에 활용.
+            </content>
+        </list>
+        <list>
+            <subject>pygame</subject>
+            <content>
+                대화 형 비디오 게임 또는 멀티미디어 애플리케이션이나,
+                프로그램 시연을 위한 그래픽, 사운드 및 기타 핵심 멀티미디어
+                기능을 처리하기 위해 Pygame 모듈을 사용.
+            </content>
+        </list>
+        <list>
+            <subject>matplotlib</subject>
+            <content>
+                데이터 시각화가 필요한 프로젝트에서 Matplotlib을 활용해 원시 데이터를
+                유의미한 데이터로 변환하여 애니메이션 plot 또는 보고서 plot을 생성.
+            </content>
+        </list>
+        <list>
+            <subject>jupyter notebook</subject>
+            <content>
+                모든 데이터 중심 프로젝트에 대해, Jupyter Notebook은 실시간 코드,
+                풍부한 텍스트 문서화, 시각화 및 기타 멀티미디어 리소스를 결합하는 포괄적인 환경을
+                제공합니다. 프로토타이핑, 탐색적 데이터 분석 및 데이터 처리 파이프라인의 문서화에
+                이상적입니다.
+            </content>
+        </list>
+        <list>
+            <subject>pandas</subject>
+            <content>대량의 데이터셋을 조작하고 분석하는 프로젝트에서는 Pandas 라이브러리가 DataFrames 및 Series와 같은 다기능 데이터 구조를 제공하므로 구조화되고 테이블화 된 방식으로 데이터를 쉽게 조작할 수 있습니다.</content>
+        </list>
+        <list>
+            <subject>Scrapy</subject>
+            <content>웹에서 데이터를 수집하는 것이 목표인 프로젝트에서는 Scrapy가 고성능 크롤링 도구로 작동합니다. Scrapy는 웹 페이지로부터 구조화 된 정보를 추출하는 쉬운 방법을 제공하여 많은 웹사이트를 스크래핑하는 데 이상적입니다.</content>
+        </list>
+        <list>
+            <subject>Requests</subject>
+            <content>귀하의 애플리케이션이나 프로젝트에 쉽고 신뢰할 수 있는 HTTP 요청이 필요한 경우, Python의 Requests 라이브러리는 이 과정을 원활하게 만듭니다. 웹 서비스와의 복잡한 통신이 필요한 프로젝트에 귀중한 자산이 될 것입니다.</content>
+        </list>
+        <list>
+            <subject>OpenCV</subject>
+            <content>컴퓨터 비전 또는 이미지 처리에 초점을 맞춘 프로젝트에서는 OpenCV가 핵심 엔진으로 작동합니다. 이는 실시간 이미지 및 비디오 처리, 객체 감지, 심지어 비전 작업을위한 기계 학습 모델에 대한 기능을 제공합니다.</content>
+        </list>
+        <list>
+            <subject>Beautiful Soup</subject>
+            <content>HTML 및 XML 문서에서 정보를 파싱하고 추출해야하는 프로젝트에서 Beautiful Soup은 복잡한 문서를 Python 객체의 트리로 변환하여 작업을 단순화합니다. 이는 웹 스크래핑 프로젝트에서 매우 유용한 도구입니다.</content>
         </list>
     </skill>
     <skill id="front-end">
-
+        <title>프론트 엔드 기술</title>
+        <list>
+            <subject>React</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>HTML/CSS/JS</subject>
+            <content></content>
+        </list>
     </skill>
     <skill id="database">
-
+        <title>DB 기술</title>
+        <list>
+            <subject>MongoDB</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>PostgreSQL</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>DynamoDB</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>MySQL</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>H2</subject>
+            <content></content>
+        </list>
     </skill>
     <skill id="os">
 
     </skill>
     <skill id="cicd">
+        <list>
+            <subject>꾸준한 SCRUM 미팅을 통한 AGILE 개발 경험</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>깃헙 액션과 젠킨스를 통한 코드 배포 오류 방지 안전한 코드 배포 확립</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>Kubernetes와 OpenShift의 독립접 구성으로 인한 독립된 환경 테스트와 성능 테스트 실현</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>코드 구성 획일화와 안정성 보장. TDD 구현</subject>
+            <content>JaCoCo를 통한 코드 기능 오류 사전 방지</content>
+            <content>Eclipse checkstyle기능으로 사내 코드 디자인 획일화</content>
+        </list>
 
     </skill>
     <skill id="cloud-service">
-
+        <list>
+            <subject>AWS 서비스들</subject>
+            <content>AWS DynamoDB</content>
+            <content>AWS S3 버킷</content>
+            <content>AWS Lambda</content>
+            <content><bold>OpenShift</bold> PaaS</content>
+        </list>
+        <list>
+            <subject>Kafka Confluent</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>MongoDB Atlas</subject>
+            <content></content>
+        </list>
+        <list>
+            <subject>MS Aurora DB</subject>
+            <content></content>
+        </list>
     </skill>
     <skill id="extra">
         <list>

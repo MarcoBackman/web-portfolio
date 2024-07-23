@@ -28,12 +28,45 @@
         </list>
     </skill>
     <skill id="python">
-
+        <title>파이선 기술</title>
+        <list>
+            <subject>numpy</subject>
+            <content>For a project involving complex numerical computations or operations on large data sets, Numpy will allow efficient processing with its robust multi-dimensional arrays and matrices facilities. It's a core component in projects requiring high-performance mathematical computations.</content>
+        </list>
+        <list>
+            <subject>pygame</subject>
+            <content>If you are creating an interactive video game or multimedia application, Pygame provides a collection of robust modules to handle graphics, sound, and other core multimedia functionality. A solid choice for any game development project. </content>
+        </list>
+        <list>
+            <subject>matplotlib</subject>
+            <content>In any project where data visualization is critical, Matplotlib is a great choice. It allows you to generate a wide range of static, animated, and interactive plots in a few lines of code, turning raw data into meaningful insights.</content>
+        </list>
+        <list>
+            <subject>jupyter notebook</subject>
+            <content>For any data-driven project, the Jupyter Notebook provides a comprehensive environment that combines live code, rich-text documentation, visualizations and other multimedia resources. It's perfect for prototyping, exploratory data analysis and documentation of the data processing pipeline.</content>
+        </list>
+        <list>
+            <subject>pandas</subject>
+            <content>For a project that involves manipulating and analyzing large datasets, the Pandas library provides versatile data structures like DataFrames and Series, which makes it easy to manipulate data in a structured and tabulated manner.</content>
+        </list>
+        <list>
+            <subject>Scrapy</subject>
+            <content>In a project aimed at collecting data from the web, Scrapy will serve as a high-performance spidering tool. Scrapy offers easy ways to extract structured information from web pages, making it ideal for scraping a large number of websites.</content>
+        </list>
+        <list>
+            <subject>Requests</subject>
+            <content>If your application or project requires easy and reliable HTTP requests, the Requests library in Python makes this process smooth and straightforward. It will be valuable in projects requiring sophisticated communication with web services.</content>
+        </list>
+        <list>
+            <subject>OpenCV</subject>
+            <content>In a project focusing on computer vision or image processing, OpenCV will stand as the core engine. It provides functionalities for real-time image and video processing, object detection, and even machine learning models geared towards vision tasks.</content>
+        </list>
+        <list>
+            <subject>Beautiful Soup</subject>
+            <content>For projects where parsing and extracting information from HTML and XML documents is necessary, Beautiful Soup simplifies the task by transforming complex documents into a tree of Python objects. It's a very valuable tool in web scraping projects.</content>
+        </list>
     </skill>
     <skill id="front-end">
-
-    </skill>
-    <skill id="aws">
 
     </skill>
     <skill id="database">

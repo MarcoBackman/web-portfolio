@@ -124,6 +124,9 @@ function parseAndApplyBoldFromContent(contents) {
 function setSkillContent(xmlDataMap, xmlId, htmlId) {
     let mappedXmlContent = xmlDataMap.get(xmlId);
     //Read title
+    if (mappedXmlContent === undefined) {
+        return;
+    }
     let titles = mappedXmlContent.getElementsByTagName("title");
     let title = "";
 
