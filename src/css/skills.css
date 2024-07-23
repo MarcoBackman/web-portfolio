@@ -2,7 +2,7 @@
 body {
     display: none;
     width: 100%;
-    background-color: #a8968e;
+    background-color: #9c9a9a;
     margin: 0;
     padding: 0;
 }
@@ -51,8 +51,6 @@ div#grid-box-wrapper {
     justify-self: center;
     width: 100%;
     margin: 0 auto 0 auto;
-    background: -webkit-linear-gradient(to right, #a8968e, #a38f85);
-    background: linear-gradient(to right, #a8968e, #a38f85);
     padding-bottom: 1em;
 }
 
