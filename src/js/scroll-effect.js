@@ -39,7 +39,7 @@ function fixNavBarAtTop(isDarkMode, scrollPos) {
         if (scrollPosition >= scrollPos && window.innerWidth > 780) {
             navBarComponent.style.top = "0";
             navBarComponent.style.position = "fixed";
-            navBarComponent.style.zIndex = "100";
+            navBarComponent.style.zIndex = "20";
             navBarComponent.style.setProperty('background', backgroundColor);
         } else {
             navBarComponent.style.position = "inherit";

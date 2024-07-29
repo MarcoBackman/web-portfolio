@@ -185,6 +185,12 @@ body:has(label#dark_mode_label>#dark-mode:checked) .skill-detail-panel::-webkit-
     background-color: #393939;
 }
 
+body:has(label#dark_mode_label>#dark-mode:checked) gridbox:hover img {
+    filter: brightness(10%) saturate(90%) invert(51%) sepia(0%) saturate(108%) hue-rotate(128deg) brightness(173%) contrast(182%);
+    -webkit-filter: brightness(10%) saturate(90%) invert(51%) sepia(0%) saturate(108%) hue-rotate(128deg) brightness(173%) contrast(182%);
+}
+
+
 /***********************************************************
  * projects.html content dark mode
  */

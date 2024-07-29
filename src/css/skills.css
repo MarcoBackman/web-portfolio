@@ -5,6 +5,7 @@ body {
     background-color: #9c9a9a;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 section#main_section{
@@ -68,8 +69,8 @@ gridbox.grid-box {
     border-width: 5px;
     width: 100%;
     height: 480px;
-    cursor: pointer;
-    transition-duration: 2s;
+    cursor: auto;
+    transition-duration: 1s;
     margin: 1em auto;
     overflow: hidden;
 }
@@ -115,15 +116,15 @@ gridbox:hover figcaption{
 }
 
 gridbox:hover img {
-    filter: brightness(0) saturate(100%) invert(91%) sepia(0%) saturate(118%) hue-rotate(138deg) brightness(93%) contrast(82%);
-    -webkit-filter: brightness(0) saturate(100%) invert(91%) sepia(0%) saturate(118%) hue-rotate(138deg) brightness(93%) contrast(82%);
+    filter: brightness(10%) saturate(90%) invert(51%) sepia(0%) saturate(108%) hue-rotate(128deg) brightness(73%) contrast(182%);
+    -webkit-filter: brightness(10%) saturate(90%) invert(51%) sepia(0%) saturate(108%) hue-rotate(128deg) brightness(73%) contrast(182%);
     transition-duration: 0.1s;
     -webkit-transition-duration: 0.1s;
 }
 
 gridbox:hover {
-    transition-duration: 2s;
-    -webkit-transition-duration: 2s;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
     z-index: 1;
 }
 
@@ -158,6 +159,9 @@ gridbox:hover {
     background-color: #555;
 }
 
+.skill-detail-panel::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+}
 
 div.skill-detail-inner-panel>h2 {
     text-align: center;
@@ -207,7 +211,7 @@ div.skill-detail-inner-panel>ul {
 
 figure:hover img {
     transform: scale(1.2);
-    transition-duration: 2s;
+    transition-duration: 1s;
 }
 
 @supports not (-webkit-mask-clip: text) {

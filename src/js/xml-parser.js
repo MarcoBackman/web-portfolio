@@ -97,7 +97,7 @@ function parseAndApplyBoldFromContent(contents) {
     if (contents === "") return "";
     let fullText = ""
     for (let contentIndex = 0; contentIndex < contents.length; contentIndex++) {
-        fullText += "<p class='description-text'>";
+        fullText += "<p class='description-text'>&nbsp• ";
         let content = contents[contentIndex];
         for (let i = 0; i < content.childNodes.length; i++) {
             if (content.childNodes[i].hasChildNodes() === true &&
