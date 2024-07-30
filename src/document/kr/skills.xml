@@ -45,7 +45,7 @@
         <list>
             <subject>Spring AOP</subject>
             <content>스프링 AOP의 크로스 커팅 기법을 사용하여 모니터링, 분석, 예외처리, 로그 기능들을 더 효율적으로 다룰 수 있게 <bold>Join Point, Advice, Pointcut, Aspect</bold> 등을 사용</content>
-            <content>Controller Exception, Custom Exception</content>
+            <content>메서드 별, 오류 타입 별, 혹은 패키지 별 통합 예외 핸들링으로, <bold>Custom Exception</bold>을 만들어 사용자에게 조금 더 통일 된 오류 보고나 개발자들에게 알기 쉬운 오류 보고서로 분류 가능</content>
         </list>
         <list>
             <subject>Spring Actuator</subject>
@@ -60,7 +60,7 @@
             <subject>Java Spring 보안</subject>
             <content>메모리 관리와 테스팅으로 서비스 상시 운영 정상화</content>
             <content><bold>Access Control</bold> 제어로 허가된 요청만 처리하고 Controller의 경우 철저한 URL 테스팅으로 권한 소유자 외 접근 확인 및 방지</content>
-            <content><bold>Java Authentication & Authorization Service</bold> 구현으로 사용자 요청 권한을 확인하고 접근 및 데이터 수취를 보안 등급에 따라 허용 및 거절</content>
+            <content><bold>Java Authentication & Authorization Service</bold> 구현으로 사용자 요청들을 <bold>UserDetails</bold>를 이용해 DB에 등록된 접근 권한에 따라 허용 및 거절</content>
             <content>HTML의 "form" 태그를 권장사용하고, 외부로 부터 입력된 정보를 체크하는 <bold>HtmlEscaper</bold>, Session 쿠기 정보 접근을 방지하는 <bold>HttpOnly 쿠키</bold>를 사용해 <bold>XSS(Cross Site Scripting) 예방</bold></content>
             <content>Spring Security에서 <bold>csrf()</bold> 보안 설정으로 <bold>CSRF(Cross-Site Request Forgery)을 예방</bold></content>
             <content>허용되지 않은 외부 URL/IP에 자료나 데이터의 의존성을 낮추고 서버는 항상 명시된 서버나 로컬 도메인에서 자료를 가져 올 수 있게 <bold>CORS(Cross-Origin Resource Sharing)</bold>를 설정</content>
@@ -68,7 +68,7 @@
             <content>로그인 이후 고유 세션 ID의 재발급으로 허가된 세션 데이터 탈취 방지</content>
             <content>신중한 로그 레벨과 선택과 로그 데이터 감별 및 마스킹으로 민감한 데이터 가시화/유출 방지</content>
             <content>SSL 통신 프로토콜를 위해 <bold>Java Secure Socket Extension</bold>을 활성화. <bold>keytool</bold>로 제작된 private키와 puiblic키를 <bold>java keystore</bold>에 등록하여 사용</content>
-            <content><bold>JWT token</bold> 기반의 권한 부여와 접근 제한 및 세션 관리로 사용자의 접근을 안전하게 제어</content>
+            <content><bold>JWT token</bold> 기반의 권한 부여와 접근 제한 및 세션 관리로  사용자의 접근을 안전하게 제어</content>
         </list>
         <list>
             <subject>로깅 기능 활용</subject>
@@ -100,11 +100,11 @@
             <content><bold>JMC, VisualVM</bold>을 이용해서 개발 된 기능의 메모리 유출, 프로세스 락, 자원 사용량 분석</content>
         </list>
         <list>
-            <subject>마이크로 서비스를 위한 프레임워크들 활용</subject>
-            <content>Eureka</content>
-            <content>Gateway</content>
-            <content>Cloud Server</content>
-            <content>Authentication Server</content>
+            <subject>마이크로 서비스를 위한 다양한 프레임워크 활용</subject>
+            <content><bold>@EnableEurekaServer, @EnableEurekaClient</bold>와 Eureka client 설정에 다른 마이크로 서비스 들을 등록하여 컴파일 타임에 호스트와 포트를 직접 접속 할 필요 없이 서비스의 존재(접속) 여부를 실시간으로 알 수 있는 <bold>Eureka 서버</bold> 제공</content>
+            <content>xml에서 <bold>routes</bold> 설정으로 설정된 서비스로 재 라우팅 해줘 내부의 서비스 정보를 숨기고, 경우에 따라 gateway filter로 요청 권한을 임시로 확인하는 <bold>Gateway 서버</bold> 구현</content>
+            <content>"spring-cloud-config-server"을 디펜던시에 넣고 <bold>@EnableConfigServer</bold> 외부 중앙 설정 서버 선언, 보다 쉽고 체계적으로 설정 값들을 관리 할 수 있는 <bold>Cloud Config Server</bold>를 활용.</content>
+            <content><bold>Java Authentication & Authorization Service</bold> 구현으로 사용자 요청들을 <bold>UserDetails</bold>를 이용해 DB에 등록된 접근 권한에 따라 허용 및 거절</content>
         </list>
         <list>
             <subject>Web API</subject>
@@ -114,24 +114,24 @@
         </list>
         <list>
             <subject>서비스 다운 방지</subject>
-            <content><bold>Resilience4j</bold> 의 Retry, RateLimiter, BulkHead, TimeLimiter, Circuit Breaker를 활용하여 마이크로 서비스간의 원활한 통신을 제공해 서비스가 다운되는 일을 방지</content>
-            <content>Retry</content>
-            <content>RateLimiter</content>
-            <content>BulkHead</content>
-            <content>TimeLimiter</content>
-            <content>Circuit Breaker</content>
+            <content><bold>Resilience4j</bold> 의 Retry, RateLimiter, BulkHead, TimeLimiter, Circuit Breaker를 활용하여 마이크로 서비스간의 원활한 통신을 제공해 서비스가 다운되는 일을 방지<bold>(Cascade failover)</bold></content>
+            <content>Request 실패피 일정 횟수 만큼 <bold>Retry</bold>를 시도하고 <bold>Backoff</bold>를 사용하여 retry 때마다 오차를 두는 기술 사용</content>
+            <content>한 호스트나 IP에서 필요 이상으로 반복되는 요청이 들어오는 것을 방지하는 <bold>RateLimiter</bold>을 적용하여 기초적인 DDos 공격 예방</content>
+            <content><bold>BulkHead</bold>디자인 패턴을 사용하여 프로세스가 사전에 설정된 정상적인 요청 조건을 실패 할 때 빠르게 취소시키고 독립시켜서 다른 서비스의 리소스를 보호해 <bold>Cascading failover</bold>를 예방하는 시스템 도입</content>
+            <content><bold>TimeLimiter</bold>를 사용해 비 정상적인 프로세스를 사전에 차단하고 로그기록을 남겨 추가 진단을 통해 원인을 파악</content>
+            <content><bold>Circuit Breaker</bold>디자인 패턴을 활용해 특정 서버의 건강상태를 확인한 뒤 <bold>open, closed, half-opened</bold>를 설정 해 설정 된 건강상태에 따라 들어오는 요청이나 프로세스를 다른 정상적인 서버로 요청하는 프레임 워크</content>
         </list>
         <list>
             <subject>서비스간의 커뮤니케이션 및 정보 전달</subject>
-            <content>OpenFiegn을 활용한 마이크로 서비스간의 Synchronous 소통 구현</content>
-            <content>Kafka</content>
-            <content>AMQ</content>
-            <content>RabbitMQ</content>
+            <content><bold>OpenFiegn</bold>을 활용한 마이크로서비스간의 Synchronous 소통 구현</content>
+            <content>방대한 실시간 이벤트 처리 시스템을 충족하기 위해 <bold>KafkaTemplate</bold>을 활용한 consumer와 producer 구현으로 Java Spring 서비스의 <bold>Kafka</bold> 메시지 툴을 활용</content>
+            <content>레거시 코드 기반의 서비스에서 <bold>JmsTemplate</bold>을 활용한 <bold>AMQ(AMQP)</bold>서비스 활용해 Request/Reply 패턴을 보장</content>
+            <content>라우팅 기능 제공, 다양한 이벤트 전달방식, 편리한 UI기반의 툴로<bold>RabbitMQ</bold>를 활용</content>
         </list>
         <list>
             <subject>캐시 시스템의 적극 활용</subject>
-            <content>Caffeine Cache</content>
-            <content>Redis</content>
+            <content>특정 어플리케이션의 자바 인메모리 캐시로 클라우드 기반의 서비스를 의존 해서 사용할 때 네트워크 사용 비용을 절감하기 위해 <bold>Caffeine Cache</bold>를 적극 활용. 어플리케이션 내부에 돌리는 캐시로 독립된 데이터를 빠르게 탐색할 때 용이.</content>
+            <content>여러 어플리케이션의 인메모리 캐싱을 지원하고 싶을 때 <bold>Redis</bold>를 활용. 서버 내의 다수의 인스턴스가 하나의 인메모리 캐시를 사용하기 때문에 데이터의 일관성 보장</content>
         </list>
     </skill>
     <skill id="python">
@@ -260,6 +260,10 @@
             <content>DB에 두개 이상의 엡데이트/쓰기 레코드 요청이 동시에 도착 할 때 가장 최신 내역을 업데이트 하고 싶을때 <bold>Optimistic Lock(Write/Update)</bold>을 사용 - <bold>버전 번호, 시간, 체크섬 기법</bold></content>
             <content>DB의 데이터를 읽을 때 가장 최신의 데이터를 받아와야 할 때 업데이트나 쓰기를 실행 시 데이터 ROW 자체에 락을 걸어 Read 접근을 release 될 때까지 미루는 <bold>Pessimistic Lock</bold>을 사용</content>
             <content>ACID설정에 따른 SQL 서버의 자동 <bold>MVCC 기능인 "Update ~ from ~"</bold>문을 사용</content>
+        </list>
+        <list>
+            <subject>DB무결성</subject>
+            <content>데이터의 정확성, 일관성, 유효성을 보장하기 위해 Entity 무결성, 참조 무결성, 도메인 무결성, 사용자 정의 무결성을 활용</content>
         </list>
         <list>
             <subject>DB 복제</subject>
