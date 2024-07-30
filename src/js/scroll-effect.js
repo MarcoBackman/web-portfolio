@@ -4,11 +4,20 @@ function getScrollPositionRatio() {
 
     // get current scroll position
     let scrollPosition = window.scrollY;
-    return (scrollPosition / documentHeight) * 2;
+    //Todo: remove multiplication by 2 and fix every scroll features
+    return (scrollPosition / documentHeight);
+}
+
+function getScrollPositionRatioByHeight(height) {
+    // get total height of the document
+    let documentHeight = document.body.scrollHeight;
+
+    //Todo: remove multiplication by 2 and fix every scroll features
+    return (height / documentHeight);
 }
 
 function componentTransparentOnScroll(componentId, isDarkMode) {
-    let scrollWeight = Math.exp(-getScrollPositionRatio());
+    let scrollWeight = Math.exp(-getScrollPositionRatio() * 2);
 
     const targetComponent = document.getElementById(componentId);
     //get svg component
@@ -25,8 +34,57 @@ function componentTransparentOnScroll(componentId, isDarkMode) {
     return scrollWeight;
 }
 
+function calculateCurrentRage() {
+
+}
+
+//// ((0 ~ 1) * 0.2) + 0.8
+function calculateElementScrollRate(elementScrollRangeRate) {
+    const minRate = 0.5;
+    const range = 0.2;
+    return (1 - (elementScrollRangeRate)) + minRate;
+}
+
+function setComponentShape(element, rate) {
+    element.style.transform = 'scaleY(' + (0.6 * rate) + ') perspective(' + (700 * rate) + 'px) ' +
+        'rotateX(' + (45 * rate) + 'deg)';
+
+    let h4Element = element.children[0]; //h4
+    h4Element.style.transform = 'scaleY(' + (3 * rate) + ')'
+        + 'rotateX(' + (-35 * rate) + 'deg) translateY(' + (3 * rate) + 'px)';
+
+    let imgElement = element.children[1]; //img
+    imgElement.style.transform = 'scaleY(' + (0.9 * rate) + ')'
+        + 'rotateX(' + (25 * rate) + 'deg) perspective(' + (1600 * rate) + 'px)';
+}
+
+function resetComponentTransform(element) {
+    element.style.transform = '';
+
+    let h4Element = element.children[0]; //h4
+    h4Element.style.transform = '';
+
+    let imgElement = element.children[1]; //img
+    imgElement.style.transform = '';
+}
+
+function componentsTrapezoidEffect(element, startTiltPos, endTiltPos) {
+    let positionRatio = getScrollPositionRatio() + 0.15;
+    let start = getScrollPositionRatioByHeight(startTiltPos);
+    let end = getScrollPositionRatioByHeight(endTiltPos) + 0.15;
+    //if current scroll rate matches the component position
+    if (positionRatio >= start && positionRatio < end) {
+        //calculate ratio 0.8 ~ 1 by total scrolls;
+        let elementScrollRangeRate = (positionRatio - start) / (end - start);
+        let newRatio = calculateElementScrollRate(elementScrollRangeRate);
+        setComponentShape(element, newRatio);
+    } else if (positionRatio < start) {
+        resetComponentTransform(element);
+    }
+}
+
 function fixNavBarAtTop(isDarkMode, scrollPos) {
-    let scrollPosition = getScrollPositionRatio();
+    let scrollPosition = getScrollPositionRatio() * 2;
     let navBarComponent = document.getElementById("category_list");
     let backgroundColor;
     if (isDarkMode) {
