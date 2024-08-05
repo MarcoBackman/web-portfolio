@@ -1,4 +1,4 @@
-const MESSAGE_SERVER = "http://3.39.236.44:9091/message-service/sendFeedbackMessage";
+const MESSAGE_SERVER = "https://3.39.236.44:9091/message-service/sendFeedbackMessage";
 const nameField = document.querySelector('#name-input');
 const emailField = document.querySelector('#address-input');
 const messageField = document.querySelector('#content-input');
