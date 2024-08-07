@@ -61,10 +61,10 @@ p.contact-text:before {
     color: #5a5a5a;
 }
 
-button#send-button {
+button#send-button, button#allow-self-signed-host {
     float: right;
     padding: 8px 12px;
-    margin: 8px 0 0;
+    margin: 8px 1px 0;
     font-family: "Montserrat", sans-serif;
     border: 2px solid #78788c;
     background: 0;
@@ -73,7 +73,7 @@ button#send-button {
     transition: all 0.3s;
 }
 
-button#send-button:hover {
+button#send-button:hover, button#allow-self-signed-host:hover {
     background: #78788c;
     color: #fff;
 }
