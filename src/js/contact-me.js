@@ -21,7 +21,7 @@ sendButton.addEventListener('click', function(e) {
         headers: {
             'Content-Type': 'application/json'
         },
-        mode: 'no-cors',
+        mode: 'cors',
         body: JSON.stringify(data)
     }).then(function(response) {
         if(response.ok) {
