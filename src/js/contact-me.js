@@ -14,12 +14,12 @@ sendButton.addEventListener('click', function(e) {
         email: emailField.value,
         content: messageField.value
     };
-
+    console.log(data);
     // make the request
     fetch(MESSAGE_SERVER, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json; charset=utf-8'
         },
         mode: 'cors',
         body: JSON.stringify(data)
